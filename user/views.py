@@ -26,3 +26,5 @@ def userlogin(request):
 def userlogout(request):
     loout(request)
     return  redirect('user/login')
+
+### 왜 푸시가 안될까
