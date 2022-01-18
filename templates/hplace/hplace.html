@@ -1,7 +1,9 @@
-<!DOCTYPE html>
+{% extends 'layout/base.html' %}
+{% load static %}
 <!-- saved from url=(0038)https://place.map.kakao.com/1168065433 -->
-<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+{% block head %}
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>폼앤노말 | 카카오맵</title>
     <meta property="og:title" content="폼앤노말">
@@ -15,11 +17,12 @@
 <meta name="twitter:description" content="서울 관악구 신림로67길 25 1층 (신림동 1432-119)">
 <meta name="twitter:image" content="http://map3.daum.net/staticmap/og?type=place&amp;srs=wcongnamul&amp;size=400x200&amp;m=484050%2C1107323">
     <link href="https://t1.daumcdn.net/localimg/localimages/07/common/kakaomap_favicon.ico" rel="shortcut icon">
-    
-        
-            <link rel="stylesheet" type="text/css" href="./폼앤노말 _ 카카오맵_files/pc.b5a88cb5.css">
-        
-    
+
+
+            <link rel="stylesheet" type="text/css" href="{% static 'css/pc.b5a88cb5.css' %}">
+
+
+
 <style type="text/css">/* global */
 .screen_out{overflow:hidden;position:absolute;width:0;height:0;line-height:0;text-indent:-9999px}
 .show{display:block}
@@ -60,11 +63,12 @@ only screen and (min-device-pixel-ratio: 1.5),
 only screen and (min-resolution: 144dpi),
 only screen and (min-resolution: 1.5dppx) {
     .social_comm_p .img_social{background-image:url(//t1.daumcdn.net/daumtop_deco/images/common/social/rtn/img_social_200414.png);background-size:170px 100px}
-}</style></head>
-<body>
-    <div id="kakaoIndex">
-        <a href="https://place.map.kakao.com/1168065433#kakaoBody">본문 바로가기</a>
-        <a href="https://place.map.kakao.com/1168065433#kakaoGnb">메뉴 바로가기</a>
+}</style>
+
+
+
+
+
     </div>
 
     <!--
@@ -75,36 +79,10 @@ only screen and (min-resolution: 1.5dppx) {
         </a>
     </h1>
     -->
-    <h1 class="logo_daum">
-        <!-- 2018-07-23 수정 -->
-        <a href="https://map.kakao.com/" id="#kakaoMapLogo" data-logtarget="" data-logevent="map_top" target="_blank"><img src="./폼앤노말 _ 카카오맵_files/logo_kakaomap.png" width="121" height="25" class="img_logo" alt="카카오맵" id="exifviewer-img-1" exifid="1656209132" oldsrc="http://t1.daumcdn.net/localimg/localimages/07/2018/pc/rtn/logo_kakaomap.png">
-        </a>
-    </h1>
-    <div data-viewid="header" data-root="" class="search_map">
-    <h2 class="screen_out">검색</h2>
-    <form id="searchForm" method="GET">
-        <fieldset>
-            <legend class="screen_out">검색어 입력 폼</legend>
-            <label for="searchKeyword" class="lab_search">카카오맵 지도 검색</label>
-            <input type="text" name="q" id="searchKeyword" class="tf_search" autocomplete="off" spellcheck="false">
-            <button type="submit" id="kakaoBtnSearch" class="btn_search">
-                <span class="ico_comm ico_search">검색</span>
-            </button>
-        </fieldset>
-        <blockquote id="searchKeywordSuggest" class="wrapper">
-            <div class="suggestBox box_sub" style="display: none;">
-                <div class="baseBox bg">
-                    <div class="list">
-                        <ul class="suggest_list_target"></ul>
-                    </div>
-                </div>
-                <div class="favorite_find"></div>
-                <div class="search_recent"></div>
-            </div>
-        <div class="suggestBox box_sub" style="display: none;"><div class="baseBox bg"><div class="list"><ul class="suggest_list_target"></ul></div></div><div class="favorite_find"></div><div class="search_recent"></div></div></blockquote>
-    </form>
-</div>
+{% endblock %}
 
+
+{% block body %}
     <div id="kakaoGnb" data-viewid="navBar" data-root="" class="location_bar" role="navigation"><!-- 스크롤 내려 왔을 때 location_bar_on 추가 -->
     <div class="inner_bar">
         <div class="outer_header_share_container">
@@ -144,42 +122,10 @@ only screen and (min-resolution: 1.5dppx) {
   </button>
   </div></div></div></div>
         </div>
-        <h2 class="tit_location" aria-hidden="true" data-logtarget="" data-logevent="name_bar,name">폼앤노말</h2>
-        <strong class="screen_out">상세정보 퀵메뉴</strong>
-        <ul class="list_lnb">
-            <li>
-                <a href="https://map.kakao.com/?urlX=484050&amp;urlY=1107323&amp;urlLevel=3&amp;itemId=1168065433&amp;q=%ED%8F%BC%EC%95%A4%EB%85%B8%EB%A7%90&amp;srcid=1168065433&amp;map_type=TYPE_MAP" target="_blank" class="link_lnb" data-logtarget="" data-logevent="name_bar,map">
-                    <span class="ico_comm ico_map">지도</span><!--  2018-11-28 추가 : 텍스트 감싸는 .ico_comm.ico_map 요소 추가  -->
-                </a>
-            </li>
-            <!-- 2018-11-28 추가 : 로드뷰, 즐겨찾기 위치이동으로 인한 추가 -->
-            <li>
-                <a href="https://map.kakao.com/?srcid=1168065433&amp;confirmid=1168065433&amp;q=%ED%8F%BC%EC%95%A4%EB%85%B8%EB%A7%90&amp;rv=on" target="_blank" class="link_lnb" data-roadview="" data-logtarget="" data-logevent="name_bar,roadview">
-                    <span class="ico_comm ico_roadview">로드뷰</span><!--  2018-11-28 추가 : 텍스트 감싸는 .ico_comm.ico_roadview 요소 추가  -->
-                </a>
-            </li>
-            <li><!-- 2018-11-28 즐겨찾기 메뉴의 lst클래스 삭제 -->
-                <a href="https://place.map.kakao.com/1168065433#none" class="link_lnb link_bookmark " data-fid="" data-link="fav" data-logtarget="" data-logevent="name_bar,favorite">
-                    <span class="ico_comm ico_bookmark">즐겨찾기 추가</span>
-                    <span class="ico_num ico_num"><span class="screen_out">나의 즐겨찾기 폴더 개수</span></span>
-                </a>
-            </li>
-            <li data-share="">
-                <a href="https://place.map.kakao.com/1168065433#none" target="_blank" class="link_lnb" data-link="share">
-                    <span class="ico_comm ico_share">공유하기</span>
-                </a>
-            </li>
-            <!--// 2018-11-28 추가 : 공유하기 버튼 추가 -->
-            <li>
-                <a href="https://map.kakao.com/?map_type=TYPE_MAP&amp;target=car&amp;rt=,,484050,1107323&amp;rt1=&amp;rt2=%ED%8F%BC%EC%95%A4%EB%85%B8%EB%A7%90&amp;rtIds=,1168065433" target="_blank" class="link_lnb" data-logtarget="" data-logevent="name_bar,route">
-                    <span class="ico_comm ico_route">길찾기</span><!--  2018-11-28 추가 : 텍스트 감싸는 .ico_comm.ico_route 요소 추가  -->
-                </a>
-            </li>
-        </ul>
+
     </div>
 </div>
     <div data-viewid="headerProfile" data-root="">
-    <a href="https://place.map.kakao.com/1168065433#" target="_top" class="btn_login login">로그인</a>
 </div>
 
 </div>
@@ -644,10 +590,10 @@ only screen and (min-resolution: 1.5dppx) {
         </div>
         <div class="agree_review">
             <!--
-            <span class="choice_mapdetail agree_checked"><!-- 선택 되었을 때 클래스 agree_chacked ->
+            <span class="choice_mapdetail agree_checked"> 선택 되었을 때 클래스 agree_chacked ->
                 <input id="mapChoice2" class="inp_choice" type="checkbox" checked="checked">
                 <label for="mapChoice2" class="lab_agree">
-                    <span class="ico_comm ico_choice"></span><!-- 선택 되었을 때 클래스 ico_focused 추가 ->
+                    <span class="ico_comm ico_choice"></span> 선택 되었을 때 클래스 ico_focused 추가 ->
                     작성된 평점 및 후기글이 카카오맵에 노출됩니다.
                 </label>
             </span>
@@ -935,23 +881,7 @@ only screen and (min-resolution: 1.5dppx) {
     </div>
 </div>
 <hr class="hide">
-<div data-viewid="footer" data-root="" id="kakaoFoot" class="footer_mapdetail" role="contentinfo">
-    <div class="inner_mapdetail">
-        <h2 class="screen_out">서비스 이용정보</h2>
-        <a href="http://policy.daum.net/info/info" class="link_info" target="_blank" data-logtarget="" data-logevent="footer,term">서비스 약관/정책</a>
-        <span class="bg_bar"></span>
-        <a href="https://cs.kakao.com/requests?locale=ko&amp;service=101" class="link_info" target="_blank" data-logtarget="" data-logevent="footer,service">고객센터</a>
-        <span class="bg_bar"></span>
-        <a href="https://cs.daum.net/redbell/top.html" class="link_info" target="_blank" data-logtarget="" data-logevent="footer,report">권리침해 신고</a>
-        <span class="bg_bar"></span>
-        <a href="http://local.biz.daum.net/rainbow_core/ols/index.local" target="_blank" class="link_info" data-logtarget="" data-logevent="footer,ad">로컬광고신청</a>
-        <span class="bg_bar"></span>
-        <a href="http://kakaomap.tistory.com/category/%EC%95%8C%EB%A6%BD%EB%8B%88%EB%8B%A4/%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8" target="_blank" class="link_info" data-logtarget="" data-logevent="footer,notice">공지사항<!--<span class="ico_comm ico_new">새글</span>--></a>
-                <span class="bg_bar"></span>
-                    <a href="https://place.map.kakao.com/1168065433#" data-id="fiyBtn" data-fiytype="detail" data-logtarget="" data-logevent="main_info,FIY" class="link_info">틀린정보 신고</a>
-        <small class="txt_copyright">Copyright © <a href="http://info.daum.net/" class="link_kakao" target="_blank">Kakao Corp.</a> All rights reserved.</small>
-    </div>
-</div><!-- 스크롤이 내려 왔을 때 클래스 lbar_on  -->
+<!-- 스크롤이 내려 왔을 때 클래스 lbar_on  -->
         <div id="wrapMinidaum"></div>
     </div>
     <div id="daumWrap" style="display:none;">
@@ -959,13 +889,12 @@ only screen and (min-resolution: 1.5dppx) {
             <div id="shareContainer"></div>
         </div>
     </div>
-    <script type="text/javascript" src="./폼앤노말 _ 카카오맵_files/v3.js.다운로드"></script><script charset="UTF-8" src="./폼앤노말 _ 카카오맵_files/v3.js(1).다운로드"></script>
-    <script type="text/javascript" src="./폼앤노말 _ 카카오맵_files/tiara.min.js.다운로드"></script>
-    <script type="text/javascript" src="./폼앤노말 _ 카카오맵_files/socialshare_pc-2.4.3.js.다운로드"></script>
+
+    <script type="{% static 'js/socialshare_pc-2.4.3.js' %}"></script>
     <script>
         window.ENV = 'PROD';
         window.browserversion = 'chrome97';
-        
+
         // 티아라 초기화
         try {
             TiaraTracker.getInstance().init({
@@ -979,8 +908,8 @@ only screen and (min-resolution: 1.5dppx) {
 
     
         
-            <script type="text/javascript" src="./폼앤노말 _ 카카오맵_files/Chart.min.js.다운로드"></script>
-            <script type="text/javascript" src="./폼앤노말 _ 카카오맵_files/pc.f6468d53.js.다운로드"></script><iframe style="position:absolute;left:0;top:0;width:0;height:0;border:0" src="./폼앤노말 _ 카카오맵_files/mapclick.html"></iframe>
+            <script type="text/javascript" src="{% static 'js/hplace/Chart.min.js' %}"></script>
+
         
     
     <!--
@@ -997,6 +926,4 @@ only screen and (min-resolution: 1.5dppx) {
     </script>
     <script async src="//go.daum.net/jsa_minidaum_pc.daum" charset="utf-8" type="text/javascript"></script>
     -->
-
-
-</body></html>
+{% endblock %}
