@@ -29,17 +29,13 @@ urlpatterns = [
     path('comment/delete', comment.views.delete),
 
     path('register/', hplace.views.register),
-    path('posts/', hplace.views.posts),
+    path('post/', hplace.views.posts),
     path('update/', hplace.views.update),
     path('read/', hplace.views.read),
     path('delete/', hplace.views.delete),
-    path('home/', hplace.views.home),
-    path('like/', hplace.views.like),
+    path('', hplace.views.home),
 
-    path('test/', hplace.views.test),
-    path('test2/', hplace.views.test2),
     path('user/login', user.views.userlogin),
     path('user/signup', user.views.signup),
     path('main_post', post.views.main_post),
-    path('test4/', post_list.views.post_list),
 ]
