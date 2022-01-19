@@ -10,7 +10,7 @@ def register(request):
         return render(request, 'hplace/hplace.html', {'commentForm': commentForm})
     elif request.method == 'POST':
         commentForm = CommentForm(request.POST)
-
+        print(commentForm)
         if commentForm.is_valid():
             comment = commentForm.save(commit=False)
             comment.writer = request.user

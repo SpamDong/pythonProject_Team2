@@ -23,13 +23,11 @@ import user.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test/', hplace.views.test),
-    path('test2/', hplace.views.test2),
+
     path('comment/register', comment.views.register),
     path('comment/update', comment.views.update),
-    path('comment/delete', comment.views.delete)
+    path('comment/delete', comment.views.delete),
 
-    path('test3/', post.views.post),
     path('user/login', user.views.userlogin),
     path('user/signup', user.views.signup),
     path('main_post', post.views.main_post),
