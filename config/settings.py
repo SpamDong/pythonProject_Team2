@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'comment',
+    'hplace',
+    'post',
+    'post_list',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +79,15 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'pythonproject_Team2',
+        'USER': 'ahd',
+        'PASSWORD': 'qwer1234',
+        'HOST': '172.30.1.57',
+        'PORT': '3306',
+        'OPTIONS': {
+            'init_command': 'SET sql_mode="STRICT_TRANS_TABLES"'
+        }
     }
 }
 

@@ -23,6 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('test/', hplace.views.test),
     path('test2/', hplace.views.test2),
-    path('test3/', post.views.post),
+    path('main_post', post.views.main_post),
     path('test4/', post_list.views.post_list),
 ]
