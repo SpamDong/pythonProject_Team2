@@ -19,6 +19,7 @@ import hplace.views
 import comment.views
 import post_list.views
 import post.views
+import user.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,5 +30,8 @@ urlpatterns = [
     path('comment/delete', comment.views.delete)
 
     path('test3/', post.views.post),
+    path('user/login', user.views.userlogin),
+    path('user/signup', user.views.signup),
+    path('main_post', post.views.main_post),
     path('test4/', post_list.views.post_list),
 ]
