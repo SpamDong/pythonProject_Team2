@@ -43,3 +43,5 @@ def delete(request, bid):
 
     post.delete()
     return redirect('/comment/register')
+
+
