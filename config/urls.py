@@ -16,9 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 import hplace.views
+import post_list.views
+import post.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('test/', hplace.views.test),
     path('test2/', hplace.views.test2),
+    path('test3/', post.views.post),
+    path('test4/', post_list.views.post_list),
 ]
