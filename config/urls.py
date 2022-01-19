@@ -29,4 +29,10 @@ urlpatterns = [
     path('home/', hplace.views.home),
     path('like/', hplace.views.like),
 
+    path('test/', hplace.views.test),
+    path('test2/', hplace.views.test2),
+    path('user/login', user.views.userlogin),
+    path('user/signup', user.views.signup),
+    path('main_post', post.views.main_post),
+    path('test4/', post_list.views.post_list),
 ]
