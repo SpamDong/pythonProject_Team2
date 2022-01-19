@@ -18,7 +18,7 @@
                     </label>
                     <textarea name="contents" id="tfReview2" class="tf_review"></textarea>
                 </div>
-
+            </fieldset>
         </form>
         <div class="upload_photo hide">
             <strong class="screen_out">첨부된 사진 목록</strong>
@@ -41,8 +41,10 @@
                 </label>
             </span>
             -->
+                {% csrf_token %}
             <span class="num_letter txt_len_warp"><span class="screen_out">등록한 글자수: </span><span class="txt_len">0</span><span class="num_total"> / 2000</span></span>
             <button type="submit" class="btn_enroll">등록</button>
+                </form>
         </div>
     </div>
     <strong class="total_evaluation">전체 <span class="color_b">34</span></strong>
