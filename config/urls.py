@@ -23,6 +23,7 @@ import user.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', post.views.main_post),
 
     path('comment/register', comment.views.register),
     path('comment/update', comment.views.update),
@@ -30,6 +31,7 @@ urlpatterns = [
 
     path('user/login', user.views.userlogin),
     path('user/signup', user.views.signup),
+    path('user/logout', user.views.userlogout),
     path('main_post', post.views.main_post),
-    path('test4/', post_list.views.post_list),
+    path('post_list/', post_list.views.post_list),
 ]
