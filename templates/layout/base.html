@@ -2,6 +2,7 @@
 {% load static %}
 
 <!-- saved from url=(0036)https://www.mangoplate.com/top_lists -->
+
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,16 +39,23 @@
     <link rel="alternate" href="https://www.mangoplate.com/zh/top_lists" hreflang="zh">
 
   <!-- Google GPT script -->
-  <script type="text/javascript" async="" src="{% static 'js/atrk.js.다운로드' %}"></script><script src="{% static 'js/sdk.js.다운로드' %}" async="" crossorigin="anonymous"></script><script async="" src="{% static 'js/analytics.js.다운로드' %}"></script><script async="async" src="{% static 'js/gpt.js.다운로드' %}"></script>
+  <script type="text/javascript" async="" src="{% static 'js/base/atrk.js' %}"></script><script src="{% static 'js/base/sdk.js' %}" async="" crossorigin="anonymous"></script><script async="" src="{% static 'js/base/analytics.js' %}"></script><script async="async" src="{% static 'js/base/gpt.js' %}"></script>
 
   <script id="dfp_ads" type="application/json">[{"id":21,"platform":"web_desktop","page":"init","inventory":"all","sizes":null,"tag":"/395211568/init/desktop_all","enabled":true,"created_at":"2017-06-23T01:58:50.000+09:00","updated_at":"2018-11-16T17:06:11.000+09:00","args":{"display_type":{"value":"popup"}}},{"id":43,"platform":"web_mobile","page":"init","inventory":"all","sizes":null,"tag":"/395211568/init/mobile_all","enabled":true,"created_at":"2020-02-12T01:57:59.000+09:00","updated_at":"2020-03-23T00:29:37.000+09:00","args":{"display_type":{"value":"popup"},"display":{"value":"once"}}},{"id":44,"platform":"web_desktop","page":"toplist_list","inventory":"card_list","sizes":[[728,90]],"tag":"/395211568/production/desktop-web.toplist-list.contents.atf","enabled":true,"created_at":null,"updated_at":null,"args":{"start":{"value":1}}},{"id":48,"platform":"web_desktop","page":"toplist_list","inventory":"card_list_btf","sizes":[[728,90]],"tag":"/395211568/production/desktop-web.toplist-list.contents.btf","enabled":true,"created_at":null,"updated_at":null,"args":{"start":{"value":11},"every":{"value":11}}},{"id":51,"platform":"web_mobile","page":"toplist_list","inventory":"card_list","sizes":[[320,100]],"tag":"/395211568/production/mobile-web.toplist-list.contents.atf","enabled":true,"created_at":null,"updated_at":null,"args":{"start":{"value":1}}},{"id":52,"platform":"web_mobile","page":"toplist_list","inventory":"card_list_btf","sizes":[[320,100]],"tag":"/395211568/production/mobile-web.toplist-list.contents.btf","enabled":true,"created_at":null,"updated_at":null,"args":{"start":{"value":11},"every":{"value":11}}},{"id":53,"platform":"web_mobile","page":"init","inventory":"popop_use_app","sizes":null,"tag":"","enabled":true,"created_at":"2020-01-30T01:49:26.000+09:00","updated_at":"2020-03-06T12:00:28.000+09:00","args":{}},{"id":57,"platform":"web_mobile","page":"init","inventory":"area_use_app","sizes":null,"tag":"","enabled":true,"created_at":"2020-01-30T01:49:26.000+09:00","updated_at":"2020-03-06T12:22:14.000+09:00","args":{}}]</script>
+{% block head %}
+{% endblock %}
+
 </head>
 
 <body>
+
+{% block body %}
+{% endblock %}
 <template id="top_list_item"></template>
 
 
-<script src="{% static 'js/bundle.min.js.다운로드' %}" crossorigin="anonymous"></script>
+
+<script src="{% static 'js/base/bundle.min.js' %}" crossorigin="anonymous"></script>
 <script type="text/javascript" charset="utf-8">
   Sentry.init({
     dsn: 'https://36045d362ce347b8a2c56e6fa0d51fc7@sentry.io/1302030',
@@ -55,8 +63,7 @@
   });
 </script>
 
-{% block content %}
-{% endblock %}
+
 
 
 <header class="Header " data-page="normal">
@@ -476,7 +483,8 @@
 </div>
 
 
-
+{% block content %}
+{% endblock %}
 
 <!-- 하단 영역 -->
 <footer class="footer">
@@ -533,7 +541,7 @@
                 망고플레이트 비즈니스
               </a>
             </li>
-        
+
           <li>
             <a href="https://www.mangoforbiz.com/?utm_campaign=20180116v1&amp;utm_medium=main_bottom_adinquiry&amp;utm_source=mp_web" target="_blank">
               광고 문의
@@ -748,7 +756,7 @@
 
       <small>
         <p>
-          
+
           ㈜ 여기어때컴퍼니<br>서울특별시 강남구 봉은사로 479, 479타워 11층<br>대표이사: 정명훈<br>사업자 등록번호: 742-86-00224 <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=7428600224" target="_blank">[사업자정보확인]</a><br>통신판매업 신고번호: 2017-서울강남-01779<br>고객센터: 02-565-5988<br><br>
           <span class="copyrights">© 2022 MangoPlate Co., Ltd. All rights reserved.</span>
         </p>
@@ -785,9 +793,9 @@
 	ga('send', 'pageview');
 
 </script>
-<script src="{% static 'js/vendor.all.min-ca5bcef18b6eb37efe83cc77be5c25e8177c177f327aee8a96399966c51d0d33.js.다운로드' %}"></script>
+<script src="{% static 'js/base/vendor.all.min-ca5bcef18b6eb37efe83cc77be5c25e8177c177f327aee8a96399966c51d0d33.js' %}"></script>
 <!-- Facebook SDK -->
-<script id="facebook-jssdk" src="{% static 'js/sdk.js(1).다운로드' %}"></script>
+<script id="facebook-jssdk" src="{% static 'js/base/sdk.js(1)' %}"></script>
 <script type="text/javascript">
   // \x3C/ is <
   if (!window.FB) {
@@ -796,9 +804,9 @@
   }
 </script>
 <!-- Kakao SDK -->
-<script src="{% static 'js/kakao.min.js.다운로드' %}"></script>
+<script src="{% static 'js/base/kakao.min.js' %}"></script>
 <!-- Apple SDK -->
-<script src="{% static 'js/appleid.auth.js.다운로드' %}"></script>
+<script src="{% static 'js/base/appleid.auth.js' %}"></script>
 <script type="text/javascript">
   if (!window.Kakao) {
     document.write('<script src="//developers.kakao.com/sdk/js/kakao.min.js">\x3C/script>')
@@ -812,7 +820,7 @@
     I18n.locale = "ko";
   }
 </script>
-<script type="text/javascript" src="{% static 'js/branch-latest.min.js.다운로드' %}" ></script>
+<script type="text/javascript" src="{% static 'js/base/branch-latest.min.js' %}" ></script>
 <!-- Branch io SDK -->
 <script type="text/javascript" charset="utf-8">
   // \x3C/ is <
@@ -821,8 +829,8 @@
   }
 </script>
 
-<script src="{% static 'js/top_list_main.all.min-35d07baff565d5d7c4894d122823ebfec04fa582bd9310ae943740d5c10eb796.js.다운로드' %}"></script>
-<script src="{% static 'js/top_list_main-5e5c21935b17d826e0e2.js.다운로드' %}"></script>
+<script src="{% static 'js/base/top_list_main.all.min-35d07baff565d5d7c4894d122823ebfec04fa582bd9310ae943740d5c10eb796.js' %}"></script>
+<script src="{% static 'js/base/top_list_main-5e5c21935b17d826e0e2.js' %}"></script>
 <!-- Start Alexa Certify Javascript -->
 <script type="text/javascript">
 	_atrk_opts = { atrk_acct:"hTunm1akKd60uG", domain:"mangoplate.com",dynamic: true};

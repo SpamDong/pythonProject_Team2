@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path
 import hplace.views
 import comment.views
+import post_list.views
+import post.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +28,6 @@ urlpatterns = [
     path('comment/update', comment.views.update),
     path('comment/delete', comment.views.delete)
 
+    path('test3/', post.views.post),
+    path('test4/', post_list.views.post_list),
 ]
