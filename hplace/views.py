@@ -7,18 +7,6 @@ from django.shortcuts import render, redirect
 from hplace.forms import BoardForm
 from hplace.models import Board
 
-
-def like(request, bid) :
-    post = Board.objects.get(Q(id=bid))
-    user = request.user
-    if post.like.filter(id=user.id).exists() :   # 게시글 좋아요 눌렀음.
-        post.like.remove(user)
-        message = 'del'
-    else :                                       # 게시글 좋아요 아직 안눌렀음.
-        post.like.add(user)
-        message = 'add'
-    return JsonResponse({'message':message, 'like_cnt' : post.like.count()})
-
 def home(request) :
     return render(request, 'hplace/hplace.html')
 
@@ -41,7 +29,7 @@ def register(request):
 def posts(request):
     posts = Board.objects.all()
 
-    return render(request, 'hplace/posts.html', {'posts':posts})
+    return render(request, 'hplace/hplace.html', {'posts':posts})
 
 def read(request, bid) :
     post = Board.objects.get(Q(id=bid))
@@ -68,6 +56,3 @@ def update(request, bid) :
             post.contents = boardForm.cleaned_data['contents']
             post.save()
             return redirect('/hplace/read/'+str(bid))
-
-def test(request):
-    return render(request, 'hplace/hplace.html')
