@@ -1,3 +1,15 @@
 from django.shortcuts import render
 
-# Create your views here.
+from comment.models import Comment
+
+
+def register():
+    print()
+
+
+def update():
+    print()
+
+
+def delete():
+    print()
