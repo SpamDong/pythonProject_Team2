@@ -21,8 +21,12 @@ import post.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test/', hplace.views.test),
-    path('test2/', hplace.views.test2),
-    path('test3/', post.views.post),
-    path('test4/', post_list.views.post_list),
+    path('register/', hplace.views.register),
+    path('posts/', hplace.views.posts),
+    path('update/', hplace.views.update),
+    path('read/', hplace.views.read),
+    path('delete/', hplace.views.delete),
+    path('home/', hplace.views.home),
+    path('like/', hplace.views.like),
+
 ]

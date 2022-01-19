@@ -1,8 +1,13 @@
-from django.shortcuts import render
+from django.db.models import Q
+from django.http import JsonResponse
+from django.shortcuts import render, redirect
+
 
 # Create your views here.
+from hplace.forms import BoardForm
+from hplace.models import Board
 
-@login_required(login_url='/user/login')
+
 def like(request, bid) :
     post = Board.objects.get(Q(id=bid))
     user = request.user
@@ -17,11 +22,10 @@ def like(request, bid) :
 def home(request) :
     return render(request, 'hplace/hplace.html')
 
-@login_required(login_url='/user/login')
 def register(request):
     if request.method == 'GET' :
         boardForm = BoardForm()
-        return render(request, 'hplace/register.html',
+        return render(request, 'hplace/hplace_register.html',
                   {'boardForm':boardForm})
     elif request.method == 'POST' :
         boardForm = BoardForm(request.POST)
@@ -30,7 +34,9 @@ def register(request):
             hplace = boardForm.save(commit=False)
             hplace.writer = request.user
             hplace.save()
-            return redirect('/hplace/register')
+            return redirect('/register/')
+        else:
+            return redirect('/register/')
 
 def posts(request):
     posts = Board.objects.all()
