@@ -1192,7 +1192,7 @@ MangoPlate에서 망고플레이트가 선정한 [1월 3주] 이주의 홀릭 �
 
 
 <header class="Header " data-page="normal">
-  <a href="https://www.mangoplate.com/" class="Header__Logo" onclick="trackEvent(&#39;CLICK_HEADER_LOGO&#39;);">
+  <a href="/" class="Header__Logo" onclick="trackEvent(&#39;CLICK_HEADER_LOGO&#39;);">
     <i class="Header__LogoIcon"></i>
   </a>
 
@@ -1207,24 +1207,46 @@ MangoPlate에서 망고플레이트가 선정한 [1월 3주] 이주의 홀릭 �
   </div>
 
   <ul class="Header__MenuList">
+    {% if user.is_authenticated %}
       <li class="Header__MenuItem Header__MenuItem--New">
-        <a href="https://www.mangoplate.com/eat_deals" class="Header__MenuLink" onclick="trackEvent(&#39;CLICK_EAT_DEALS&#39;)">
-          <span class="Header__MenuText">EAT딜</span>
+        <a href="/" class="Header__MenuLink" onclick="trackEvent(&#39;CLICK_EAT_DEALS&#39;)">
+          <span class="Header__MenuText">홈으로</span>
         </a>
       </li>
 
     <li class="Header__MenuItem">
-      <a href="https://www.mangoplate.com/top_lists" class="Header__MenuLink" onclick="trackEvent(&#39;CLICK_TOP_LIST&#39;)">
-        <span class="Header__MenuText">맛집 리스트</span>
+      <a href="/register/" class="Header__MenuLink" onclick="trackEvent(&#39;CLICK_TOP_LIST&#39;)">
+        <span class="Header__MenuText">게시글 작성</span>
       </a>
     </li>
 
     <li class="Header__MenuItem">
-      <a href="https://www.mangoplate.com/mango_picks" class="Header__MenuLink" onclick="trackEvent(&#39;CLICK_MANGO_PICK&#39;)">
-        <span class="Header__MenuText">망고 스토리</span>
+      <a href="/user/logout" class="Header__MenuLink" onclick="trackEvent(&#39;CLICK_MANGO_PICK&#39;)">
+        <span class="Header__MenuText">로그아웃</span>
       </a>
     </li>
+    {% else %}
+
+      <li class="Header__MenuItem Header__MenuItem--New">
+        <a href="/" class="Header__MenuLink" onclick="trackEvent(&#39;CLICK_EAT_DEALS&#39;)">
+          <span class="Header__MenuText">홈으로</span>
+        </a>
+      </li>
+
+    <li class="Header__MenuItem">
+      <a href="/user/signup" class="Header__MenuLink" onclick="trackEvent(&#39;CLICK_TOP_LIST&#39;)">
+        <span class="Header__MenuText">회원가입</span>
+      </a>
+    </li>
+
+    <li class="Header__MenuItem">
+      <a href="/user/login" class="Header__MenuLink" onclick="trackEvent(&#39;CLICK_MANGO_PICK&#39;)">
+        <span class="Header__MenuText">로그인</span>
+      </a>
+    </li>
+      {% endif %}
   </ul>
+
 
   <ul class="Header__IconButtonList">
     <li class="Header__IconButtonItem only-mobile Header__IconButtonItem--MenuButton MenuButton--New">

@@ -26,12 +26,14 @@ urlpatterns = [
     path('register/', hplace.views.register),
     path('posts/', hplace.views.posts),
     path('update/', hplace.views.update),
-    path('read/', hplace.views.read),
+    path('read/<int:bid>', hplace.views.read),
     path('delete/', hplace.views.delete),
     path('home/', hplace.views.home),
     path('like/', hplace.views.like),
 
     path('', post.views.main_post),
+    path('test/', hplace.views.test),
+
 
     path('comment/register', comment.views.register),
     path('comment/update', comment.views.update),

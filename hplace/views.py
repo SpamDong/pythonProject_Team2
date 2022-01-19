@@ -45,7 +45,7 @@ def posts(request):
 
 def read(request, bid) :
     post = Board.objects.get(Q(id=bid))
-    return render(request, 'hplace/read.html', {'post':post})
+    return render(request, 'hplace/hplace.html', {'post' : post})
 
 def delete(request, bid) :
     post = Board.objects.get(Q(id=bid))
@@ -68,3 +68,6 @@ def update(request, bid) :
             post.contents = boardForm.cleaned_data['contents']
             post.save()
             return redirect('/hplace/read/'+str(bid))
+
+def test(request):
+    return render(request, 'hplace/hplace.html')

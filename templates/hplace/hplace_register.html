@@ -4,7 +4,7 @@
 <section class="page-section" id="contact">
     <div class="container">
         <!-- Contact Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+
         <!-- Icon Divider-->
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
@@ -14,11 +14,13 @@
         <table class="info
               no_menu
               ">
+            <br><br><br><br><br>
+                            <form method='post'>
             <caption>레스토랑 상세 정보</caption>
             <tbody>
             <tr class="only-desktop">
                 <th>주소</th>
-                <td><input type="text"><br>
+                <td><input type="text" name=""><br>
                 </td>
             </tr>
             <tr class="only-desktop">
@@ -41,7 +43,7 @@
         <!-- Contact Section Form-->
         <div class="form-floating mb-3">
             <div class="col-lg-8 col-xl-7">
-                <form method='post'>
+
                     {% csrf_token %}
                     {{ boardForm }}
                     <input type="submit">
