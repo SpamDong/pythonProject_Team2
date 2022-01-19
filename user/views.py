@@ -18,7 +18,7 @@ def signup(request):
 def userlogin(request):
     if request.method == "GET":
         loginForm = AuthenticationForm()
-        return render(request, 'user/login.html', {'loginForm':loginForm})
+        return render(request, 'user/login.html', {'loginForm': loginForm})
     elif request.method == "POST":
         loginForm = AuthenticationForm(request, request.POST)
         if loginForm.is_valid():

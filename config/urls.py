@@ -16,11 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 import hplace.views
+import comment.views
 import post_list.views
 import post.views
+import user.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('comment/register', comment.views.register),
+    path('comment/update', comment.views.update),
+    path('comment/delete', comment.views.delete),
+
     path('register/', hplace.views.register),
     path('posts/', hplace.views.posts),
     path('update/', hplace.views.update),
