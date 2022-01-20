@@ -14,36 +14,19 @@
         <table class="info
               no_menu
               ">
-            <br><br><br><br><br>
-                            <form method='post'>
             <caption>레스토랑 상세 정보</caption>
             <tbody>
-            <tr class="only-desktop">
-                <th>주소</th>
-                <td><input type="text" name=""><br>
-                </td>
-            </tr>
-            <tr class="only-desktop">
-                <th>전화번호</th>
-                <td><input type="tel"></td>
-            </tr>
-            <tr>
-                <th>음식 종류</th>
-                <td>
-                    <span><input type="text"></span>
-                </td>
-            </tr>
-            <tr>
-                <th>휴일</th>
-                <td><input type="text"></td>
-            </tr>
-
+<br>
+            <br>
+            <br>
+            <br>
+            <br>
             </tbody>
         </table>
         <!-- Contact Section Form-->
         <div class="form-floating mb-3">
             <div class="col-lg-8 col-xl-7">
-
+                <form method='post'>
                     {% csrf_token %}
                     {{ boardForm }}
                     <input type="submit">
