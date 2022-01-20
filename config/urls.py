@@ -22,7 +22,7 @@ import post.views
 import user.views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', post.views.main_post),
     path('register/', hplace.views.register),
     path('posts/', hplace.views.posts),
     path('update/<int:bid>', hplace.views.update),
