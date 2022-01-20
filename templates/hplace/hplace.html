@@ -5,23 +5,24 @@
 {% block head %}
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>폼앤노말 | 카카오맵</title>
-    <meta property="og:title" content="폼앤노말">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>폼앤노말 | 카카오맵</title>
+<meta property="og:title" content="폼앤노말">
 <meta property="og:site_name" content="카카오맵">
 <meta property="og:description" content="서울 관악구 신림로67길 25 1층 (신림동 1432-119)">
 <meta property="og:type" content="website">
-<meta property="og:image" content="http://map3.daum.net/staticmap/og?type=place&amp;srs=wcongnamul&amp;size=400x200&amp;m=484050%2C1107323">
+<meta property="og:image"
+      content="http://map3.daum.net/staticmap/og?type=place&amp;srs=wcongnamul&amp;size=400x200&amp;m=484050%2C1107323">
 <meta property="og:url" content="https://place.map.kakao.com/1168065433">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="폼앤노말">
 <meta name="twitter:description" content="서울 관악구 신림로67길 25 1층 (신림동 1432-119)">
-<meta name="twitter:image" content="http://map3.daum.net/staticmap/og?type=place&amp;srs=wcongnamul&amp;size=400x200&amp;m=484050%2C1107323">
-    <link href="https://t1.daumcdn.net/localimg/localimages/07/common/kakaomap_favicon.ico" rel="shortcut icon">
+<meta name="twitter:image"
+      content="http://map3.daum.net/staticmap/og?type=place&amp;srs=wcongnamul&amp;size=400x200&amp;m=484050%2C1107323">
+<link href="https://t1.daumcdn.net/localimg/localimages/07/common/kakaomap_favicon.ico" rel="shortcut icon">
 
 
-            <link rel="stylesheet" type="text/css" href="{% static 'css/pc.b5a88cb5.css' %}">
-
+<link rel="stylesheet" type="text/css" href="{% static 'css/pc.b5a88cb5.css' %}">
 
 
 <style type="text/css">/* global */
@@ -64,69 +65,90 @@ only screen and (min-device-pixel-ratio: 1.5),
 only screen and (min-resolution: 144dpi),
 only screen and (min-resolution: 1.5dppx) {
     .social_comm_p .img_social{background-image:url(//t1.daumcdn.net/daumtop_deco/images/common/social/rtn/img_social_200414.png);background-size:170px 100px}
-}</style>
+}
+
+</style>
 
 
+</div>
 
-
-
-    </div>
-
-    <!--
-    <h1 class="logo_daum">
-        <a href="http://daum.net" id="kakaoLogo" data-logtarget data-logevent="daum_top" target="_blank"><img src="//t1.daumcdn.net/localimg/localimages/07/2017/pc/rtn/logo_daum.png" width="44" height="18" class="img_logo" alt="다음"></a>
-        <a href="https://map.kakao.com" id="kakaoServiceLogo" data-logtarget data-logevent="map_top" target="_blank">
-            <img src="//t1.daumcdn.net/localimg/localimages/07/2017/pc/rtn/logo_service.png" width="39" height="20" class="img_logo" alt="지도">
-        </a>
-    </h1>
-    -->
+<!--
+<h1 class="logo_daum">
+    <a href="http://daum.net" id="kakaoLogo" data-logtarget data-logevent="daum_top" target="_blank"><img src="//t1.daumcdn.net/localimg/localimages/07/2017/pc/rtn/logo_daum.png" width="44" height="18" class="img_logo" alt="다음"></a>
+    <a href="https://map.kakao.com" id="kakaoServiceLogo" data-logtarget data-logevent="map_top" target="_blank">
+        <img src="//t1.daumcdn.net/localimg/localimages/07/2017/pc/rtn/logo_service.png" width="39" height="20" class="img_logo" alt="지도">
+    </a>
+</h1>
+-->
 {% endblock %}
 
 
 {% block body %}
-    <div id="kakaoGnb" data-viewid="navBar" data-root="" class="location_bar" role="navigation"><!-- 스크롤 내려 왔을 때 location_bar_on 추가 -->
+<div id="kakaoGnb" data-viewid="navBar" data-root="" class="location_bar" role="navigation">
+    <!-- 스크롤 내려 왔을 때 location_bar_on 추가 -->
     <div class="inner_bar">
         <div class="outer_header_share_container">
-            <div id="header_share_container" class="inner_header_share_container"><div class="social_comm_p hide"><div class="sns_comm_p share_layer">
-    <strong class="screen_out">SNS로 공유하기 펼쳐짐</strong>
-    <ul class="list_sns"><li>
-        <a href="https://place.map.kakao.com/1168065433#none" class="link_sns" data-handler="kakaotalk">
+            <div id="header_share_container" class="inner_header_share_container">
+                <div class="social_comm_p hide">
+                    <div class="sns_comm_p share_layer">
+                        <strong class="screen_out">SNS로 공유하기 펼쳐짐</strong>
+                        <ul class="list_sns">
+                            <li>
+                                <a href="https://place.map.kakao.com/1168065433#none" class="link_sns"
+                                   data-handler="kakaotalk">
         <span class="img_social ico_sns_kt">
-        </span>카카오톡</a></li><li>
-        <a href="https://place.map.kakao.com/1168065433#none" class="link_sns" data-handler="kakaostory">
+        </span>카카오톡</a></li>
+                            <li>
+                                <a href="https://place.map.kakao.com/1168065433#none" class="link_sns"
+                                   data-handler="kakaostory">
         <span class="img_social ico_sns_ks">
-        </span>카카오스토리</a></li><li>
-        <a href="https://place.map.kakao.com/1168065433#none" class="link_sns" data-handler="facebook">
+        </span>카카오스토리</a></li>
+                            <li>
+                                <a href="https://place.map.kakao.com/1168065433#none" class="link_sns"
+                                   data-handler="facebook">
         <span class="img_social ico_sns_fb">
-        </span>페이스북</a></li><li>
-        <a href="https://place.map.kakao.com/1168065433#none" class="link_sns" data-handler="twitter">
+        </span>페이스북</a></li>
+                            <li>
+                                <a href="https://place.map.kakao.com/1168065433#none" class="link_sns"
+                                   data-handler="twitter">
         <span class="img_social ico_sns_tw">
-        </span>트위터</a></li><li>
-        <a href="https://place.map.kakao.com/1168065433#none" class="link_sns" data-handler="mail">
+        </span>트위터</a></li>
+                            <li>
+                                <a href="https://place.map.kakao.com/1168065433#none" class="link_sns"
+                                   data-handler="mail">
         <span class="img_social ico_sns_mail">
-        </span>다음메일</a></li><li style="display: none">
-        <a href="https://place.map.kakao.com/1168065433#none" class="link_sns" data-handler="daumcafe">
+        </span>다음메일</a></li>
+                            <li style="display: none">
+                                <a href="https://place.map.kakao.com/1168065433#none" class="link_sns"
+                                   data-handler="daumcafe">
         <span class="img_social ico_sns_cafe">
-        </span>다음카페</a></li></ul>
-    <div class="copyUrl"><div class="sns_copyurl">
-    <a href="https://place.map.kakao.com/1168065433#none" class="link_copyurl">
-    <span class="screen_out">현재페이지 URL복사</span>
-    <span class="txt_url">https://place.map.kakao.com/1168065433</span>
-    <span class="txt_copy">URL복사</span>
-    </a>
-    </div></div>
-    <button class="btn_close"><span class="img_social ico_close">공유목록 닫기</span></button>
-    </div><div class="sns_comm_p copyurl_layer hide">
-  <div class="inner_copyurl">
-  <p class="desc_copyurl">주소가 복사되었습니다.<br>원하는곳에 붙여넣기(Ctrl+V)해주세요.</p>
-  <button class="btn_close"><span class="img_social ico_close">공유목록 닫기</span>
-  </button>
-  </div></div></div></div>
+        </span>다음카페</a></li>
+                        </ul>
+                        <div class="copyUrl">
+                            <div class="sns_copyurl">
+                                <a href="https://place.map.kakao.com/1168065433#none" class="link_copyurl">
+                                    <span class="screen_out">현재페이지 URL복사</span>
+                                    <span class="txt_url">https://place.map.kakao.com/1168065433</span>
+                                    <span class="txt_copy">URL복사</span>
+                                </a>
+                            </div>
+                        </div>
+                        <button class="btn_close"><span class="img_social ico_close">공유목록 닫기</span></button>
+                    </div>
+                    <div class="sns_comm_p copyurl_layer hide">
+                        <div class="inner_copyurl">
+                            <p class="desc_copyurl">주소가 복사되었습니다.<br>원하는곳에 붙여넣기(Ctrl+V)해주세요.</p>
+                            <button class="btn_close"><span class="img_social ico_close">공유목록 닫기</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
 </div>
-    <div data-viewid="headerProfile" data-root="">
+<div data-viewid="headerProfile" data-root="">
 </div>
 
 </div>
@@ -135,163 +157,163 @@ only screen and (min-resolution: 1.5dppx) {
     <div class="dimmed_layer hide"></div>
     <div id="mArticle">
         <div data-viewid="basicInfo" class="cont_essential">
-    <div data-viewid="basicInfoTop" data-root="">
-    <div class="details_present" style="background:none;">
-        <a href="https://place.map.kakao.com/1168065433#none" class="link_present" data-logtarget="" data-logevent="info_pannel,main_pic">
-                <span class="bg_present" style="background-image:url(&#39;//t1.kakaocdn.net/thumb/T800x0.q80/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fplace%2F5C8D001C15634B99A39D9335E81CD99B&#39;)"></span>
-            <span class="frame_g"></span>
-        </a>
-    </div>
-    <div class="place_details">
-        <div class="inner_place">
-                <span class="color_g txt_elocation">{{ post.title }}</span>
-            <h2 class="tit_location">{{ post.title }}</h2>
-            <div class="location_evaluation">
-                <span class="txt_location"><span class="screen_out">분류: </span>{{ post.user_food }}</span>
-                    <span class="ico_comm ico_dot"></span>
-                    <a href="https://place.map.kakao.com/1168065433#none" class="link_evaluation" data-cnt="34" data-target="comment" data-logtarget="" data-logevent="info_pannel,point">후기 <span class="color_b">4.4<span class="screen_out">점</span></span>
-                        <span class="color_g">(34)<span class="screen_out">개 후기</span></span>
+            <div data-viewid="basicInfoTop" data-root="">
+                <div class="details_present" style="background:none;">
+                    <a href="https://place.map.kakao.com/1168065433#none" class="link_present" data-logtarget=""
+                       data-logevent="info_pannel,main_pic">
+                        <span class="bg_present"
+                              style="background-image:url(&#39;//t1.kakaocdn.net/thumb/T800x0.q80/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fplace%2F5C8D001C15634B99A39D9335E81CD99B&#39;)"></span>
+                        <span class="frame_g"></span>
                     </a>
-                    <span class="ico_comm ico_dot"></span>
+                </div>
+                <div class="place_details">
+                    <div class="inner_place">
+                        <span class="color_g txt_elocation">{{ post.title }}</span>
+                        <h2 class="tit_location">{{ post.title }}</h2>
+                        <div class="location_evaluation">
+                            <span class="txt_location"><span class="screen_out">분류: </span>{{ post.user_food }}</span>
+                            <span class="ico_comm ico_dot"></span>
+                            <a href="https://place.map.kakao.com/1168065433#none" class="link_evaluation" data-cnt="34"
+                               data-target="comment" data-logtarget="" data-logevent="info_pannel,point">후기 <span
+                                    class="color_b">4.4<span class="screen_out">점</span></span>
+                                <span class="color_g">(34)<span class="screen_out">개 후기</span></span>
+                            </a>
+                            <span class="ico_comm ico_dot"></span>
+
+                        </div>
+                        <strong class="screen_out">위치 정보 및 공유하기</strong>
+                        <ul class="list_place">
+                            <li>
+                                <a href="https://map.kakao.com/?urlX=484050&amp;urlY=1107323&amp;urlLevel=3&amp;itemId=1168065433&amp;q=%ED%8F%BC%EC%95%A4%EB%85%B8%EB%A7%90&amp;srcid=1168065433&amp;map_type=TYPE_MAP"
+                                   target="_blank" class="link_place" data-logtarget=""
+                                   data-logevent="info_pannel,map_view"><span
+                                        class="ico_comm ico_storemap"></span>지도</a></li>
+                            <li>
+                                <a href="https://map.kakao.com/?map_type=TYPE_MAP&amp;target=car&amp;rt=,,484050,1107323&amp;rt1=&amp;rt2=%ED%8F%BC%EC%95%A4%EB%85%B8%EB%A7%90&amp;rtIds=,1168065433"
+                                   target="_blank" class="link_place" data-logtarget=""
+                                   data-logevent="info_pannel,route"><span class="ico_comm ico_route"></span>길찾기</a>
+                            </li>
+                            <li>
+                                <a href="https://map.kakao.com/?srcid=1168065433&amp;confirmid=1168065433&amp;q=%ED%8F%BC%EC%95%A4%EB%85%B8%EB%A7%90&amp;rv=on"
+                                   class="link_place" target="_blank" data-logtarget=""
+                                   data-logevent="info_pannel,roadview" data-roadview=""><span
+                                        class="ico_comm ico_roadmap"></span>로드뷰</a>
+                            </li>
+                            <li class="lst">
+                                <a href="https://place.map.kakao.com/1168065433#none" class="link_place"
+                                   data-logevent="info_pannel,share"><span class="ico_comm ico_share"></span>공유하기</a>
+                                <div data-viewid="snsShare" data-root="" class="detail_share">
+                                </div>
+                                <div class="place_share_container" id="place_share_container">
+                                    <div class="social_comm_p hide">
+                                        <div class="sns_comm_p share_layer">
+                                            <strong class="screen_out">SNS로 공유하기 펼쳐짐</strong>
+                                            <ul class="list_sns">
+                                                <li>
+                                                    <a href="https://place.map.kakao.com/1168065433#none"
+                                                       class="link_sns" data-handler="kakaotalk">
+        <span class="img_social ico_sns_kt">
+        </span>카카오톡</a></li>
+                                                <li>
+                                                    <a href="https://place.map.kakao.com/1168065433#none"
+                                                       class="link_sns" data-handler="kakaostory">
+        <span class="img_social ico_sns_ks">
+        </span>카카오스토리</a></li>
+                                                <li>
+                                                    <a href="https://place.map.kakao.com/1168065433#none"
+                                                       class="link_sns" data-handler="facebook">
+        <span class="img_social ico_sns_fb">
+        </span>페이스북</a></li>
+                                                <li>
+                                                    <a href="https://place.map.kakao.com/1168065433#none"
+                                                       class="link_sns" data-handler="twitter">
+        <span class="img_social ico_sns_tw">
+        </span>트위터</a></li>
+                                                <li>
+                                                    <a href="https://place.map.kakao.com/1168065433#none"
+                                                       class="link_sns" data-handler="mail">
+        <span class="img_social ico_sns_mail">
+        </span>다음메일</a></li>
+                                                <li style="display: none">
+                                                    <a href="https://place.map.kakao.com/1168065433#none"
+                                                       class="link_sns" data-handler="daumcafe">
+        <span class="img_social ico_sns_cafe">
+        </span>다음카페</a></li>
+                                            </ul>
+                                            <div class="copyUrl">
+                                                <div class="sns_copyurl">
+                                                    <a href="https://place.map.kakao.com/1168065433#none"
+                                                       class="link_copyurl">
+                                                        <span class="screen_out">현재페이지 URL복사</span>
+                                                        <span class="txt_url">https://place.map.kakao.com/1168065433</span>
+                                                        <span class="txt_copy">URL복사</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <button class="btn_close"><span class="img_social ico_close">공유목록 닫기</span>
+                                            </button>
+                                        </div>
+                                        <div class="sns_comm_p copyurl_layer hide">
+                                            <div class="inner_copyurl">
+                                                <p class="desc_copyurl">주소가 복사되었습니다.<br>원하는곳에 붙여넣기(Ctrl+V)해주세요.</p>
+                                                <button class="btn_close"><span
+                                                        class="img_social ico_close">공유목록 닫기</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <a href="https://place.map.kakao.com/1168065433#none" class="link_bookmark " data-fid=""
+                           data-logtarget="" data-logevent="info_pannel,favorite">
+                            <span class="ico_comm ico_bookmark">즐겨찾기 추가</span>
+                            <span class="ico_num ico_num"><span class="screen_out">나의 즐겨찾기 폴더 개수</span></span>
+                        </a>
+
+                    </div>
+                </div>
 
             </div>
-            <strong class="screen_out">위치 정보 및 공유하기</strong>
-            <ul class="list_place">
-                <li>
-                    <a href="https://map.kakao.com/?urlX=484050&amp;urlY=1107323&amp;urlLevel=3&amp;itemId=1168065433&amp;q=%ED%8F%BC%EC%95%A4%EB%85%B8%EB%A7%90&amp;srcid=1168065433&amp;map_type=TYPE_MAP" target="_blank" class="link_place" data-logtarget="" data-logevent="info_pannel,map_view"><span class="ico_comm ico_storemap"></span>지도</a></li>
-                <li>
-                    <a href="https://map.kakao.com/?map_type=TYPE_MAP&amp;target=car&amp;rt=,,484050,1107323&amp;rt1=&amp;rt2=%ED%8F%BC%EC%95%A4%EB%85%B8%EB%A7%90&amp;rtIds=,1168065433" target="_blank" class="link_place" data-logtarget="" data-logevent="info_pannel,route"><span class="ico_comm ico_route"></span>길찾기</a>
-                </li>
-                <li>
-                        <a href="https://map.kakao.com/?srcid=1168065433&amp;confirmid=1168065433&amp;q=%ED%8F%BC%EC%95%A4%EB%85%B8%EB%A7%90&amp;rv=on" class="link_place" target="_blank" data-logtarget="" data-logevent="info_pannel,roadview" data-roadview=""><span class="ico_comm ico_roadmap"></span>로드뷰</a>
-                </li>
-                <li class="lst">
-                    <a href="https://place.map.kakao.com/1168065433#none" class="link_place" data-logevent="info_pannel,share"><span class="ico_comm ico_share"></span>공유하기</a>
-                    <div data-viewid="snsShare" data-root="" class="detail_share">
-</div>
-                    <div class="place_share_container" id="place_share_container"><div class="social_comm_p hide"><div class="sns_comm_p share_layer">
-    <strong class="screen_out">SNS로 공유하기 펼쳐짐</strong>
-    <ul class="list_sns"><li>
-        <a href="https://place.map.kakao.com/1168065433#none" class="link_sns" data-handler="kakaotalk">
-        <span class="img_social ico_sns_kt">
-        </span>카카오톡</a></li><li>
-        <a href="https://place.map.kakao.com/1168065433#none" class="link_sns" data-handler="kakaostory">
-        <span class="img_social ico_sns_ks">
-        </span>카카오스토리</a></li><li>
-        <a href="https://place.map.kakao.com/1168065433#none" class="link_sns" data-handler="facebook">
-        <span class="img_social ico_sns_fb">
-        </span>페이스북</a></li><li>
-        <a href="https://place.map.kakao.com/1168065433#none" class="link_sns" data-handler="twitter">
-        <span class="img_social ico_sns_tw">
-        </span>트위터</a></li><li>
-        <a href="https://place.map.kakao.com/1168065433#none" class="link_sns" data-handler="mail">
-        <span class="img_social ico_sns_mail">
-        </span>다음메일</a></li><li style="display: none">
-        <a href="https://place.map.kakao.com/1168065433#none" class="link_sns" data-handler="daumcafe">
-        <span class="img_social ico_sns_cafe">
-        </span>다음카페</a></li></ul>
-    <div class="copyUrl"><div class="sns_copyurl">
-    <a href="https://place.map.kakao.com/1168065433#none" class="link_copyurl">
-    <span class="screen_out">현재페이지 URL복사</span>
-    <span class="txt_url">https://place.map.kakao.com/1168065433</span>
-    <span class="txt_copy">URL복사</span>
-    </a>
-    </div></div>
-    <button class="btn_close"><span class="img_social ico_close">공유목록 닫기</span></button>
-    </div><div class="sns_comm_p copyurl_layer hide">
-  <div class="inner_copyurl">
-  <p class="desc_copyurl">주소가 복사되었습니다.<br>원하는곳에 붙여넣기(Ctrl+V)해주세요.</p>
-  <button class="btn_close"><span class="img_social ico_close">공유목록 닫기</span>
-  </button>
-  </div></div></div></div>
-                </li>
-            </ul>
-
-            <a href="https://place.map.kakao.com/1168065433#none" class="link_bookmark " data-fid="" data-logtarget="" data-logevent="info_pannel,favorite">
-                <span class="ico_comm ico_bookmark">즐겨찾기 추가</span>
-                <span class="ico_num ico_num"><span class="screen_out">나의 즐겨찾기 폴더 개수</span></span>
-            </a>
-
-        </div>
-    </div>
-
-</div>
-    <div data-viewid="basicInfo" data-root="" class="details_placeinfo">
-    <h3 class="tit_subject">상세정보</h3>
-    <div class="placeinfo_default">
-        <h4 class="tit_detail"><span class="ico_comm ico_address">위치</span></h4>
-        <div class="location_detail">
-            <span class="txt_address">{{ post.title }}</span>
-            <span class="txt_addrnum">지번<span class="bg_bar"></span>신림동 1432-119</span>
-        </div>
-    </div>
-        <div class="placeinfo_default">
-            <h4 class="tit_detail"><span class="ico_comm ico_operation">운영시간 안내</span></h4>
-            <div class="location_detail openhour_wrap"><!-- btn_more 클릭 했을 때 open_on 추가 -->
-                <div class="location_present">
-                            <strong class="tit_operation fst">휴무일
-                                        <span class="holiday">휴무일</span>
-                            </strong>
-                            <ul class="list_operation">
-                                    <li>
-                                        <span class="txt_operation">화요일
-
-                                        </span>
-                                            <a href="https://place.map.kakao.com/1168065433#none" class="btn_more" data-logevent="main_info,more_timeinfo"><span class="ico_comm ico_more">더보기</span></a>
-                                    </li>
-                            </ul>
+            <div data-viewid="basicInfo" data-root="" class="details_placeinfo">
+                <h3 class="tit_subject">상세정보</h3>
+                <div class="placeinfo_default">
+                    <h4 class="tit_detail"><span class="ico_comm ico_address">위치</span></h4>
+                    <div class="location_detail">
+                        <span><span class="color_g"> 식당위치</span><span
+                                class="txt_address">{{ post.user_address }}</span></span>
+                    </div>
                 </div>
-                    <div class="fold_floor" style="top: 43px;">
-                        <div class="inner_floor">
-                                    <strong class="tit_operation fst">영업시간</strong>
-
-                                        <ul class="list_operation">
-                                                <li>월,수,목,금,토,일 <span class="time_operation">11:00 ~ 22:00</span>
-
-                                                </li>
-                                        </ul>
-                                <strong class="tit_operation">휴무일</strong>
-                                <ul class="list_operation">
-                                        <li>화요일
-
-                                        </li>
-                                </ul>
-                            <a href="https://place.map.kakao.com/1168065433#none" class="btn_close">
-                                <span class="ico_comm ico_close">닫기</span>
-                            </a>
+                <div class="placeinfo_default placeinfo_contact">
+                    <h4 class="tit_detail"><span class="ico_comm ico_contact">연락처</span></h4>
+                    <div class="location_detail"><!-- btn_more 클릭 했을 때 open_on 추가 -->
+                        <div class="location_present">
+                            <span class="num_contact"><span class="color_g"> 대표번호&nbsp;&nbsp;</span><span
+                                    class="txt_contact">{{ post.user_number }}</span></span>
                         </div>
                     </div>
-            </div>
-        </div>
-        <div class="placeinfo_default placeinfo_contact">
-            <h4 class="tit_detail"><span class="ico_comm ico_contact">연락처</span></h4>
-            <div class="location_detail"><!-- btn_more 클릭 했을 때 open_on 추가 -->
-                <div class="location_present">
-                    <span class="num_contact"><span class="txt_contact">010-4053-1124</span><span class="color_g"> 대표번호</span></span>
+                </div>
+            <div class="placeinfo_default">
+                <h4 class="tit_detail"><span class="ico_comm ico_tag">내용</span></h4>
+                <div class="location_detail"></div>
+                <span class="num_contact"><span class="color_g"> &nbsp;&nbsp;식당소개&nbsp;&nbsp;&nbsp;</span><span
+                        class="txt_contact">{{ post.contents }}</span></span>
+                <div class="placeinfo_default placeinfo_contact">
+                <span><div class="location_detail">
+                            </div>
+                </div>
 
-                </div>
+            <div class="placeinfo_default">
+                <h4 class="tit_detail"><span class="ico_comm ico_delivery">카테고리</span></h4>
+                <div class="location_detail"></div>
+                <span class="num_contact"><span class="color_g"> &nbsp;&nbsp;카테고리&nbsp;&nbsp;&nbsp;</span><span
+                        class="txt_contact">{{ post.user_food }}</span></span>
+
             </div>
-        </div>
-        <div class="placeinfo_default">
-            <h4 class="tit_detail"><span class="ico_comm ico_tag">태그</span></h4>
-            <div class="location_detail">
-                <div class="txt_tag">
-                    <span class="tag_g">
-                            <a href="https://map.kakao.com/?q=%EA%B0%90%EC%84%B1%EC%B9%B4%ED%8E%98" class="link_tag" target="_blank" data-logtarget="" data-logevent="main_info,tag,감성카페">#감성카페</a>
-                            <a href="https://map.kakao.com/?q=%EB%8D%B0%EC%9D%B4%ED%8A%B8%EC%BD%94%EC%8A%A4" class="link_tag" target="_blank" data-logtarget="" data-logevent="main_info,tag,데이트코스">#데이트코스</a>
-                            <a href="https://map.kakao.com/?q=%EB%B9%88%ED%8B%B0%EC%A7%80%EB%B6%84%EC%9C%84%EA%B8%B0" class="link_tag" target="_blank" data-logtarget="" data-logevent="main_info,tag,빈티지분위기">#빈티지분위기</a>
-                    </span>
-                    <a href="https://place.map.kakao.com/1168065433#none" class="btn_more2"><span class="ico_comm ico_more">더보기</span></a>
-                </div>
-            </div>
-        </div>
-        <div class="placeinfo_default">
-            <h4 class="tit_detail"><span class="ico_comm ico_delivery">예약, 배달, 포장</span></h4>
-            <div class="location_detail">예약가능, 배달가능, 포장가능</div>
-        </div>
-        <div class="placeinfo_default placeinfo_facility">
-            <h4 class="tit_facility"><span class="ico_comm ico_installation"></span>시설정보</h4>
-            <ul class="list_facility">
+            <div class="placeinfo_default placeinfo_facility">
+                <h4 class="tit_facility"><span class="ico_comm ico_installation"></span>시설정보</h4>
+                <ul class="list_facility">
                     <li>
                         <span class="ico_comm ico_wifi"></span>
                         <span class="color_g">WIFI</span>
@@ -316,37 +338,42 @@ only screen and (min-resolution: 1.5dppx) {
                         <span class="ico_comm ico_nosmoking"></span>
                         <span class="color_g">흡연실<span class="screen_out">시설 없음</span></span>
                     </li>
-            </ul>
+                </ul>
+            </div>
+            <span class="info_revise">업데이트 <span class="date_revise">2021.11.10.</span> <span
+                    class="bg_bar">|</span> <a href="https://place.map.kakao.com/1168065433#" class="link_fiy"
+                                               data-fiytype="detail" data-logtarget=""
+                                               data-logevent="main_info,FIY">틀린정보 신고</a></span>
         </div>
-    <span class="info_revise">업데이트 <span class="date_revise">2021.11.10.</span> <span class="bg_bar">|</span> <a href="https://place.map.kakao.com/1168065433#" class="link_fiy" data-fiytype="detail" data-logtarget="" data-logevent="main_info,FIY">틀린정보 신고</a></span>
-</div>
-</div>
-
-
-
-
-
-
-        <div data-viewid="menuInfo" data-root="" class="cont_menu">
-    <div class="particular_head">
-        <h3 class="tit_subject">메뉴</h3>
-        <span class="txt_updated">업데이트 <span class="txt_date"> 2021.08.17.</span></span>
     </div>
+
+
+    <div data-viewid="menuInfo" data-root="" class="cont_menu">
+        <div class="particular_head">
+            <h3 class="tit_subject">메뉴</h3>
+            <span class="txt_updated">업데이트 <span class="txt_date"> 2021.08.17.</span></span>
+        </div>
         <div class="wrap_list">
             <div class="present_menu present_menu2">
-                    <a href="https://place.map.kakao.com/1168065433#none" data-type="menuboard" data-pidx="0" class="view_menu" style="background-image:url(&#39;//img1.kakaocdn.net/relay/local/R320x110/?fname=http%3A%2F%2Fpostfiles6.naver.net%2FMjAxOTA2MTlfMTMy%2FMDAxNTYwOTIzNTEyODYy.NupM8w8U3KAXRULoqjyA6F9EXhCuaVNLmEMb-cS2HHAg.iy09EEhlE0SxWWnE2o7YaDIeiSw8jcGwngqNuiLKPyUg.JPEG.parkvogue412%2FIMG_0959.JPG%3Ftype%3Dw966&#39;)" data-logtarget="" data-logevent="additional_info,menu,image1">
-                        <span class="frame_g"></span>
-                    </a>
-                    <a href="https://place.map.kakao.com/1168065433#none" data-type="menuboard" data-pidx="1" class="view_menu" style="background-image:url(&#39;//img1.kakaocdn.net/relay/local/R320x110/?fname=http%3A%2F%2Fpostfiles14.naver.net%2FMjAxOTAzMTVfNTkg%2FMDAxNTUyNjI1MDU4NDU4.kuSCNrhXUVWAEyk8HR6tazD1BbvpcGpK_hYCLRjkRfkg.t8pHrwx61CrbF9nJHxed4RKa5qzaeAfs2HM6K8rMheYg.JPEG.soulbless%2Foutput_3394171441.jpg%3Ftype%3Dw966&#39;)" data-logtarget="" data-logevent="additional_info,menu,image2">
+                <a href="https://place.map.kakao.com/1168065433#none" data-type="menuboard" data-pidx="0"
+                   class="view_menu"
+                   style="background-image:url(&#39;//img1.kakaocdn.net/relay/local/R320x110/?fname=http%3A%2F%2Fpostfiles6.naver.net%2FMjAxOTA2MTlfMTMy%2FMDAxNTYwOTIzNTEyODYy.NupM8w8U3KAXRULoqjyA6F9EXhCuaVNLmEMb-cS2HHAg.iy09EEhlE0SxWWnE2o7YaDIeiSw8jcGwngqNuiLKPyUg.JPEG.parkvogue412%2FIMG_0959.JPG%3Ftype%3Dw966&#39;)"
+                   data-logtarget="" data-logevent="additional_info,menu,image1">
+                    <span class="frame_g"></span>
+                </a>
+                <a href="https://place.map.kakao.com/1168065433#none" data-type="menuboard" data-pidx="1"
+                   class="view_menu"
+                   style="background-image:url(&#39;//img1.kakaocdn.net/relay/local/R320x110/?fname=http%3A%2F%2Fpostfiles14.naver.net%2FMjAxOTAzMTVfNTkg%2FMDAxNTUyNjI1MDU4NDU4.kuSCNrhXUVWAEyk8HR6tazD1BbvpcGpK_hYCLRjkRfkg.t8pHrwx61CrbF9nJHxed4RKa5qzaeAfs2HM6K8rMheYg.JPEG.soulbless%2Foutput_3394171441.jpg%3Ftype%3Dw966&#39;)"
+                   data-logtarget="" data-logevent="additional_info,menu,image2">
                                 <span class="menu_num">
                                     <span class="txt_num"><span class="ico_comm ico_menu"> 갯수: </span>9</span>
                                 </span>
-                        <span class="frame_g"></span>
-                    </a>
+                    <span class="frame_g"></span>
+                </a>
             </div>
         </div>
-    <strong class="screen_out">메뉴 목록</strong>
-    <ul class="list_menu" data-maxpage="1">
+        <strong class="screen_out">메뉴 목록</strong>
+        <ul class="list_menu" data-maxpage="1">
             <li class="nophoto_type menu_fst" data-page="1"><!-- 이미지가 있는 경우 -->
                 <div class="info_menu">
                     <em class="screen_out">명: </em>
@@ -387,24 +414,11 @@ only screen and (min-resolution: 1.5dppx) {
 
                 </div>
             </li>
-    </ul>
-</div>
+        </ul>
+    </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div data-viewid="visitor" data-root="" class="cont_visitor">
+    <div data-viewid="visitor" data-root="" class="cont_visitor">
         <h3 class="tit_subject">방문자 데이터</h3>
         <p class="txt_visitor">카카오의 장소 기반 빅데이터를 분석한 정보입니다. (2022.01.18. 업데이트)</p>
         <div class="popular_statistics">
@@ -468,169 +482,297 @@ only screen and (min-resolution: 1.5dppx) {
     </div>
 
 
-        <div data-viewid="photoSection" data-root="" class="cont_photo">
-    <div class="particular_head">
-        <h3 class="tit_subject">사진</h3>
+    <div data-viewid="photoSection" data-root="" class="cont_photo">
+        <div class="particular_head">
+            <h3 class="tit_subject">사진</h3>
 
-        <div class="wrap_btn">
+            <div class="wrap_btn">
+            </div>
         </div>
-    </div>
         <div class="photo_area">
             <ul class="list_photo photo_type5">
-        <li class="size_l">
-            <!-- 사진 2장 부터 클래스 size_l 추가 -->
-            <a href="https://place.map.kakao.com/1168065433#none" class="link_photo" data-pidx="0" style="background-image:url(&#39;//img1.kakaocdn.net/relay/local/R640x320/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fplace%2F5C8D001C15634B99A39D9335E81CD99B&#39;)" data-logtarget="" data-logevent="photo,photo_view">
-                <span class="frame_g"></span>
-            </a>
-        </li>
-        <li class="">
-            <!-- 사진 2장 부터 클래스 size_l 추가 -->
-            <a href="https://place.map.kakao.com/1168065433#none" class="link_photo" data-pidx="1" style="background-image:url(&#39;//img1.kakaocdn.net/relay/local/R640x320/?fname=http%3A%2F%2Ft1.kakaocdn.net%2Ffiy_reboot%2Fplace%2F84D826CD799549E580C5DF6CD01C9638&#39;)" data-logtarget="" data-logevent="photo,photo_view">
-                <span class="frame_g"></span>
-            </a>
-        </li>
-        <li class="">
-            <!-- 사진 2장 부터 클래스 size_l 추가 -->
-            <a href="https://place.map.kakao.com/1168065433#none" class="link_photo" data-pidx="2" style="background-image:url(&#39;//img1.kakaocdn.net/relay/local/R640x320/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flocal%2FkakaomapPhoto%2Freview%2F4406e4d756785149896a4123e3b19d2c1d0ff8d9%3Foriginal&#39;)" data-logtarget="" data-logevent="photo,photo_view">
-                <span class="frame_g"></span>
-            </a>
-        </li>
-        <li class="">
-            <!-- 사진 2장 부터 클래스 size_l 추가 -->
-            <a href="https://place.map.kakao.com/1168065433#none" class="link_photo" data-pidx="3" style="background-image:url(&#39;//img1.kakaocdn.net/relay/local/R640x320/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flocal%2FkakaomapPhoto%2Freview%2Fc2b853667a387ae494c6d40b8fada921d38ac5ec%3Foriginal&#39;)" data-logtarget="" data-logevent="photo,photo_view">
-                <span class="frame_g"></span>
-            </a>
-        </li>
-        <li class="">
-            <!-- 사진 2장 부터 클래스 size_l 추가 -->
-            <a href="https://place.map.kakao.com/1168065433#none" class="link_photo" style="background-image:url(&#39;//img1.kakaocdn.net/relay/local/R640x320/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flocal%2FkakaomapPhoto%2Freview%2F879518005cab152e4573bf5f9d8869e0130f4666%3Foriginal&#39;)" data-logtarget="" data-logevent="photo,photo_view">
+                <li class="size_l">
+                    <!-- 사진 2장 부터 클래스 size_l 추가 -->
+                    <a href="https://place.map.kakao.com/1168065433#none" class="link_photo" data-pidx="0"
+                       style="background-image:url(&#39;//img1.kakaocdn.net/relay/local/R640x320/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fplace%2F5C8D001C15634B99A39D9335E81CD99B&#39;)"
+                       data-logtarget="" data-logevent="photo,photo_view">
+                        <span class="frame_g"></span>
+                    </a>
+                </li>
+                <li class="">
+                    <!-- 사진 2장 부터 클래스 size_l 추가 -->
+                    <a href="https://place.map.kakao.com/1168065433#none" class="link_photo" data-pidx="1"
+                       style="background-image:url(&#39;//img1.kakaocdn.net/relay/local/R640x320/?fname=http%3A%2F%2Ft1.kakaocdn.net%2Ffiy_reboot%2Fplace%2F84D826CD799549E580C5DF6CD01C9638&#39;)"
+                       data-logtarget="" data-logevent="photo,photo_view">
+                        <span class="frame_g"></span>
+                    </a>
+                </li>
+                <li class="">
+                    <!-- 사진 2장 부터 클래스 size_l 추가 -->
+                    <a href="https://place.map.kakao.com/1168065433#none" class="link_photo" data-pidx="2"
+                       style="background-image:url(&#39;//img1.kakaocdn.net/relay/local/R640x320/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flocal%2FkakaomapPhoto%2Freview%2F4406e4d756785149896a4123e3b19d2c1d0ff8d9%3Foriginal&#39;)"
+                       data-logtarget="" data-logevent="photo,photo_view">
+                        <span class="frame_g"></span>
+                    </a>
+                </li>
+                <li class="">
+                    <!-- 사진 2장 부터 클래스 size_l 추가 -->
+                    <a href="https://place.map.kakao.com/1168065433#none" class="link_photo" data-pidx="3"
+                       style="background-image:url(&#39;//img1.kakaocdn.net/relay/local/R640x320/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flocal%2FkakaomapPhoto%2Freview%2Fc2b853667a387ae494c6d40b8fada921d38ac5ec%3Foriginal&#39;)"
+                       data-logtarget="" data-logevent="photo,photo_view">
+                        <span class="frame_g"></span>
+                    </a>
+                </li>
+                <li class="">
+                    <!-- 사진 2장 부터 클래스 size_l 추가 -->
+                    <a href="https://place.map.kakao.com/1168065433#none" class="link_photo"
+                       style="background-image:url(&#39;//img1.kakaocdn.net/relay/local/R640x320/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flocal%2FkakaomapPhoto%2Freview%2F879518005cab152e4573bf5f9d8869e0130f4666%3Foriginal&#39;)"
+                       data-logtarget="" data-logevent="photo,photo_view">
                         <span class="more_photo">
                             <span class="num_photo">+2324</span>
                         </span>
-                <span class="frame_g"></span>
-            </a>
-        </li>
-</ul>
-
-        </div>
-            <strong class="screen_out">분류</strong>
-            <ul class="list_category">
-                    <li class="on">
-                        <a href="https://place.map.kakao.com/1168065433#none" class="link_tag" data-category="all" data-logtarget="" data-logevent="photo,tag,전체">
-                            전체
-                        </a>
-                    </li><!-- 선택시 클래스 on 추가 -->
-                    <li>
-                        <a href="https://place.map.kakao.com/1168065433#none" class="link_tag" data-category="음식" data-logtarget="" data-logevent="photo,tag,음식">
-
-                            #음식
-                        </a>
-                    </li><!-- 선택시 클래스 on 추가 -->
-                    <li>
-                        <a href="https://place.map.kakao.com/1168065433#none" class="link_tag link_tag2" data-category="메뉴판" data-logtarget="" data-logevent="photo,tag,메뉴판">
-
-                            #메뉴판
-                        </a>
-                    </li><!-- 선택시 클래스 on 추가 -->
-                    <li>
-                        <a href="https://place.map.kakao.com/1168065433#none" class="link_tag" data-category="전경" data-logtarget="" data-logevent="photo,tag,전경">
-
-                            #전경
-                        </a>
-                    </li><!-- 선택시 클래스 on 추가 -->
-                    <li>
-                        <a href="https://place.map.kakao.com/1168065433#none" class="link_tag" data-category="실내" data-logtarget="" data-logevent="photo,tag,실내">
-
-                            #실내
-                        </a>
-                    </li><!-- 선택시 클래스 on 추가 -->
-                    <li>
-                        <a href="https://place.map.kakao.com/1168065433#none" class="link_tag" data-category="기타" data-logtarget="" data-logevent="photo,tag,기타">
-
-                            #기타
-                        </a>
-                    </li><!-- 선택시 클래스 on 추가 -->
+                        <span class="frame_g"></span>
+                    </a>
+                </li>
             </ul>
-</div>
 
-{% include 'hplace/hplace_comment.html' %}
+        </div>
+        <strong class="screen_out">분류</strong>
+        <ul class="list_category">
+            <li class="on">
+                <a href="https://place.map.kakao.com/1168065433#none" class="link_tag" data-category="all"
+                   data-logtarget="" data-logevent="photo,tag,전체">
+                    전체
+                </a>
+            </li><!-- 선택시 클래스 on 추가 -->
+            <li>
+                <a href="https://place.map.kakao.com/1168065433#none" class="link_tag" data-category="음식"
+                   data-logtarget="" data-logevent="photo,tag,음식">
 
+                    #음식
+                </a>
+            </li><!-- 선택시 클래스 on 추가 -->
+            <li>
+                <a href="https://place.map.kakao.com/1168065433#none" class="link_tag link_tag2" data-category="메뉴판"
+                   data-logtarget="" data-logevent="photo,tag,메뉴판">
 
-        <div data-viewid="findway" data-root="" class="cont_findway">
-    <h3 class="tit_subject">찾아가는 길</h3>
-    <div class="findway_map">
-        <h4 class="screen_out">지도 보기</h4>
-        <div class="view_map" id="map" style="overflow: hidden; background: url(&quot;https://t1.daumcdn.net/mapjsapi/images/bg_tile.png&quot;);"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; touch-action: none; cursor: url(&quot;https://t1.daumcdn.net/mapjsapi/images/cursor/openhand.cur.ico&quot;) 7 5, url(&quot;https://t1.daumcdn.net/mapjsapi/images/cursor/openhand.cur.ico&quot;), default;"><div style="position: absolute; left: 30px; top: -35px;"><div style="position: absolute; z-index: 0;"></div><div style="position: absolute; z-index: 1; left: 0px; top: 0px;"><img src="./폼앤노말 _ 카카오맵_files/435.png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -131px; top: 201px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./폼앤노말 _ 카카오맵_files/436.png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 125px; top: 201px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./폼앤노말 _ 카카오맵_files/437.png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 381px; top: 201px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./폼앤노말 _ 카카오맵_files/438.png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 637px; top: 201px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./폼앤노말 _ 카카오맵_files/435(1).png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -131px; top: -55px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./폼앤노말 _ 카카오맵_files/436(1).png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 125px; top: -55px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./폼앤노말 _ 카카오맵_files/437(1).png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 381px; top: -55px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./폼앤노말 _ 카카오맵_files/438(1).png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 637px; top: -55px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./폼앤노말 _ 카카오맵_files/435(2).png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -131px; top: -311px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./폼앤노말 _ 카카오맵_files/436(2).png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 125px; top: -311px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./폼앤노말 _ 카카오맵_files/437(2).png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 381px; top: -311px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./폼앤노말 _ 카카오맵_files/438(2).png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 637px; top: -311px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"></div><div style="position: absolute; z-index: 1;"></div><div style="width: 638px; height: 258px; position: absolute; z-index: 1;"></div><div style="position: absolute; z-index: 1;"><svg version="1.1" style="stroke: none; stroke-dashoffset: 0.5; stroke-linejoin: round; fill: none; transform: translateZ(0px); position: absolute; left: -1306px; top: -481px; width: 3190px; height: 1290px;" viewBox="0 0 3190 1290"><defs></defs></svg></div><div style="position: absolute; z-index: 1; width: 100%; height: 0px; transform: translateZ(0px);"><div style="position: absolute; margin: -48px 0px 0px -17px; z-index: 999; left: 319px; top: 129px;"><img draggable="false" src="./폼앤노말 _ 카카오맵_files/ico_findway.png" alt="" title="" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 66px, 50px, 30px); top: 0px; left: -30px; width: 70px; height: 70px;"></div><div style="position: absolute; margin: -17px 0px 0px -15px; z-index: 0; left: 370px; top: 81px;"><img draggable="false" src="./폼앤노말 _ 카카오맵_files/ico_findway.png" alt="" title="" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(30px, 30px, 60px, 0px); top: -30px; left: 0px; width: 70px; height: 70px;"></div><div style="position: absolute; margin: -17px 0px 0px -15px; z-index: 0; left: 394px; top: 113px;"><img draggable="false" src="./폼앤노말 _ 카카오맵_files/ico_findway.png" alt="" title="" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(30px, 30px, 60px, 0px); top: -30px; left: 0px; width: 70px; height: 70px;"></div><div style="position: absolute; margin: -17px 0px 0px -15px; z-index: 0; left: 335px; top: 214px;"><img draggable="false" src="./폼앤노말 _ 카카오맵_files/ico_findway.png" alt="" title="" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(30px, 30px, 60px, 0px); top: -30px; left: 0px; width: 70px; height: 70px;"></div><div style="position: absolute; margin: -17px 0px 0px -15px; z-index: 0; left: 401px; top: 158px;"><img draggable="false" src="./폼앤노말 _ 카카오맵_files/ico_findway.png" alt="" title="" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(30px, 30px, 60px, 0px); top: -30px; left: 0px; width: 70px; height: 70px;"></div><div style="position: absolute; margin: -17px 0px 0px -15px; z-index: 0; left: 318px; top: 217px;"><img draggable="false" src="./폼앤노말 _ 카카오맵_files/ico_findway.png" alt="" title="" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(30px, 30px, 60px, 0px); top: -30px; left: 0px; width: 70px; height: 70px;"></div><div style="position: absolute; margin: -17px 0px 0px -15px; z-index: 0; left: 327px; top: 235px;"><img draggable="false" src="./폼앤노말 _ 카카오맵_files/ico_findway.png" alt="" title="" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(30px, 30px, 60px, 0px); top: -30px; left: 0px; width: 70px; height: 70px;"></div><div style="position: absolute; margin: -17px 0px 0px -15px; z-index: 0; left: 365px; top: 229px;"><img draggable="false" src="./폼앤노말 _ 카카오맵_files/ico_findway.png" alt="" title="" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(30px, 30px, 60px, 0px); top: -30px; left: 0px; width: 70px; height: 70px;"></div><div style="position: absolute; margin: -17px 0px 0px -15px; z-index: 0; left: 293px; top: 241px;"><img draggable="false" src="./폼앤노말 _ 카카오맵_files/ico_findway.png" alt="" title="" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(30px, 30px, 60px, 0px); top: -30px; left: 0px; width: 70px; height: 70px;"></div><div style="position: absolute; margin: -17px 0px 0px -15px; z-index: 0; left: 275px; top: 246px;"><img draggable="false" src="./폼앤노말 _ 카카오맵_files/ico_findway.png" alt="" title="" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(30px, 30px, 60px, 0px); top: -30px; left: 0px; width: 70px; height: 70px;"></div><div style="position: absolute; margin: -17px 0px 0px -15px; z-index: 0; left: 178px; top: 170px;"><img draggable="false" src="./폼앤노말 _ 카카오맵_files/ico_findway.png" alt="" title="" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(30px, 30px, 60px, 0px); top: -30px; left: 0px; width: 70px; height: 70px;"></div></div></div></div><div style="position: absolute; cursor: default; z-index: 1; margin: 0px 6px; height: 19px; line-height: 14px; bottom: 0px; color: rgb(0, 0, 0); right: 0px;"><div style="color: rgb(0, 0, 0); text-align: center; font-size: 10px; float: right;"><div style="float: left; margin: 2px 3px 0px 4px; height: 6px; transition: width 0.1s ease 0s; border-top: none rgb(0, 0, 0); border-right: 2px solid rgb(0, 0, 0); border-bottom: 2px solid rgb(0, 0, 0); border-left: 2px solid rgb(0, 0, 0); border-image: initial; width: 46px;"></div><div style="float: left; margin: 0px 4px 0px 0px; font-family: AppleSDGothicNeo-Regular, 돋움, dotum, sans-serif; font-weight: bold; color: rgb(0, 0, 0);">100m</div></div><div style="margin: 0px 4px; float: right;"><a target="_blank" href="http://map.kakao.com/" title="Kakao 지도로 보시려면 클릭하세요." style="float: left; width: 32px; height: 10px;"><img src="./폼앤노말 _ 카카오맵_files/m_bi_b.png" alt="Kakao 지도로 이동" style="float: left; width: 32px; height: 10px; border: none;"></a><div style="font: 11px / 11px Arial, Tahoma, Dotum, sans-serif; float: left;"></div></div></div><div style="cursor: auto; position: absolute; z-index: 2; left: 0px; top: 0px;"></div></div><!-- 지도 영역 입니다. -->
-        <strong class="screen_out">지도 보기 탭 메뉴</strong>
-        <ul class="tab_map">
-            <li class="on"><a href="https://place.map.kakao.com/1168065433#none" class="link_tab link_mapview" data-logtarget="" data-logevent="waytogo,2D_view">지도뷰</a></li>
-            <li><a href="https://place.map.kakao.com/1168065433#none" class="link_tab link_skyview" data-logtarget="" data-logevent="waytogo,sky_view">스카이뷰</a></li>
+                    #메뉴판
+                </a>
+            </li><!-- 선택시 클래스 on 추가 -->
+            <li>
+                <a href="https://place.map.kakao.com/1168065433#none" class="link_tag" data-category="전경"
+                   data-logtarget="" data-logevent="photo,tag,전경">
+
+                    #전경
+                </a>
+            </li><!-- 선택시 클래스 on 추가 -->
+            <li>
+                <a href="https://place.map.kakao.com/1168065433#none" class="link_tag" data-category="실내"
+                   data-logtarget="" data-logevent="photo,tag,실내">
+
+                    #실내
+                </a>
+            </li><!-- 선택시 클래스 on 추가 -->
+            <li>
+                <a href="https://place.map.kakao.com/1168065433#none" class="link_tag" data-category="기타"
+                   data-logtarget="" data-logevent="photo,tag,기타">
+
+                    #기타
+                </a>
+            </li><!-- 선택시 클래스 on 추가 -->
         </ul>
-        <div class="map_control">
-            <div class="bg_control bg_zoomin link_control">
-                <a href="https://place.map.kakao.com/1168065433#none" class="ico_comm ico_zoomin" data-logtarget="" data-logevent="waytogo,zoomin">확대하기</a>
+    </div>
+
+    {% include 'hplace/hplace_comment.html' %}
+
+
+    <div data-viewid="findway" data-root="" class="cont_findway">
+        <h3 class="tit_subject">찾아가는 길</h3>
+        <div class="findway_map">
+            <h4 class="screen_out">지도 보기</h4>
+            <div class="view_map" id="map"
+                 style="overflow: hidden; background: url(&quot;https://t1.daumcdn.net/mapjsapi/images/bg_tile.png&quot;);">
+                <div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; touch-action: none; cursor: url(&quot;https://t1.daumcdn.net/mapjsapi/images/cursor/openhand.cur.ico&quot;) 7 5, url(&quot;https://t1.daumcdn.net/mapjsapi/images/cursor/openhand.cur.ico&quot;), default;">
+                    <div style="position: absolute; left: 30px; top: -35px;">
+                        <div style="position: absolute; z-index: 0;"></div>
+                        <div style="position: absolute; z-index: 1; left: 0px; top: 0px;"><img
+                                src="./폼앤노말 _ 카카오맵_files/435.png" alt="" draggable="false"
+                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -131px; top: 201px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                src="./폼앤노말 _ 카카오맵_files/436.png" alt="" draggable="false"
+                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 125px; top: 201px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                src="./폼앤노말 _ 카카오맵_files/437.png" alt="" draggable="false"
+                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 381px; top: 201px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                src="./폼앤노말 _ 카카오맵_files/438.png" alt="" draggable="false"
+                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 637px; top: 201px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                src="./폼앤노말 _ 카카오맵_files/435(1).png" alt="" draggable="false"
+                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -131px; top: -55px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                src="./폼앤노말 _ 카카오맵_files/436(1).png" alt="" draggable="false"
+                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 125px; top: -55px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                src="./폼앤노말 _ 카카오맵_files/437(1).png" alt="" draggable="false"
+                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 381px; top: -55px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                src="./폼앤노말 _ 카카오맵_files/438(1).png" alt="" draggable="false"
+                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 637px; top: -55px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                src="./폼앤노말 _ 카카오맵_files/435(2).png" alt="" draggable="false"
+                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -131px; top: -311px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                src="./폼앤노말 _ 카카오맵_files/436(2).png" alt="" draggable="false"
+                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 125px; top: -311px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                src="./폼앤노말 _ 카카오맵_files/437(2).png" alt="" draggable="false"
+                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 381px; top: -311px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img
+                                src="./폼앤노말 _ 카카오맵_files/438(2).png" alt="" draggable="false"
+                                style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 637px; top: -311px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;">
+                        </div>
+                        <div style="position: absolute; z-index: 1;"></div>
+                        <div style="width: 638px; height: 258px; position: absolute; z-index: 1;"></div>
+                        <div style="position: absolute; z-index: 1;">
+                            <svg version="1.1"
+                                 style="stroke: none; stroke-dashoffset: 0.5; stroke-linejoin: round; fill: none; transform: translateZ(0px); position: absolute; left: -1306px; top: -481px; width: 3190px; height: 1290px;"
+                                 viewBox="0 0 3190 1290">
+                                <defs></defs>
+                            </svg>
+                        </div>
+                        <div style="position: absolute; z-index: 1; width: 100%; height: 0px; transform: translateZ(0px);">
+                            <div style="position: absolute; margin: -48px 0px 0px -17px; z-index: 999; left: 319px; top: 129px;">
+                                <img draggable="false" src="./폼앤노말 _ 카카오맵_files/ico_findway.png" alt="" title=""
+                                     style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 66px, 50px, 30px); top: 0px; left: -30px; width: 70px; height: 70px;">
+                            </div>
+                            <div style="position: absolute; margin: -17px 0px 0px -15px; z-index: 0; left: 370px; top: 81px;">
+                                <img draggable="false" src="./폼앤노말 _ 카카오맵_files/ico_findway.png" alt="" title=""
+                                     style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(30px, 30px, 60px, 0px); top: -30px; left: 0px; width: 70px; height: 70px;">
+                            </div>
+                            <div style="position: absolute; margin: -17px 0px 0px -15px; z-index: 0; left: 394px; top: 113px;">
+                                <img draggable="false" src="./폼앤노말 _ 카카오맵_files/ico_findway.png" alt="" title=""
+                                     style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(30px, 30px, 60px, 0px); top: -30px; left: 0px; width: 70px; height: 70px;">
+                            </div>
+                            <div style="position: absolute; margin: -17px 0px 0px -15px; z-index: 0; left: 335px; top: 214px;">
+                                <img draggable="false" src="./폼앤노말 _ 카카오맵_files/ico_findway.png" alt="" title=""
+                                     style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(30px, 30px, 60px, 0px); top: -30px; left: 0px; width: 70px; height: 70px;">
+                            </div>
+                            <div style="position: absolute; margin: -17px 0px 0px -15px; z-index: 0; left: 401px; top: 158px;">
+                                <img draggable="false" src="./폼앤노말 _ 카카오맵_files/ico_findway.png" alt="" title=""
+                                     style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(30px, 30px, 60px, 0px); top: -30px; left: 0px; width: 70px; height: 70px;">
+                            </div>
+                            <div style="position: absolute; margin: -17px 0px 0px -15px; z-index: 0; left: 318px; top: 217px;">
+                                <img draggable="false" src="./폼앤노말 _ 카카오맵_files/ico_findway.png" alt="" title=""
+                                     style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(30px, 30px, 60px, 0px); top: -30px; left: 0px; width: 70px; height: 70px;">
+                            </div>
+                            <div style="position: absolute; margin: -17px 0px 0px -15px; z-index: 0; left: 327px; top: 235px;">
+                                <img draggable="false" src="./폼앤노말 _ 카카오맵_files/ico_findway.png" alt="" title=""
+                                     style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(30px, 30px, 60px, 0px); top: -30px; left: 0px; width: 70px; height: 70px;">
+                            </div>
+                            <div style="position: absolute; margin: -17px 0px 0px -15px; z-index: 0; left: 365px; top: 229px;">
+                                <img draggable="false" src="./폼앤노말 _ 카카오맵_files/ico_findway.png" alt="" title=""
+                                     style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(30px, 30px, 60px, 0px); top: -30px; left: 0px; width: 70px; height: 70px;">
+                            </div>
+                            <div style="position: absolute; margin: -17px 0px 0px -15px; z-index: 0; left: 293px; top: 241px;">
+                                <img draggable="false" src="./폼앤노말 _ 카카오맵_files/ico_findway.png" alt="" title=""
+                                     style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(30px, 30px, 60px, 0px); top: -30px; left: 0px; width: 70px; height: 70px;">
+                            </div>
+                            <div style="position: absolute; margin: -17px 0px 0px -15px; z-index: 0; left: 275px; top: 246px;">
+                                <img draggable="false" src="./폼앤노말 _ 카카오맵_files/ico_findway.png" alt="" title=""
+                                     style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(30px, 30px, 60px, 0px); top: -30px; left: 0px; width: 70px; height: 70px;">
+                            </div>
+                            <div style="position: absolute; margin: -17px 0px 0px -15px; z-index: 0; left: 178px; top: 170px;">
+                                <img draggable="false" src="./폼앤노말 _ 카카오맵_files/ico_findway.png" alt="" title=""
+                                     style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(30px, 30px, 60px, 0px); top: -30px; left: 0px; width: 70px; height: 70px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="position: absolute; cursor: default; z-index: 1; margin: 0px 6px; height: 19px; line-height: 14px; bottom: 0px; color: rgb(0, 0, 0); right: 0px;">
+                    <div style="color: rgb(0, 0, 0); text-align: center; font-size: 10px; float: right;">
+                        <div style="float: left; margin: 2px 3px 0px 4px; height: 6px; transition: width 0.1s ease 0s; border-top: none rgb(0, 0, 0); border-right: 2px solid rgb(0, 0, 0); border-bottom: 2px solid rgb(0, 0, 0); border-left: 2px solid rgb(0, 0, 0); border-image: initial; width: 46px;"></div>
+                        <div style="float: left; margin: 0px 4px 0px 0px; font-family: AppleSDGothicNeo-Regular, 돋움, dotum, sans-serif; font-weight: bold; color: rgb(0, 0, 0);">
+                            100m
+                        </div>
+                    </div>
+                    <div style="margin: 0px 4px; float: right;"><a target="_blank" href="http://map.kakao.com/"
+                                                                   title="Kakao 지도로 보시려면 클릭하세요."
+                                                                   style="float: left; width: 32px; height: 10px;"><img
+                            src="./폼앤노말 _ 카카오맵_files/m_bi_b.png" alt="Kakao 지도로 이동"
+                            style="float: left; width: 32px; height: 10px; border: none;"></a>
+                        <div style="font: 11px / 11px Arial, Tahoma, Dotum, sans-serif; float: left;"></div>
+                    </div>
+                </div>
+                <div style="cursor: auto; position: absolute; z-index: 2; left: 0px; top: 0px;"></div>
+            </div><!-- 지도 영역 입니다. -->
+            <strong class="screen_out">지도 보기 탭 메뉴</strong>
+            <ul class="tab_map">
+                <li class="on"><a href="https://place.map.kakao.com/1168065433#none" class="link_tab link_mapview"
+                                  data-logtarget="" data-logevent="waytogo,2D_view">지도뷰</a></li>
+                <li><a href="https://place.map.kakao.com/1168065433#none" class="link_tab link_skyview"
+                       data-logtarget="" data-logevent="waytogo,sky_view">스카이뷰</a></li>
+            </ul>
+            <div class="map_control">
+                <div class="bg_control bg_zoomin link_control">
+                    <a href="https://place.map.kakao.com/1168065433#none" class="ico_comm ico_zoomin"
+                       data-logtarget="" data-logevent="waytogo,zoomin">확대하기</a>
+                </div>
+                <div class="bg_control bg_zoomout link_control">
+                    <a href="https://place.map.kakao.com/1168065433#none" class="ico_comm ico_zoomout"
+                       data-logtarget="" data-logevent="waytogo,zoomout">축소하기</a>
+                </div>
+                <div class="bg_control bg_refresh link_control">
+                    <a href="https://place.map.kakao.com/1168065433#none" class="ico_comm ico_refresh"
+                       data-logtarget="" data-logevent="waytogo,refresh">새로고침</a>
+                </div>
+                <div class="bg_control bg_full">
+                    <a href="https://map.kakao.com/?urlX=484050&amp;urlY=1107323&amp;urlLevel=3&amp;itemId=1168065433&amp;q=%ED%8F%BC%EC%95%A4%EB%85%B8%EB%A7%90&amp;map_type=TYPE_MAP"
+                       target="_blank" class="ico_comm ico_full" data-logtarget=""
+                       data-logevent="waytogo,largeview">전체화면</a>
+                </div>
             </div>
-            <div class="bg_control bg_zoomout link_control">
-                <a href="https://place.map.kakao.com/1168065433#none" class="ico_comm ico_zoomout" data-logtarget="" data-logevent="waytogo,zoomout">축소하기</a>
+            <!--
+            <div class="map_control">
+                <a href="#none" class="link_control" data-logtarget data-logevent="waytogo,zoomin"><span class="ico_comm ico_zoomin">확대하기</span></a>
+                <a href="#none" class="link_control" data-logtarget data-logevent="waytogo,zoomout"><span class="ico_comm ico_zoomout">축소하기</span></a>
+                <a href="#none" class="link_control" data-logtarget data-logevent="waytogo,refresh"><span class="ico_comm ico_refresh">새로고침</span></a>
             </div>
-            <div class="bg_control bg_refresh link_control">
-                <a href="https://place.map.kakao.com/1168065433#none" class="ico_comm ico_refresh" data-logtarget="" data-logevent="waytogo,refresh">새로고침</a>
-            </div>
-            <div class="bg_control bg_full">
-                <a href="https://map.kakao.com/?urlX=484050&amp;urlY=1107323&amp;urlLevel=3&amp;itemId=1168065433&amp;q=%ED%8F%BC%EC%95%A4%EB%85%B8%EB%A7%90&amp;map_type=TYPE_MAP" target="_blank" class="ico_comm ico_full" data-logtarget="" data-logevent="waytogo,largeview">전체화면</a>
+            <a href="https://map.kakao.com?urlX=484050&urlY=1107323&urlLevel=3&itemId=1168065433&q=%ED%8F%BC%EC%95%A4%EB%85%B8%EB%A7%90&map_type=TYPE_MAP" target="_blank" class="link_full" data-logtarget data-logevent="waytogo,largeview"><span class="ico_comm ico_full">전체화면</span></a>
+            -->
+        </div>
+
+
+    </div>
+    <div id="photoList" class="map_layer hide"></div>
+    <div id="roughMap" class="map_layer hide">
+        <iframe data-id="frame" frameborder="0" border="0" class="frame"
+                src="./폼앤노말 _ 카카오맵_files/saved_resource.html" style="width: 1017px; height: 693px;"></iframe>
+    </div>
+
+    <div data-viewid="fiyLayer" data-root="" id="fiyModalLayer" style="display:none">
+        <div class="fiy_wrap">
+            <iframe frameborder="0" border="0" class="fiyFrame"
+                    src="./폼앤노말 _ 카카오맵_files/saved_resource(4).html"></iframe>
+        </div>
+        <div class="modal_bg"></div>
+    </div>
+    <div data-viewid="fiyLoginLayer" data-root="" class="fiy_layer" style="display:none">
+        <div class="inner_fiy_layer">
+            <div class="layer_head"><strong class="tit_fiy">정보수정</strong></div>
+            <div class="layer_body">
+                <p class="desc_fiy">로그인을 하시면<br>요청 결과를 안내해드립니다</p>
+                <div class="wrap_btn">
+                    <a href="https://place.map.kakao.com/1168065433#none" class="btn_fiy btn_kakao"><span
+                            class="inner_btn">카카오계정으로 로그인</span></a>
+                </div>
+                <button type="button" class="btn_fiy2">로그인 하지 않습니다</button>
             </div>
         </div>
-        <!--
-        <div class="map_control">
-            <a href="#none" class="link_control" data-logtarget data-logevent="waytogo,zoomin"><span class="ico_comm ico_zoomin">확대하기</span></a>
-            <a href="#none" class="link_control" data-logtarget data-logevent="waytogo,zoomout"><span class="ico_comm ico_zoomout">축소하기</span></a>
-            <a href="#none" class="link_control" data-logtarget data-logevent="waytogo,refresh"><span class="ico_comm ico_refresh">새로고침</span></a>
-        </div>
-        <a href="https://map.kakao.com?urlX=484050&urlY=1107323&urlLevel=3&itemId=1168065433&q=%ED%8F%BC%EC%95%A4%EB%85%B8%EB%A7%90&map_type=TYPE_MAP" target="_blank" class="link_full" data-logtarget data-logevent="waytogo,largeview"><span class="ico_comm ico_full">전체화면</span></a>
-        -->
-    </div>
-
-
-
-
-</div>
-        <div id="photoList" class="map_layer hide"></div>
-        <div id="roughMap" class="map_layer hide">
-    <iframe data-id="frame" frameborder="0" border="0" class="frame" src="./폼앤노말 _ 카카오맵_files/saved_resource.html" style="width: 1017px; height: 693px;"></iframe>
-</div>
-
-        <div data-viewid="fiyLayer" data-root="" id="fiyModalLayer" style="display:none">
-    <div class="fiy_wrap">
-        <iframe frameborder="0" border="0" class="fiyFrame" src="./폼앤노말 _ 카카오맵_files/saved_resource(4).html"></iframe>
-    </div>
-    <div class="modal_bg"></div>
-</div>
-        <div data-viewid="fiyLoginLayer" data-root="" class="fiy_layer" style="display:none">
-    <div class="inner_fiy_layer">
-        <div class="layer_head"><strong class="tit_fiy">정보수정</strong></div>
-        <div class="layer_body">
-            <p class="desc_fiy">로그인을 하시면<br>요청 결과를 안내해드립니다</p>
-            <div class="wrap_btn">
-                <a href="https://place.map.kakao.com/1168065433#none" class="btn_fiy btn_kakao"><span class="inner_btn">카카오계정으로 로그인</span></a>
-            </div>
-            <button type="button" class="btn_fiy2">로그인 하지 않습니다</button>
-        </div>
     </div>
 </div>
-    </div>
 </div>
 <hr class="hide">
 <!-- 스크롤이 내려 왔을 때 클래스 lbar_on  -->
-        <div id="wrapMinidaum"></div>
+<div id="wrapMinidaum"></div>
+</div>
+<div id="daumWrap" style="display:none;">
+    <div id="daumContent">
+        <div id="shareContainer"></div>
     </div>
-    <div id="daumWrap" style="display:none;">
-        <div id="daumContent">
-            <div id="shareContainer"></div>
-        </div>
-    </div>
+</div>
 
-    <script type="{% static 'js/socialshare_pc-2.4.3.js' %}"></script>
-    <script>
+<script type="{% static 'js/socialshare_pc-2.4.3.js' %}"></script>
+<script>
         window.ENV = 'PROD';
         window.browserversion = 'chrome97';
 
@@ -643,26 +785,26 @@ only screen and (min-resolution: 1.5dppx) {
         } catch(e) {}
         window.placeRestrictType = 'NONE'
         window._cp = '';
-    </script>
 
 
-
-            <script type="text/javascript" src="{% static 'js/hplace/Chart.min.js' %}"></script>
-
+</script>
 
 
-    <!--
-    <script>
-        var minidaum_options = {
-            disableTracker: true, // 미니다음에서 tiara 사용안함
-            bgType: "white",
-            enableLogoutRetun: true,
-            returnUrl: '',
-            disableHotissue: true,
-            disableLogo:true,
-            enableShield: false
-        };
-    </script>
-    <script async src="//go.daum.net/jsa_minidaum_pc.daum" charset="utf-8" type="text/javascript"></script>
-    -->
+<script type="text/javascript" src="{% static 'js/hplace/Chart.min.js' %}"></script>
+
+
+<!--
+<script>
+    var minidaum_options = {
+        disableTracker: true, // 미니다음에서 tiara 사용안함
+        bgType: "white",
+        enableLogoutRetun: true,
+        returnUrl: '',
+        disableHotissue: true,
+        disableLogo:true,
+        enableShield: false
+    };
+</script>
+<script async src="//go.daum.net/jsa_minidaum_pc.daum" charset="utf-8" type="text/javascript"></script>
+-->
 {% endblock %}
