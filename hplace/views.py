@@ -69,6 +69,16 @@ def update(request, bid) :
             post.user_number = boardForm.cleaned_data['user_number']
             post.user_food = boardForm.cleaned_data['user_food']
             post.contents = boardForm.cleaned_data['contents']
+            post.menu_1 = boardForm.cleaned_data['menu_1']
+            post.menu_2 = boardForm.cleaned_data['menu_2']
+            post.menu_3 = boardForm.cleaned_data['menu_3']
+            post.menu_4 = boardForm.cleaned_data['menu_4']
+            post.menu_5 = boardForm.cleaned_data['menu_5']
+            post.price_1 = boardForm.cleaned_data['price_1']
+            post.price_2 = boardForm.cleaned_data['price_2']
+            post.price_3 = boardForm.cleaned_data['price_3']
+            post.price_4 = boardForm.cleaned_data['price_4']
+            post.price_5 = boardForm.cleaned_data['price_5']
             post.save()
             return redirect('/read/'+str(bid))
 
