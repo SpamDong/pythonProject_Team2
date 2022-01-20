@@ -583,8 +583,39 @@ only screen and (min-resolution: 1.5dppx) {
         </ul>
     </div>
 
-    {% include 'hplace/hplace_comment.html' %}
 
+
+
+<div data-viewid="comment" data-root="" class="cont_evaluation  ">
+    <h3 class="tit_subject">후기 작성</h3>
+    <div class="evaluation_place">
+        <form action="/comment/register/{{post.id}}" method="POST">
+            {% csrf_token %}
+            <fieldset>
+                <div class="grade_star">
+                    <span class="ico_star star_rate">
+                        <span class="ico_star inner_star" style="width:0%"></span>
+                    </span>
+                    <em class="num_rate">0/5</em>
+                    <span class="txt_word">후기를 남겨주세요</span>
+                </div>
+                <div class="write_review">
+                    <textarea name="contents" id="tfReview2" class="tf_review"></textarea>
+                </div>
+            </fieldset>
+
+            <div class="agree_review">
+                                    <span class="num_letter txt_len_warp">
+                                        <span class="screen_out">등록한 글자수: </span>
+                                        <span class="txt_len">0</span>
+                                        <span class="num_total"> / 2000</span>
+                                    </span>
+                <button type="submit" class="btn_enroll">등록</button>
+
+            </div>
+        </form>
+    </div>
+</div>
 
     <div data-viewid="findway" data-root="" class="cont_findway">
         <h3 class="tit_subject">찾아가는 길</h3>

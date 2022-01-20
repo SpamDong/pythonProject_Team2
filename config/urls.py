@@ -35,9 +35,7 @@ urlpatterns = [
     path('test/', hplace.views.test),
 
 
-    path('comment/register', comment.views.register),
-    path('comment/update', comment.views.update),
-    path('comment/delete', comment.views.delete),
+    path('comment/register/<int:bid>', comment.views.register),
 
     path('user/login', user.views.userlogin),
     path('user/signup', user.views.signup),

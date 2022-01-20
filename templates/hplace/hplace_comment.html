@@ -1,9 +1,8 @@
 <div data-viewid="comment" data-root="" class="cont_evaluation  ">
     <h3 class="tit_subject">후기 작성</h3>
     <div class="evaluation_place">
-        <!-- 텍스트 필드에 포커스 일때 클래스 write_on 추가 -->
-        <form id="commentUpdateForm" method="post" data-commentid="">
-{% csrf_token %}
+        <form method="POST">
+            {% csrf_token %}
             <fieldset>
                 <div class="grade_star">
                     <span class="ico_star star_rate">
@@ -17,109 +16,15 @@
                 </div>
             </fieldset>
 
-        <div class="agree_review">
+            <div class="agree_review">
                                     <span class="num_letter txt_len_warp">
                                         <span class="screen_out">등록한 글자수: </span>
                                         <span class="txt_len">0</span>
                                         <span class="num_total"> / 2000</span>
                                     </span>
-            <button type="submit" method="POST" class="btn_enroll">등록</button>
+                <a href="/read/<int:bid>/"><button type="submit" method="POST" class="btn_enroll">등록</button></a>
 
-        </div>
-            </form>
-    </div>
-    <!-- 후기목록 -->
-    <strong class="total_evaluation">전체 <span class="color_b">{{ post.count }}</span></strong>
-    <div class="ahead_info">
-        <strong class="screen_out">후기 요약</strong>
-        <div class="grade_star">
-            <em class="num_rate">4.4<span class="txt_score">점</span></em>
-            <span class="ico_star star_rate">
-            <span class="ico_star inner_star" style="width:88%"></span>
-        </span>
-        </div>
-    </div>
-
-    <div class="evaluation_review">
-        <strong class="screen_out">후기 리스트</strong>
-        <ul class="list_evaluation">
-
-            {% if commentForm %}
-            {% for comment in commentForm %}
-            <li data-id="4850953" class="" data-is-block="false">
-
-                <div class="star_info">
-                    <div class="grade_star size_s">
-                        <span class="ico_star star_rate">
-                            <span class="ico_star inner_star" style="width:80%;">
-                            </span>
-                        </span>
-                        <em class="num_rate">4<span class="screen_out">점</span></em>
-                    </div>
-                </div>
-
-                <div class="comment_info">
-                    <p class="txt_comment "><span>{{comment.contents}}</span>
-                        <button type="button" class="btn_fold">더보기</button>
-                    </p>
-                    <div class="append_item">
-                        <a href="https://place.map.kakao.com/1168065433#none" class="link_like " data-logtarget=""
-                           data-logevent="point,list,good">
-                            <!-- like_on 클래스 추가시 아이콘 변경 -->
-                            <span class="ico_comm ico_like"></span> 좋아요 <span class="num_g"
-                                                                              style="display:none;">0</span>
-                        </a>
-                        <span class="bg_bar"></span>
-
-                        <em class="screen_out">작성자 : </em>
-                        <a class="link_user" href="javascript:void(0);"
-                           data-ismy="false"
-                           data-userid="ggphir" data-username="tricky coffee lover">{{ comment.writer }}
-                        </a>
-                        <span class="bg_bar"></span>
-
-                        <em class="screen_out">작성일 : </em>
-                        <span class="time_write">{{ comment.create_date }}</span>
-                        <span class="bg_bar"></span>
-                        <a href="javascript:void(0);"
-                           data-id="spamLink"
-                           data-commentid="4850953"
-                           class="link_function"
-                           target="popup"
-                           data-logtarget=""
-                           data-logevent="point,list,report">
-                            신고
-                        </a>
-                    </div>
-                </div>
-            </li>
-            {% endfor %}
-            {% endif %}
-        </ul>
-
-        <div class="paging_mapdetail">
-            <span class="screen_out">현재페이지</span>
-            <em class="link_page">1</em>
-            <a href="https://place.map.kakao.com/1168065433#none" class="link_page" data-page="2" data-logtarget=""
-               data-logevent="point,page,page_number2">
-                2
-            </a>
-            <a href="https://place.map.kakao.com/1168065433#none" class="link_page" data-page="3" data-logtarget=""
-               data-logevent="point,page,page_number3">
-                3
-            </a>
-            <a href="https://place.map.kakao.com/1168065433#none" class="link_page" data-page="4" data-logtarget=""
-               data-logevent="point,page,page_number4">
-                4
-            </a>
-            <a href="https://place.map.kakao.com/1168065433#none" class="link_page" data-page="5" data-logtarget=""
-               data-logevent="point,page,page_number5">
-                5
-            </a>
-            <a href="https://place.map.kakao.com/1168065433#none" class="btn_next" data-page="6" data-logtarget=""
-               data-logevent="point,page,next">
-                다음<span class="ico_comm ico_next"></span>
-            </a>
-        </div>
+            </div>
+        </form>
     </div>
 </div>

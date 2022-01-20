@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 
 
 # Create your views here.
+from comment.models import Comment
 from hplace.forms import BoardForm
 from hplace.models import Board
 
@@ -44,8 +45,21 @@ def posts(request):
     return render(request, 'hplace/hplace.html', {'posts':posts})
 
 def read(request, bid) :
-    post = Board.objects.get(Q(id=bid))
-    return render(request, 'hplace/hplace.html', {'post' : post})
+    if request.method == 'GET':
+
+        post = Board.objects.get(Q(id=bid))
+        return render(request, 'hplace/hplace.html', {'post': post})
+
+    if request.method == 'POST':
+        commentForm = Comment(request.POST)
+
+        if commentForm.is_valid():
+            hplace = commentForm.save(commit=False)
+            hplace.writer = request.user
+            hplace.save()
+            return redirect('/read/' + str(bid))
+
+
 
 def delete(request, bid) :
     post = Board.objects.get(Q(id=bid))
