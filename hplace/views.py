@@ -6,6 +6,7 @@ from django.shortcuts import render, redirect
 # Create your views here.
 from hplace.forms import BoardForm
 from hplace.models import Board
+from comment.models import Comment
 
 
 def like(request, bid) :
@@ -45,14 +46,15 @@ def posts(request):
 
 def read(request, bid) :
     post = Board.objects.get(Q(id=bid))
-    return render(request, 'hplace/hplace.html', {'post' : post})
+    comment = Comment.objects.all()
+    return render(request, 'hplace/hplace.html', {'post' : post, 'comment' : comment})
 
 def delete(request, bid) :
     post = Board.objects.get(Q(id=bid))
     if request.user != post.writer :
-        return redirect('/hplace/hplace')
+        return redirect('/hplace')
     post.delete()
-    return redirect('/hplace/hplace')
+    return redirect('/hplace')
 
 def update(request, bid) :
     post = Board.objects.get(Q(id=bid))
