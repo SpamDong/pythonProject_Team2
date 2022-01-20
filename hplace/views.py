@@ -45,9 +45,9 @@ def posts(request):
     return render(request, 'hplace/hplace.html', {'posts':posts})
 
 def read(request, bid) :
-    post = Board.objects.get(Q(id=bid))
-    comment = Comment.objects.all()
-    return render(request, 'hplace/hplace.html', {'post' : post, 'comment' : comment})
+    post = Board.objects.prefetch_related('comment_set').get(Q(id=bid))
+    return render(request, 'hplace/hplace.html', {'post' : post})
+
 
 def delete(request, bid) :
     post = Board.objects.get(Q(id=bid))

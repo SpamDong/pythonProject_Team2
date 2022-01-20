@@ -216,10 +216,9 @@ function logout_click() {
 	window.location.href = '/user/logout'
 
 }</script>
-      <button class="UserRestaurantHistory__SettingButton" style="display:block;" onclick="logout_click)">회원탈퇴</button>
-      <script>
-function logout_click() {
-	window.location.href = '/user/logout'
+      <button class="UserRestaurantHistory__SettingButton" style="display:block;" onclick="change_click()">비밀번호 바꾸기</button>      <script>
+function change_click() {
+	window.location.href = '/user/changepassword'
 }</script>
       {% else %}
         <button class="UserRestaurantHistory__LoginButton UserRestaurantHistory__LoginButton--Show" style="display:block;" onclick="login_click()">로그인</button>
