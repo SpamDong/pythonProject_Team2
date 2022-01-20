@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'hplace',
     'post',
     'post_list',
+    'user'
 ]
 
 MIDDLEWARE = [
@@ -80,8 +81,8 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pythonproject_team2',
-        'USER': 'shr',
+        'NAME': 'pythonproject_Team2',
+        'USER': 'ahd',
         'PASSWORD': 'qwer1234',
         'HOST': '172.30.1.57',
         'PORT': '3306',

@@ -13,7 +13,7 @@ def signup(request):
         signupForm = UserCreationForm(request.POST)
         if signupForm.is_valid():
             signupForm.save()
-            return redirect('/user/login')
+            return redirect('/main_post')
 
 def userlogin(request):
     if request.method == "GET":
@@ -29,7 +29,7 @@ def userlogin(request):
 
 def userlogout(request):
     logout(request)
-    return redirect('user/login')
+    return redirect('/user/login')
 
 
 

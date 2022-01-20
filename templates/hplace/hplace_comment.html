@@ -17,8 +17,10 @@
                     <textarea name="contents" id="tfReview2" class="tf_review"></textarea>
                 </div>
             </fieldset>
-            <div class="upload_photo hide">
-                <strong class="screen_out">첨부된 사진 목록</strong>
+        </form>
+        <div class="upload_photo hide">
+            <strong class="screen_out">첨부된 사진 목록</strong>
+            <form id="imgUploadForm" action="https://place.map.kakao.com/commentphoto/upload" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="pidx">
                 <span class="thumb_upload box_upload">
                             <label for="imgUpload2" class="lab_upload">사진 등록하기</label>
