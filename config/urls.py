@@ -42,6 +42,9 @@ urlpatterns = [
     path('user/login', user.views.userlogin),
     path('user/signup', user.views.signup),
     path('user/logout', user.views.userlogout),
+
+    path('user/changepassword', user.views.changepassword, name='password_edit'),
+
     path('main_post', post.views.main_post),
     path('post_list/', post_list.views.post_list),
 ]
