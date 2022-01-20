@@ -25,13 +25,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', hplace.views.register),
     path('posts/', hplace.views.posts),
-    path('update/', hplace.views.update),
+    path('update/<int:bid>', hplace.views.update),
     path('read/<int:bid>', hplace.views.read),
-    path('delete/', hplace.views.delete),
+    path('delete/<int:bid>', hplace.views.delete),
     path('home/', hplace.views.home),
     path('like/', hplace.views.like),
 
-    path('', post.views.main_post),
+    path('hplace/', post.views.main_post),
     path('test/', hplace.views.test),
 
 
