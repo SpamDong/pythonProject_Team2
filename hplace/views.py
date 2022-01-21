@@ -45,24 +45,23 @@ def posts(request):
     return render(request, 'hplace/hplace.html', {'posts':posts})
 
 def read(request, bid) :
-    post = Board.objects.prefetch_related('comment_set').get(Q(id=bid))
+    post = Board.objects.get(Q(id=bid))
     return render(request, 'hplace/hplace.html', {'post' : post})
-
 
 def delete(request, bid) :
     post = Board.objects.get(Q(id=bid))
     if request.user != post.writer :
-        return redirect('/hplace')
+        return redirect('/hplace/hplace')
     post.delete()
-    return redirect('/hplace')
+    return redirect('/hplace/hplace')
 
 def update(request, bid) :
     post = Board.objects.get(Q(id=bid))
     if request.user != post.writer:
-        return redirect('/hplace')
+        return redirect('/hplace/hplace')
     if request.method == "GET" :
         boardForm = BoardForm(instance=post)
-        return render(request, 'hplace/hplace_update.html', {'boardForm': boardForm})
+        return render(request, 'hplace/update.html', {'boardForm': boardForm})
     elif request.method == 'POST' :
         boardForm = BoardForm(request.POST)
         if boardForm.is_valid() :
