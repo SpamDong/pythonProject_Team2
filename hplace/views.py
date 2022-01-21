@@ -7,6 +7,7 @@ from django.shortcuts import render, redirect
 from comment.models import Comment
 from hplace.forms import BoardForm
 from hplace.models import Board
+from comment.models import Comment
 
 
 def like(request, bid) :
@@ -71,10 +72,10 @@ def delete(request, bid) :
 def update(request, bid) :
     post = Board.objects.get(Q(id=bid))
     if request.user != post.writer:
-        return redirect('/hplace')
+        return redirect('/hplace/hplace')
     if request.method == "GET" :
         boardForm = BoardForm(instance=post)
-        return render(request, 'hplace/hplace_update.html', {'boardForm': boardForm})
+        return render(request, 'hplace/update.html', {'boardForm': boardForm})
     elif request.method == 'POST' :
         boardForm = BoardForm(request.POST)
         if boardForm.is_valid() :

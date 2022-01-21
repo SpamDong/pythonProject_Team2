@@ -27,7 +27,7 @@ urlpatterns = [
     path('posts/', hplace.views.posts),
     path('update/<int:bid>', hplace.views.update),
     path('read/<int:bid>', hplace.views.read),
-    path('delete/', hplace.views.delete),
+    path('delete/<int:bid>', hplace.views.delete),
     path('home/', hplace.views.home),
     path('like/', hplace.views.like),
 
