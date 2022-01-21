@@ -61,7 +61,7 @@ def update(request, bid) :
         return redirect('/hplace/hplace')
     if request.method == "GET" :
         boardForm = BoardForm(instance=post)
-        return render(request, 'hplace/update.html', {'boardForm': boardForm})
+        return render(request, 'hplace/hplace_update.html', {'boardForm': boardForm})
     elif request.method == 'POST' :
         boardForm = BoardForm(request.POST)
         if boardForm.is_valid() :
