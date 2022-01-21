@@ -46,8 +46,7 @@ def posts(request):
 
 def read(request, bid) :
     post = Board.objects.get(Q(id=bid))
-    comment = Comment.objects.all()
-    return render(request, 'hplace/hplace.html', {'post' : post, 'comment' : comment})
+    return render(request, 'hplace/hplace.html', {'post' : post})
 
 def delete(request, bid) :
     post = Board.objects.get(Q(id=bid))
