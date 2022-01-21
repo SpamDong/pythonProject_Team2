@@ -1,9 +1,10 @@
 from django import forms
-from django.contrib.auth.forms import PasswordChangeForm, UserCreationForm
+from django.contrib.auth import get_user_model
+from django.contrib.auth.forms import PasswordChangeForm, UserCreationForm, UserChangeForm
 from django.contrib.auth.hashers import check_password
 from django.contrib.auth.models import User
 
-# 비밀번호 삭제 폼
+# 비밀번호 변경 폼
 class CustomPasswordChangeForm(PasswordChangeForm):
     def __init__(self, *args, **kwargs):
         super(CustomPasswordChangeForm, self).__init__(*args, **kwargs)

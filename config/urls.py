@@ -22,7 +22,7 @@ import post.views
 import user.views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', post.views.main_post),
     path('register/', hplace.views.register),
     path('posts/', hplace.views.posts),
     path('update/<int:bid>', hplace.views.update),
@@ -44,6 +44,7 @@ urlpatterns = [
     path('user/logout', user.views.userlogout),
 
     path('user/changepassword', user.views.changepassword, name='password_edit'),
+
     path('main_post', post.views.main_post),
     path('post_list/', post_list.views.post_list),
 ]

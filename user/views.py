@@ -1,6 +1,8 @@
-
+from django.contrib import auth
 from django.contrib.auth import logout, login, update_session_auth_hash
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, PasswordChangeForm
+from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.utils.decorators import method_decorator
 from django.views import View
@@ -9,14 +11,17 @@ from user.form import CustomPasswordChangeForm
 
 
 def signup(request):
-    if request.method == "GET":
-        signupForm = UserCreationForm()
-        return render(request, 'user/signup.html',{'signupForm':signupForm})
-    elif request.method == "POST":
-        signupForm = UserCreationForm(request.POST)
-        if signupForm.is_valid():
-            signupForm.save()
-            return redirect('/main_post')
+    if request.method == 'POST':
+        if request.POST['password1'] == request.POST['password2']:
+            user = User.objects.create_user(
+                                            username=request.POST['username'],
+                                            password=request.POST['password1'],
+                                            email=request.POST['email'],
+                                            first_name=request.POST['first_name'],)
+            auth.login(request, user)
+            return redirect('/user/login')
+        return render(request, 'user/signup.html')
+    return render(request, 'user/signup.html')
 
 def userlogin(request):
     if request.method == "GET":
@@ -33,7 +38,6 @@ def userlogin(request):
 def userlogout(request):
     logout(request)
     return redirect('/user/login')
-
 
 
 def changepassword(request):
