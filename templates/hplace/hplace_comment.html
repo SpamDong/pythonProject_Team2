@@ -1,51 +1,21 @@
 <div data-viewid="comment" data-root="" class="cont_evaluation  ">
     <h3 class="tit_subject">후기 작성</h3>
     <div class="evaluation_place">
-        <!-- 텍스트 필드에 포커스 일때 클래스 write_on 추가 -->
-        <form id="commentUpdateForm" method="post" data-commentid="">
-            <fieldset>
-                <input type="hidden" name="point" value="">
-                <div class="grade_star">
-                    <span class="ico_star star_rate">
-                        <span class="ico_star inner_star" style="width:0%"></span>
-                    </span>
-                    <em class="num_rate">0/5</em>
-                    <span class="txt_word">후기를 남겨주세요</span>
-                </div>
+        <form action="comment/register/{[post.id}}" method="POST">
+            {% csrf_token %}
+
                 <div class="write_review">
-                    <label for="tfReview" class="lab_review">
-                        작성한 후기는 장소와 마이페이지에 공개되며 매장주를 포함한 다른 사용자가 볼 수 있으니, 서로를 배려하는 마음을 담아 작성해 주세요.
-                    </label>
                     <textarea name="contents" id="tfReview2" class="tf_review"></textarea>
                 </div>
-            </fieldset>
-        </form>
-        <div class="upload_photo hide">
-            <strong class="screen_out">첨부된 사진 목록</strong>
-            <form id="imgUploadForm" action="https://place.map.kakao.com/commentphoto/upload" method="POST" enctype="multipart/form-data">
-                <input type="hidden" name="pidx">
-                <span class="thumb_upload box_upload">
-                    <label for="imgUpload2" class="lab_upload">사진 등록하기</label>
-                    <input type="file" id="imgUpload2" name="upphoto" class="inp_upload" accept="image/jpeg, image/png">
-                    <span class="ico_comm ico_upload"></span>
-                </span>
-            </form>
-        </div>
-        <div class="agree_review">
-            <!--
-            <span class="choice_mapdetail agree_checked"> 선택 되었을 때 클래스 agree_chacked ->
-                <input id="mapChoice2" class="inp_choice" type="checkbox" checked="checked">
-                <label for="mapChoice2" class="lab_agree">
-                    <span class="ico_comm ico_choice"></span> 선택 되었을 때 클래스 ico_focused 추가 ->
-                    작성된 평점 및 후기글이 카카오맵에 노출됩니다.
-                </label>
-            </span>
-            -->
-                {% csrf_token %}
-            <span class="num_letter txt_len_warp"><span class="screen_out">등록한 글자수: </span><span class="txt_len">0</span><span class="num_total"> / 2000</span></span>
-            <button type="submit" class="btn_enroll">등록</button>
-                </form>
-        </div>
-    </div>
+            <div class="agree_review">
+                                    <span class="num_letter txt_len_warp">
+                                        <span class="screen_out">등록한 글자수: </span>
+                                        <span class="txt_len">0</span>
+                                        <span class="num_total"> / 2000</span>
+                                    </span>
+                <button type="submit" method="POST" class="btn_enroll">등록</button>
 
+            </div>
+        </form>
+    </div>
 </div>
