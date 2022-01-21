@@ -67,7 +67,7 @@
 
 
 <header class="Header " data-page="normal">
-  <a href="/" class="Header__Logo" onclick="trackEvent(&#39;CLICK_HEADER_LOGO&#39;);">
+  <a href="https://www.mangoplate.com/" class="Header__Logo" onclick="trackEvent(&#39;CLICK_HEADER_LOGO&#39;);">
     <i class="Header__LogoIcon"></i>
   </a>
 
@@ -82,24 +82,43 @@
   </div>
 
   <ul class="Header__MenuList">
-      <li class="Header__MenuItem">
+    {% if user.is_authenticated %}
+      <li class="Header__MenuItem Header__MenuItem--New">
         <a href="/" class="Header__MenuLink" onclick="trackEvent(&#39;CLICK_EAT_DEALS&#39;)">
-
-          <span class="Header__MenuText">홈으로</span>
+          <span class="Header__MenuText">맛집 리스트</span>
         </a>
       </li>
 
-    <li class="Header__MenuItem Header__MenuItem--New">
-      <a href="/post_list/" class="Header__MenuLink" onclick="trackEvent(&#39;CLICK_TOP_LIST&#39;)">
-        <span class="Header__MenuText">맛집 리스트</span>
+    <li class="Header__MenuItem">
+      <a href="https://www.mangoplate.com/top_lists" class="Header__MenuLink" onclick="trackEvent(&#39;CLICK_TOP_LIST&#39;)">
+        <span class="Header__MenuText">게시판 작성</span>
       </a>
     </li>
 
     <li class="Header__MenuItem">
-      <a href="/user/signup" class="Header__MenuLink" onclick="trackEvent(&#39;CLICK_MANGO_PICK&#39;)">
+      <a href="https://www.mangoplate.com/mango_picks" class="Header__MenuLink" onclick="trackEvent(&#39;CLICK_MANGO_PICK&#39;)">
+        <span class="Header__MenuText">로그아웃</span>
+      </a>
+    </li>
+    {% else %}
+    <li class="Header__MenuItem Header__MenuItem--New">
+        <a href="https://www.mangoplate.com/eat_deals" class="Header__MenuLink" onclick="trackEvent(&#39;CLICK_EAT_DEALS&#39;)">
+          <span class="Header__MenuText">맛집 리스트</span>
+        </a>
+      </li>
+
+    <li class="Header__MenuItem">
+      <a href="https://www.mangoplate.com/top_lists" class="Header__MenuLink" onclick="trackEvent(&#39;CLICK_TOP_LIST&#39;)">
+        <span class="Header__MenuText">로그인</span>
+      </a>
+    </li>
+
+    <li class="Header__MenuItem">
+      <a href="https://www.mangoplate.com/mango_picks" class="Header__MenuLink" onclick="trackEvent(&#39;CLICK_MANGO_PICK&#39;)">
         <span class="Header__MenuText">회원가입</span>
       </a>
     </li>
+    {% endif %}
   </ul>
 
   <ul class="Header__IconButtonList">
@@ -355,6 +374,35 @@
 
 
 
+    <span>이용약관 동의</span>
+  </div>
+
+  <div class="account_terms_layer_content">
+    <div class="account_terms_layer_content_location">
+      <p class="terms_content">
+        전체 동의
+      </p>
+
+      <div class="check_area">
+        <button class="check_terms_btn all_terms_btn" data-ischecked="false">
+          <img src="{% static 'assets/img/portfolio/24_jjq1lbdgzpdnp.png' %}" alt="arrow" title="">
+        </button>
+      </div>
+    </div>
+
+    <p class="sub_content">
+      망고플레이트 서비스 이용을 위해 다음의 약관에 동의해 주세요.
+    </p>
+
+    <hr class="seper_hr">
+
+    <ul class="account_terms_items">
+
+    </ul>
+  </div>
+
+  <button class="account_terms_layer_ok_btn" disabled="true">확인</button>
+</div>
 
 <aside class="pop-context pg-login" style="display: none;">
   <div class="contents-box">
