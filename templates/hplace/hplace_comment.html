@@ -1,7 +1,7 @@
 <div data-viewid="comment" data-root="" class="cont_evaluation  ">
     <h3 class="tit_subject">후기 작성</h3>
     <div class="evaluation_place">
-        <form action="comment/register/{[post.id}}" method="POST">
+        <form action="/comment/register/{{post.id}}" method="POST">
             {% csrf_token %}
 
                 <div class="write_review">
