@@ -36,6 +36,7 @@ urlpatterns = [
 
 
     path('comment/register/<int:bid>', comment.views.register),
+    path('comment/delete/<int:cid>', comment.views.delete),
 
     path('user/login', user.views.userlogin),
     path('user/signup', user.views.signup),
