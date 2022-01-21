@@ -1861,7 +1861,7 @@
     </li>
 
     <li class="Header__MenuItem">
-      <a href="user/logout" class="Header__MenuLink" onclick="trackEvent(&#39;CLICK_MANGO_PICK&#39;)">
+      <a href="/user/logout" class="Header__MenuLink" onclick="trackEvent(&#39;CLICK_MANGO_PICK&#39;)">
         <span class="Header__MenuText">로그아웃</span>
       </a>
     </li>
@@ -1993,8 +1993,33 @@
     </div>
 
     <footer class="UserRestaurantHistory__Footer">
-      <button class="UserRestaurantHistory__LoginButton UserRestaurantHistory__LoginButton--Show" onclick="trackEvent(&#39;CLICK_LOGIN&#39;)">로그인</button>
-      <button class="UserRestaurantHistory__SettingButton" onclick="trackEvent(&#39;CLICK_SETTING&#39;)">내정보</button>
+      {% if request.user.is_authenticated %}
+        <button class="UserRestaurantHistory__LoginButton UserRestaurantHistory__LoginButton--Show" style="display:none;" onclick="trackEvent(&#39;CLICK_LOGIN&#39;)">로그인</button>
+      <button class="UserRestaurantHistory__SettingButton" style="display:block;" onclick="logout_click()">로그아웃</button>
+      <script>
+function logout_click() {
+	window.location.href = '/user/logout'
+
+}</script>
+      <button class="UserRestaurantHistory__SettingButton" style="display:block;" onclick="change_click()">비밀번호 바꾸기</button>      <script>
+function change_click() {
+	window.location.href = '/user/changepassword'
+}</script>
+      {% else %}
+        <button class="UserRestaurantHistory__LoginButton UserRestaurantHistory__LoginButton--Show" style="display:block;" onclick="login_click()">로그인</button>
+      <script>function login_click() {
+	window.location.href = '/user/login'
+
+}</script>
+        <button class="UserRestaurantHistory__LoginButton UserRestaurantHistory__LoginButton--Show" style="display:block;" onclick="searchID()">아이디 찾기</button>
+      <script>function searchID() {
+	window.location.href = '/user/searchID'
+
+}</script>
+      <button class="UserRestaurantHistory__SettingButton" style="display:none;" onclick="trackEvent(&#39;CLICK_SETTING&#39;)">내정보</button>
+
+      {% endif%}
+
     </footer>
   </div>
 </div>

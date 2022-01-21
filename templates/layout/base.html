@@ -227,9 +227,35 @@
     </div>
 
     <footer class="UserRestaurantHistory__Footer">
-      <button class="UserRestaurantHistory__LoginButton UserRestaurantHistory__LoginButton--Show" onclick="trackEvent(&#39;CLICK_LOGIN&#39;)">로그인</button>
-      <button class="UserRestaurantHistory__SettingButton" onclick="trackEvent(&#39;CLICK_SETTING&#39;)">내정보</button>
+      {% if request.user.is_authenticated %}
+        <button class="UserRestaurantHistory__LoginButton UserRestaurantHistory__LoginButton--Show" style="display:none;" onclick="trackEvent(&#39;CLICK_LOGIN&#39;)">로그인</button>
+      <button class="UserRestaurantHistory__SettingButton" style="display:block;" onclick="logout_click()">로그아웃</button>
+      <script>
+function logout_click() {
+	window.location.href = '/user/logout'
+
+}</script>
+      <button class="UserRestaurantHistory__SettingButton" style="display:block;" onclick="change_click()">비밀번호 바꾸기</button>      <script>
+function change_click() {
+	window.location.href = '/user/changepassword'
+}</script>
+      {% else %}
+        <button class="UserRestaurantHistory__LoginButton UserRestaurantHistory__LoginButton--Show" style="display:block;" onclick="login_click()">로그인</button>
+      <script>function login_click() {
+	window.location.href = '/user/login'
+
+}</script>
+        <button class="UserRestaurantHistory__LoginButton UserRestaurantHistory__LoginButton--Show" style="display:block;" onclick="searchID()">아이디 찾기</button>
+      <script>function searchID() {
+	window.location.href = '/user/searchID'
+
+}</script>
+      <button class="UserRestaurantHistory__SettingButton" style="display:none;" onclick="trackEvent(&#39;CLICK_SETTING&#39;)">내정보</button>
+
+      {% endif%}
+
     </footer>
+
   </div>
 </div>
 
@@ -404,33 +430,10 @@
   <button class="account_terms_layer_ok_btn" disabled="true">확인</button>
 </div>
 
-<aside class="pop-context pg-login" style="display: none;">
-  <div class="contents-box">
-    <button class="btn-nav-close" onclick="mp_login_layer.close_layer();">
-      닫기
-    </button>
 
-    <p class="title">로그인</p>
 
-      <p class="message">
-       로그인 하면 가고싶은 식당을 <br>저장할 수 있어요
-      </p>
 
-      <p>
-        <a class="btn-login facebook" href="https://www.mangoplate.com/top_lists#" onclick="trackEvent(&#39;CLICK_LOGIN_FACEBOOK&#39;,&#39;&#39;,&#39;&#39;,&#39;PU_LOGIN&#39;);">
-          <span class="text">페이스북으로 계속하기</span>
-        </a>
 
-        <a class="btn-login kakaotalk" href="https://www.mangoplate.com/top_lists#" onclick="trackEvent(&#39;CLICK_LOGIN_KAKAO&#39;,&#39;&#39;,&#39;&#39;,&#39;PU_LOGIN&#39;);">
-          <span class="text">카카오톡으로 계속하기</span>
-        </a>
-
-        <a class="btn-login apple" href="https://www.mangoplate.com/top_lists#" onclick="trackEvent(&#39;CLICK_LOGIN_APPLE&#39;,&#39;&#39;,&#39;&#39;,&#39;PU_LOGIN&#39;);">
-          <span class="text">Apple로 계속하기</span>
-        </a>
-      </p>
-  </div>
-</aside>
 
 <div class="login_loading_area">
   <img src="{% static 'assets/img/portfolio/ldcyd5lxlvtlppe3.gif' %}" alt="login loading bar">
