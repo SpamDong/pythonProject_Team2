@@ -583,86 +583,39 @@ only screen and (min-resolution: 1.5dppx) {
         </ul>
     </div>
 
-    {% include 'hplace/hplace_comment.html' %}
 
 
-<div class="evaluation_review">
-    <div class="cont_evaluation">
-        <strong class="total_evaluation">전체 <span class="color_b">34</span></strong>
-    <div class="ahead_info">
-        <strong class="screen_out">후기 요약</strong>
-        <div class="grade_star">
-            <em class="num_rate">4.4<span class="txt_score">점</span></em>
-        <span class="ico_star star_rate"><span class="ico_star inner_star" style="width:88%"></span></span>
-        </div>
-    </div>
-        <strong class="screen_out">후기 리스트</strong>
-        <ul class="list_evaluation">
-                                                            {% if post %}
-                            {% for tag in post.comment_set.all %}
-                    <li data-id="4850953" class="" data-is-block="false">
-                        <!-- 2018-07-23 profile_info 추가 시작 -->
-                        <a href="javascript:void(0);" class="profile_info" data-ismy="false" data-userid="ggphir" data-username="tricky coffee lover" data-ori="http://t1.daumcdn.net/local/kakaomapPhoto/profile/5752faf76013c005d53126aba76250e1c528d351?original">
-                                <img src="./폼앤노말 _ 카카오맵_files/saved_resource" width="48" height="48" class="thumb_g" alt="" onerror="this.style.display=&#39;none&#39;">
 
-                                <span class="ico_comm"></span>
-                        </a>
-                        <div class="star_info">
-                            <div class="grade_star size_s">
-                                <span class="ico_star star_rate"><span class="ico_star inner_star" style="width:80%;"></span></span>
-                                <em class="num_rate">4<span class="screen_out">점</span></em>
-                            </div>
-                        </div>
-                        <!-- // 2018-07-23 profile_info 추가 끝 -->
+<div data-viewid="comment" data-root="" class="cont_evaluation  ">
+    <h3 class="tit_subject">후기 작성</h3>
+    <div class="evaluation_place">
+        <form action="/comment/register/{{post.id}}" method="POST">
+            {% csrf_token %}
+            <fieldset>
+                <div class="grade_star">
+                    <span class="ico_star star_rate">
+                        <span class="ico_star inner_star" style="width:0%"></span>
+                    </span>
+                    <em class="num_rate">0/5</em>
+                    <span class="txt_word">후기를 남겨주세요</span>
+                </div>
+                <div class="write_review">
+                    <textarea name="contents" id="tfReview2" class="tf_review"></textarea>
+                </div>
+            </fieldset>
 
-                            <a href="https://place.map.kakao.com/1168065433#none" data-basis="4850953" data-type="kakaomapcomment" class="link_photo" data-logtarget="" data-logevent="point,list,image">
-                                <img src="./폼앤노말 _ 카카오맵_files/saved_resource(1)" width="78" height="78" class="img_profile" alt="포토뷰어">
-                                <span class="frame_photo"></span>
-                                <span class="mark_photo"><span class="screen_out">갯수 : </span>6</span>
-                                <span class="frame_blind"></span>
-                            </a>
+            <div class="agree_review">
+                                    <span class="num_letter txt_len_warp">
+                                        <span class="screen_out">등록한 글자수: </span>
+                                        <span class="txt_len">0</span>
+                                        <span class="num_total"> / 2000</span>
+                                    </span>
+                <button type="submit" class="btn_enroll">등록</button>
 
-                                <p class="txt_comment "><span>{{ tag.contents }}</span><button type="button" class="btn_fold">더보기</button></p>
-                                <div class="append_item">
-                                        <a href="https://place.map.kakao.com/1168065433#none" class="link_like " data-logtarget="" data-logevent="point,list,good">
-                                            <!-- like_on 클래스 추가시 아이콘 변경 -->
-                                            <span class="ico_comm ico_like"></span> 좋아요 <span class="num_g" style="display:none;">0</span>
-                                        </a>
-                                        <span class="bg_bar"></span>
-
-                                                <em class="screen_out">작성자 : </em><a class="link_user" href="javascript:void(0);" data-ismy="false" data-userid="ggphir" data-username="tricky coffee lover" data-ori="http://t1.daumcdn.net/local/kakaomapPhoto/profile/5752faf76013c005d53126aba76250e1c528d351?original">tricky coffee lover</a>
-                                                <span class="bg_bar"></span>
-
-                                    <em class="screen_out">작성일 : </em><span class="time_write">2022.01.07.</span>
-                                        <span class="bg_bar"></span>
-                                        <a href="javascript:void(0);" data-id="spamLink" data-commentid="4850953" class="link_function" target="popup" data-logtarget="" data-logevent="point,list,report">
-                                            신고
-                                        </a>
-                                </div>
-                            {% endfor %}
-                            {% endif %}
-        </ul>
-            <div class="paging_mapdetail">
-                        <span class="screen_out">현재페이지</span>
-                        <em class="link_page">1</em>
-                        <a href="https://place.map.kakao.com/1168065433#none" class="link_page" data-page="2" data-logtarget="" data-logevent="point,page,page_number2">
-                            2
-                        </a>
-                        <a href="https://place.map.kakao.com/1168065433#none" class="link_page" data-page="3" data-logtarget="" data-logevent="point,page,page_number3">
-                            3
-                        </a>
-                        <a href="https://place.map.kakao.com/1168065433#none" class="link_page" data-page="4" data-logtarget="" data-logevent="point,page,page_number4">
-                            4
-                        </a>
-                        <a href="https://place.map.kakao.com/1168065433#none" class="link_page" data-page="5" data-logtarget="" data-logevent="point,page,page_number5">
-                            5
-                        </a>
-                    <a href="https://place.map.kakao.com/1168065433#none" class="btn_next" data-page="6" data-logtarget="" data-logevent="point,page,next">
-                        다음<span class="ico_comm ico_next"></span>
-                    </a>
             </div>
-        </div>
+        </form>
     </div>
+</div>
 
     <div data-viewid="findway" data-root="" class="cont_findway">
         <h3 class="tit_subject">찾아가는 길</h3>
