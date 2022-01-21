@@ -1,9 +1,9 @@
-from django.contrib import auth
-from django.contrib.auth import logout, login, update_session_auth_hash
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, PasswordChangeForm
-from django.contrib.auth.models import User
+
+from django.contrib.auth import logout, login, authenticate
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+
 from django.shortcuts import render, redirect
+from django.template.loader import render_to_string
 from django.utils.decorators import method_decorator
 from django.views import View
 
@@ -39,7 +39,7 @@ def userlogout(request):
     logout(request)
     return redirect('/user/login')
 
-
+@login_required
 def changepassword(request):
     if request.method == 'POST':
         password_change_form = CustomPasswordChangeForm(request.user, request.POST)
@@ -52,3 +52,25 @@ def changepassword(request):
 
     return render(request, 'user/changepw.html', {'password_change_form':password_change_form})
 
+
+@login_required
+def userdelete(request):
+
+    if request.method == 'POST':
+
+        request.user.delete()
+
+        return redirect('/main_post')
+
+    return render(request, 'user/userdelete.html')
+
+
+def member_modify(request):
+    if request.method == "POST":
+        #id = request.user.id
+        #user = User.objects.get(pk=id)
+        user = request.user
+        user.first_name = request.POST["first_name"]
+        user.save()
+        return redirect('/')
+    return render(request, 'user/member_modify.html')

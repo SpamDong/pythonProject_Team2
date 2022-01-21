@@ -1,0 +1,20 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<br><br><br><br><br><br><br>
+<div class="span3">
+    <h2>회원탈퇴</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <h4>탈퇴 시 계정복구는 불가능합니다.</h4>
+        <h4>정말로 탈퇴하시겠습니까?</h4>
+        <input method="POST" type="submit" class="btn btn-primary pull-right" value="탈퇴" >
+
+    </form>
+</div>
+<br><br><br><br><br><br><br><br><br>
+
+{% endblock %}
