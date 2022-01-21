@@ -44,8 +44,10 @@ urlpatterns = [
     path('user/changepassword', user.views.changepassword, name='password_edit'),
     path('user/delete', user.views.userdelete),
     path('user/member_modify', user.views.member_modify, name='member_modify'),
-
+    path('user/find_id1', user.views.find_id1),
+    path('user/find_id2', user.views.find_id2),
 
     path('main_post', post.views.main_post),
     path('post_list/', post_list.views.post_list),
 ]
+

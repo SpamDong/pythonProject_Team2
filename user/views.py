@@ -8,7 +8,7 @@ from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 from django.utils.decorators import method_decorator
 from django.views import View
-
+from django.contrib.auth.models import User
 from user.form import CustomPasswordChangeForm
 
 
@@ -76,3 +76,13 @@ def member_modify(request):
         user.save()
         return redirect('/')
     return render(request, 'user/member_modify.html')
+
+
+def find_id1(request):
+            return render(request, 'user/find_id1.html')
+
+def find_id2(request):
+    if request.method == "POST":
+        if User.objects.filter(first_name= request.user.first_name , email= request.user.email).exists():
+            name = User.objects.get(first_name= request.user.first_name , email= request.user.email)
+            return render(request, 'user/find_id2.html', {'name' : name})
