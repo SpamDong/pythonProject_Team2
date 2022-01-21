@@ -83,6 +83,6 @@ def find_id1(request):
 
 def find_id2(request):
     if request.method == "POST":
-        if User.objects.filter(first_name= request.user.first_name , email= request.user.email).exists():
+        if User.objects.filter(first_name = request.user.first_name, email = request.user.email).exists():
             name = User.objects.get(first_name= request.user.first_name , email= request.user.email)
             return render(request, 'user/find_id2.html', {'name' : name})
