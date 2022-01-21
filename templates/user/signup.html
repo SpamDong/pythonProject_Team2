@@ -1,23 +1,33 @@
 {% extends 'layout/base.html' %}
 {% block content %}
 
-<br><br><br><br><br><br><br>
-<div>    </div><h1>회원가입</h1>
-
-<form method="POST">
-    {% csrf_token %}
-    {{ signupForm }}
-    <input type="submit" method="POST">
-</form>
-<br><br><br><br><br><br><br>
-
-
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<br><br><br>
+<div class="span3">
+    <h2>회원가입</h2>
+    <form method="post">
+         {% csrf_token %}
+    <label>"ID/아이디"를 입력하세요.</label>
+    <input type="text" name="username" class="span3">
+    <label>"이름"을 입력하세요.</label>
+    <input type="text" name="first_name" class="span3">
+    <label>"PW/패스워드"를 입력하세요.</label>
+    <input type="password" name="password1" class="span3">
+	<label>"PW/패스워드"를 재입력하세요.</label>
+    <input type="password" name="password2" class="span3">
+    <label>"Email/이메일"을 입력하세요.</label>
+    <input type="email" name="email" class="span3">
+    <input method="POST" type="submit" value="가입하기" class="btn btn-primary pull-right">
+    <div class="clearfix"></div>
+    </form>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br>
 
 {% endblock %}
-
-
-
-
 
 
 

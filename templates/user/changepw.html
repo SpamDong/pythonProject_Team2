@@ -1,0 +1,82 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<br><br><br>
+<div class="span3">
+    <h2>비밀번호 변경</h2>
+    <form method="POST" novalidate>
+    {% csrf_token %}
+    <div>
+        <label name="label_old_password" for="{{ password_change_form.old_password.id_for_label }}">{{ password_change_form.old_password.label }}</label>
+        {{ password_change_form.old_password }}
+        <script type="text/javascript">
+            if (document.getElementsByName('old_password')[0].value != '') {
+                document.getElementsByName('label_old_password')[0].setAttribute('class', 'active');
+            }
+        </script>
+        {% if password_change_form.old_password.errors %}
+        <script type="text/javascript">
+            document.getElementsByName('old_password')[0].setAttribute('class', 'form-control is-invalid')
+        </script>
+        {% for error in password_change_form.old_password.errors %}
+        <div class="invalid-feedback">
+            {{ error }}
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+    <div>
+        <label name="label_new_password1" for="{{ password_change_form.new_password1.id_for_label }}">{{ password_change_form.new_password1.label }}</label>
+        {{ password_change_form.new_password1 }}
+        <script type="text/javascript">
+            if (document.getElementsByName('new_password1')[0].value != '') {
+                document.getElementsByName('label_new_password1')[0].setAttribute('class', 'active');
+            }
+        </script>
+        {% if password_change_form.new_password1.errors %}
+        <script type="text/javascript">
+            document.getElementsByName('new_password1')[0].setAttribute('class', 'form-control is-invalid')
+        </script>
+        {% for error in password_change_form.new_password1.errors %}
+        <div class="invalid-feedback">
+            {{ error }}
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+    <div>
+        <label name="label_new_password2" for="{{ password_change_form.new_password2.id_for_label }}">{{ password_change_form.new_password2.label }}</label>
+        {{ password_change_form.new_password2 }}
+        <script type="text/javascript">
+            if (document.getElementsByName('new_password2')[0].value != '') {
+                document.getElementsByName('label_new_password2')[0].setAttribute('class', 'active');
+            }
+        </script>
+        {% if password_change_form.new_password2.errors %}
+        <script type="text/javascript">
+            document.getElementsByName('new_password2')[0].setAttribute('class', 'form-control is-invalid')
+        </script>
+        {% for error in password_change_form.new_password2.errors %}
+        <div style="white-space: nowrap;" class="invalid-feedback">
+            {{ error }}
+        </div>
+        {% endfor %}
+        {% endif %}
+        <small>
+            <br>
+            이전 비밀번호와는 다르게 입력해 주세요.
+        </small>
+        <input method="POST" type="submit" value="수정하기" class="btn btn-primary pull-right">
+        <div class="clearfix"></div>
+    </div>
+</form>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+{% endblock %}
+
+
