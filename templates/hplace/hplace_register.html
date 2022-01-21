@@ -5,7 +5,11 @@
 <section class="page-section" id="contact">
     <div class="container">
         <!-- Contact Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+        <br>
+            <br>
+            <br>
+        <div style="text-align: center;">
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">게시글 작성 화면</h2></div>
         <!-- Icon Divider-->
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
@@ -17,8 +21,6 @@
             <br>
             <br>
             <br>
-            <br>
-            <br>
             </tbody>
         </table>
         <!-- Contact Section Form-->
@@ -27,54 +29,58 @@
                 <form method='post'>
                     {% csrf_token %}
                     <div style="text-align: center;">
-                    <br>
-                    게시글 작성
-                    <br>
-                    <br>
                     가게 이름:
-                    <input title="title" type="text">
+                    {{ boardForm.title }}
                     <br><br>
                     가게 주소:
-                    <input user_address="user_address" type="text">
+                    {{ boardForm.user_address }}
                     <br><br>
                     가게 번호:
-                    <input user_number="user_number" type="text">
+                    {{ boardForm.user_number }}
                     <br><br>
                     가게 분류:
-                    <input user_food="user_food" type="text">
+                    {{ boardForm.user_food }}
                     <br><br>
-                    소개 내용:
-                    <input contents="contents" type="text">
+                    소개 내용<br>
+                    {{ boardForm.contents }}
                     <br><br>
                     메뉴 1:
-                    <input menu_1="menu_1" type="text">&nbsp; &nbsp;
+                    {{ boardForm.menu_1 }}&nbsp; &nbsp;
                     가격 1:
-                    <input price_1="price_1" type="text">
+                    {{ boardForm.price_1 }}
                     <br>
                     메뉴 2:
-                    <input menu_2="menu_2" type="text">&nbsp; &nbsp;
+                    {{ boardForm.menu_2 }}&nbsp; &nbsp;
                     가격 2:
-                    <input price_2="price_2" type="text">
+                    {{ boardForm.price_2 }}
                     <br>
                     메뉴 3:
-                    <input menu_3="menu_3" type="text">&nbsp; &nbsp;
+                    {{ boardForm.menu_3 }}&nbsp; &nbsp;
                     가격 3:
-                    <input price_3="price_3" type="text">
+                    {{ boardForm.price_3 }}
                     <br>
                     메뉴 4:
-                    <input menu_4="menu_4" type="text">&nbsp; &nbsp;
+                    {{ boardForm.menu_4 }}&nbsp; &nbsp;
                     가격 4:
-                    <input price_4="price_4" type="text">
+                    {{ boardForm.price_4 }}
                     <br>
                     메뉴 5:
-                    <input menu_5="menu_5" type="text">&nbsp; &nbsp;
+                    {{ boardForm.menu_5 }}&nbsp; &nbsp;
                     가격 5:
-                    <input price_5="price_5" type="text">
-                    <br>
+                    {{ boardForm.price_5 }}
+                    <br><br>
                     사진 업로드:
                     <input price_5="price_5" type="file">
-
-                        <input type="submit"></div>
+                        <br><br><br>
+                    <input id=input1 type="submit"><br><br>
+<style>
+    #input1 {
+    	width: 50px;
+        height: 25px;
+        background-color: black;
+        color: white;
+    }
+</style>
                 </form>
             </div>
         </div>
