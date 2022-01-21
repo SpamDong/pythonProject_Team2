@@ -9,6 +9,5 @@ from post.models import Post
 
 def post_list(request):
     post_List = Board.objects.all()
-
     return render(request, 'post_list/post_list.html', {'post_List' : post_List})
 
