@@ -51,17 +51,17 @@ def read(request, bid) :
 def delete(request, bid) :
     post = Board.objects.get(Q(id=bid))
     if request.user != post.writer :
-        return redirect('/hplace')
+        return redirect('/hplace/hplace')
     post.delete()
-    return redirect('/hplace')
+    return redirect('/hplace/hplace')
 
 def update(request, bid) :
     post = Board.objects.get(Q(id=bid))
     if request.user != post.writer:
-        return redirect('/hplace')
+        return redirect('/hplace/hplace')
     if request.method == "GET" :
         boardForm = BoardForm(instance=post)
-        return render(request, 'hplace/hplace_update.html', {'boardForm': boardForm})
+        return render(request, 'hplace/update.html', {'boardForm': boardForm})
     elif request.method == 'POST' :
         boardForm = BoardForm(request.POST)
         if boardForm.is_valid() :
