@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+
+import analytics.views
 import hplace.views
 import comment.views
 import post_list.views
@@ -36,6 +38,8 @@ urlpatterns = [
 
 
     path('comment/register/<int:bid>', comment.views.register),
+    path('comment/delete/<int:cid>', comment.views.delete),
+    path('analytics/views', analytics.views.dashboard),
 
     path('user/login', user.views.userlogin),
     path('user/signup', user.views.signup),
