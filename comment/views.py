@@ -4,8 +4,8 @@ from .forms import CommentForm
 from .models import Comment
 import hplace.models
 
-def register(request, bid):
 
+def register(request, bid):
     if request.method == 'GET':
         commentForm = CommentForm()
         return render(request, 'hplace/hplace.html', {'commentForm': commentForm})
@@ -19,10 +19,8 @@ def register(request, bid):
             comment.save()
             return redirect('/read/' + str(bid))
 
-def read(request, bid) :
+
+def read(request, bid):
     comment = Comment.objects.get(Q(id=bid))
-    return render(request, 'hplace/hplace.html', {'comment' : comment})
 
-
-
-
+    return render(request, 'hplace/hplace.html', {'comment': comment})
