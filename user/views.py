@@ -1,6 +1,8 @@
-
-from django.contrib.auth import logout, login, authenticate
+from django.contrib import auth
+from django.contrib.auth import logout, login, authenticate, update_session_auth_hash
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.models import User
 
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
