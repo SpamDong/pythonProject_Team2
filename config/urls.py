@@ -17,12 +17,10 @@ from django.contrib import admin
 from django.urls import path
 import hplace.views
 import comment.views
-import post_list.views
-import post.views
 import user.views
 
 urlpatterns = [
-    path('', post.views.main_post),
+    path('', hplace.views.main_post),
     path('register/', hplace.views.register),
     path('posts/', hplace.views.posts),
     path('update/<int:bid>', hplace.views.update),
@@ -31,7 +29,7 @@ urlpatterns = [
     path('home/', hplace.views.home),
     path('like/', hplace.views.like),
 
-    path('hplace/', post.views.main_post),
+    path('hplace/', hplace.views.main_post),
     path('test/', hplace.views.test),
 
 
@@ -46,6 +44,5 @@ urlpatterns = [
     path('user/member_modify', user.views.member_modify, name='member_modify'),
 
 
-    path('main_post', post.views.main_post),
-    path('post_list/', post_list.views.post_list),
+    path('post_list/', hplace.views.post_list),
 ]

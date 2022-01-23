@@ -39,8 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'comment',
     'hplace',
-    'post',
-    'post_list',
     'user'
 ]
 
@@ -82,9 +80,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'pythonproject_team2',
-        'USER': 'yjj',
+        'USER': 'root',
         'PASSWORD': 'qwer1234',
-        'HOST': '172.30.1.57',
+        'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
             'init_command': 'SET sql_mode="STRICT_TRANS_TABLES"'

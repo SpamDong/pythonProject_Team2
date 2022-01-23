@@ -8,6 +8,12 @@ from comment.models import Comment
 from hplace.forms import BoardForm
 from hplace.models import Board
 
+def main_post(request):
+    posts = Board.objects.all()
+    return render(request, 'main_post/main_post.html', {'posts' : posts})
+
+def post_list(request):
+    return render(request, 'post_list/post_list.html')
 
 def like(request, bid) :
     post = Board.objects.get(Q(id=bid))
