@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from django.urls import reverse_lazy
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -27,7 +29,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+AUTHENTICATION_BACKENDS = [
+    'my_user.my_auth.UserBackend', # 우리가 만든 AUTH를 먼저 검사
+    'django.contrib.auth.backends.ModelBackend', # Django가 관리하는 AUTH
+]
 # Application definition
 
 INSTALLED_APPS = [
@@ -41,8 +46,21 @@ INSTALLED_APPS = [
     'hplace',
     'post',
     'post_list',
-    'user'
+    'user',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.kakao',
 ]
+
+SITE_ID = 1
+
+
+LOGIN_REDIRECT_URL = '/'  # 로그인 후 리다이렉트 될 경로
+ACCOUNT_LOGOUT_REDIRECT_URL = reverse_lazy('accountapp:login')
+ACCOUNT_LOGOUT_ON_GET = True
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

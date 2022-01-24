@@ -23,6 +23,12 @@
             <input type="submit" class="btn btn-primary pull-right" value="로그인하기">
         </form>
     </div>
+    {% load socialaccount %}
+
+<a href="{% provider_login_url 'kakao' method='oauth2' %}">
+카카오톡 로그인
+</a>
 </div>
+
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 {% endblock %}

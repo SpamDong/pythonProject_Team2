@@ -5,7 +5,7 @@
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-<br><br><br><br>
+<br><br><br><br><br>
 <div class="span3">
     <h2>회원가입</h2>
     <form method="post">
@@ -23,9 +23,16 @@
     <input method="POST" type="submit" value="가입하기" class="btn btn-primary pull-right">
     <div class="clearfix"></div>
     </form>
+    {% load socialaccount %}
+
+<a href="{% provider_login_url 'kakao' method='oauth2' %}">
+카카오톡 회원가입
+</a>
 </div>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br>
+<br><br><br>
+
 
 {% endblock %}
 
