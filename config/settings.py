@@ -29,10 +29,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-AUTHENTICATION_BACKENDS = [
-    'my_user.my_auth.UserBackend', # 우리가 만든 AUTH를 먼저 검사
-    'django.contrib.auth.backends.ModelBackend', # Django가 관리하는 AUTH
-]
 # Application definition
 
 INSTALLED_APPS = [

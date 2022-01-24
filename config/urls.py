@@ -54,14 +54,12 @@ urlpatterns = [
     path('post_list/', post_list.views.post_list),
 
     path('test11/', user.views.request_api),
+
     path('kakaologin/', user.views.kakaologin),
     path('kakaologin2/', user.views.request_api4),
 
-    # path('account/', include('accountapp.urls')),
+
     path('account/', include('allauth.urls')),
-    # path('accounts/kakao/login/callback/', user.get_user_info),
-    #
-    # path('', user.views.home, name = 'home'),
-    # path('top/', user.views.top, name = 'top'),
+    # path('accounts/kakao/login/callback/', get_user_info),
 ]
 
