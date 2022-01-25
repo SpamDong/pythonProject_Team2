@@ -60,6 +60,8 @@ urlpatterns = [
     path('kakaologin/', user.views.kakaologin),
     path('kakaologin2/', user.views.request_api4),
 
+    path('sendemail/', user.views.sendEmail),
+    path('key_compare/', user.views.key_compare),
 
     path('account/', include('allauth.urls')),
     # url(r'^accounts/', include('allauth.urls')),

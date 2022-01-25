@@ -21,3 +21,12 @@ class CustomPasswordChangeForm(PasswordChangeForm):
             'class': 'form-control',
         })
 
+
+from user_email.models import user_email
+from django import forms
+
+
+class user_emailForm(forms.ModelForm):
+    class Meta:
+        model = user_email
+        fields = {'name', 'num'}
