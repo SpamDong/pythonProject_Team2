@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<body>
+
+<h1 id="order"></h1>
+
+<h1> 파이어 메세지</h1>
+<script>
+https://fcm.googleapis.com//v1/projects/web-project-8e3f7/messages:send
+Content-Type: application/json
+Authorization: bearer <YOUR-ACCESS-TOKEN>
+
+{
+  "message": {
+    "token": "eEz-Q2sG8nQ:APA91bHJQRT0JJ...",
+    "notification": {
+      "title": "Background Message Title",
+      "body": "Background message body"
+    },
+    "webpush": {
+      "fcm_options": {
+        "link": "https://dummypage.com"
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>

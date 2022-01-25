@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    import '@firebase/messaging';
+
+const config = {
+  projectId: "team-5dd61",
+  apiKey: "Your api key",
+  messagingSenderId: "Your sender ID",
+};
+
+firebase.initializeApp(config);
+const messaging = firebase.messaging()
+messaging.usePublicVapidKey("Your Web push key");
+Notification.requestPermission().then(function(permission) {
+  if (permission === 'granted') {
+    console.log('Notification permission granted.');
+  } else {
+    console.log('Unable to get permission to notify.');
+  }
+});
+</script>
+</body>
+</html>

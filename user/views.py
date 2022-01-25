@@ -1,14 +1,10 @@
-from django.contrib import auth
-from django.contrib.auth import logout, login, authenticate, update_session_auth_hash
+from django.contrib import auth, messages
+from django.contrib.auth import logout, login, update_session_auth_hash
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, PasswordChangeForm, UserChangeForm
 from django.contrib.auth.models import User
-
 from django.shortcuts import render, redirect
-from django.template.loader import render_to_string
-from django.utils.decorators import method_decorator
-from django.views import View
-from django.contrib.auth.models import User
+
 from user.form import CustomPasswordChangeForm
 
 
@@ -83,6 +79,10 @@ def find_id1(request):
 
 def find_id2(request):
     if request.method == "POST":
-        if User.objects.filter(first_name = request.user.first_name, email = request.user.email).exists():
-            name = User.objects.get(first_name= request.user.first_name , email= request.user.email)
-            return render(request, 'user/find_id2.html', {'name' : name})
+        if User.objects.filter(first_name=request.POST.get('username', None), email=request.POST.get('email', None)).exists():
+            user = User.objects.get(first_name=request.POST.get('username', None), email=request.POST.get('email', None))
+
+            print("test",user)
+
+            return render(request, 'user/find_id2.html', {'user' : user})
+    print('안됨')
