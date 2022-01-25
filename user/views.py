@@ -111,10 +111,10 @@ def request_api(request):   # 기상
 
 def kakaologin(request):
     # app_key = '5baed5a062eee62acdce3048f6053838'
-    # redirect_uri = 'http://127.0.0.1:8000/kakaologin/'
+    # redirect_uri = 'http://127.0.0.1:8000/accounts/kakao/login/callback/'
     # kakao_auth_api = 'https"//kauth.kakao.com/oauth/authorize?respons_type=code'
     return redirect(
-        f'https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=5baed5a062eee62acdce3048f6053838&redirect_uri=http://127.0.0.1:8000/kakaologin2/'
+        'https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=5baed5a062eee62acdce3048f6053838&redirect_uri=http://127.0.0.1:8000/accounts/kakao/login/callback/'
     )
 
 
@@ -133,32 +133,6 @@ def request_api4(request):
     res = requests.post('https://kauth.kakao.com/oauth/token', data=data, headers=headers,)
 
     print(res.text)
+    return redirect('/')
+    # return render(request,'main_post/main_post.html')
 
-    return render(request,'main_post/main_post.html')
-
-class KakaoLogInView(View):
-    def get(self, request):
-        try:
-            access_token = request.headers.get('Authorization', None)
-            headers = {"Authorization": f"Bearer PiHvH9YK6z6WLRV8px31kiPoNYtwnvUcFhAU_worDSAAAAF-jvTF3w"}
-            kakao_login_data = requests.get("https://kapi.kakao.com/v2/user/me", headers=headers).json()
-
-            if not kakao_login_data:
-                return JsonResponse({'message': 'INVALID_TOKEN'}, status=401)
-
-            if kakao_login_data.get('code') == -401:
-                return JsonResponse({'message': 'INVALID_TOKEN'}, status=401)
-
-            kakao_id = str(kakao_login_data["id"])
-            kakao_account = kakao_login_data["kakao_account"]
-            email = kakao_account["email"]
-
-            if not User.objects.filter(email=email).exists() and email is not None:
-                return JsonResponse({'message': 'INVALID_USER'}, status=401)
-
-            login_token = jwt.encode({'user_id': kakao_id}, '5baed5a062eee62acdce3048f6053838', algorithm=ALGORITHM)
-
-            return JsonResponse({'message': 'SUCCESS', 'access_token': login_token}, status=200)
-
-        except json.JSONDecodeError:
-            return JsonResponse({"message": "JSONDecodeError"}, status=400)
