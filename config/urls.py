@@ -14,6 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.template.defaulttags import url
+
 from django.urls import path, re_path, include
 import hplace.views
 import comment.views
@@ -60,6 +62,13 @@ urlpatterns = [
 
 
     path('account/', include('allauth.urls')),
+    # url(r'^accounts/', include('allauth.urls')),
+    # path('accounts/', include('accountapp.urls')),
+    # url(r'^accounts/', include('allauth.urls')),
+
+    #
+    # path("/log-in/kakao", user.KakaoLogInView.as_view()),
+    ]
+
     # path('accounts/kakao/login/callback/', get_user_info),
-]
 

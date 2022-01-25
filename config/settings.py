@@ -31,6 +31,12 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -48,14 +54,29 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.kakao',
+    'allauth.socialaccount.providers.google',
+    # 'user.apps.AccountConfig',
+
 ]
-
 SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'
 
-
-LOGIN_REDIRECT_URL = '/'  # 로그인 후 리다이렉트 될 경로
-ACCOUNT_LOGOUT_REDIRECT_URL = reverse_lazy('accountapp:login')
-ACCOUNT_LOGOUT_ON_GET = True
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
+    }
+}
+# SITE_ID = 1
+# # django-allauth setting
+# LOGIN_REDIRECT_URL = 'tif:index' # 로그인 후 리디렉션할 페이지
+# ACCOUNT_LOGOUT_REDIRECT_URL = "tif:index"  # 로그아웃 후 리디렉션 할 페이지
+# ACCOUNT_LOGOUT_ON_GET = True # 로그아웃 버튼 클릭 시 자동 로그아웃
 
 
 MIDDLEWARE = [

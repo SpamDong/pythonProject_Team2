@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, PasswordChangeForm, UserChangeForm
 from django.contrib.auth.models import User
 from django.core.mail import EmailMessage
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 from django.utils.decorators import method_decorator
@@ -17,6 +18,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 
 from user.form import CustomPasswordChangeForm
+import jwt
 
 
 
@@ -115,6 +117,7 @@ def kakaologin(request):
         f'https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=5baed5a062eee62acdce3048f6053838&redirect_uri=http://127.0.0.1:8000/kakaologin2/'
     )
 
+
 def request_api3(request):
     print(request.GET.get('code'))
     return render(request,'kakaologin.html')
@@ -124,7 +127,7 @@ def request_api4(request):
     headers = {"Content-Type": "application/x-www-form-urlencoded"} # 문서에서 쓰라는 헤더 복사 붙여넣기
     data = {"grant_type" : "authorization_code",
             "client_id" : "5baed5a062eee62acdce3048f6053838",
-            "redirect_uri" : "http://127.0.0.1:8000/kakaologin2/",
+            "redirect_uri" : "http://127.0.0.1:8000/accounts/kakao/login/callback/",
             "code" : request.GET.get('code')}
 
     res = requests.post('https://kauth.kakao.com/oauth/token', data=data, headers=headers,)
@@ -133,3 +136,29 @@ def request_api4(request):
 
     return render(request,'main_post/main_post.html')
 
+class KakaoLogInView(View):
+    def get(self, request):
+        try:
+            access_token = request.headers.get('Authorization', None)
+            headers = {"Authorization": f"Bearer PiHvH9YK6z6WLRV8px31kiPoNYtwnvUcFhAU_worDSAAAAF-jvTF3w"}
+            kakao_login_data = requests.get("https://kapi.kakao.com/v2/user/me", headers=headers).json()
+
+            if not kakao_login_data:
+                return JsonResponse({'message': 'INVALID_TOKEN'}, status=401)
+
+            if kakao_login_data.get('code') == -401:
+                return JsonResponse({'message': 'INVALID_TOKEN'}, status=401)
+
+            kakao_id = str(kakao_login_data["id"])
+            kakao_account = kakao_login_data["kakao_account"]
+            email = kakao_account["email"]
+
+            if not User.objects.filter(email=email).exists() and email is not None:
+                return JsonResponse({'message': 'INVALID_USER'}, status=401)
+
+            login_token = jwt.encode({'user_id': kakao_id}, '5baed5a062eee62acdce3048f6053838', algorithm=ALGORITHM)
+
+            return JsonResponse({'message': 'SUCCESS', 'access_token': login_token}, status=200)
+
+        except json.JSONDecodeError:
+            return JsonResponse({"message": "JSONDecodeError"}, status=400)
