@@ -54,6 +54,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.kakao',
     'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.naver',
     # 'user.apps.AccountConfig',
 
 ]
@@ -75,7 +77,7 @@ SOCIALACCOUNT_PROVIDERS = {
 # 카카오 로그인 관련
 # SITE_ID = 1
 #
-# # django-allauth setting
+# django-allauth setting
 # LOGIN_REDIRECT_URL = 'tif:index' # 로그인 후 리디렉션할 페이지
 # ACCOUNT_LOGOUT_REDIRECT_URL = "tif:index"  # 로그아웃 후 리디렉션 할 페이지
 # ACCOUNT_LOGOUT_ON_GET = True # 로그아웃 버튼 클릭 시 자동 로그아웃
@@ -172,3 +174,8 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+NAVER_CLIENT_ID = 'cKc1OCwFJ0kt4dCPynxJ'
+NAVER_SECRET_KEY = 'vox4bHYK3T'
+
+

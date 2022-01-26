@@ -63,14 +63,11 @@ urlpatterns = [
 
     path('account/', include('allauth.urls')),
 
+
     path('accounts/kakao/login/callback/', user.views.request_api4),
-    # url(r'^accounts/', include('allauth.urls')),
-    # path('accounts/', include('accountapp.urls')),
-    # url(r'^accounts/', include('allauth.urls')),
 
-    #
-    # path("/log-in/kakao", user.KakaoLogInView.as_view()),
-    ]
+    path('kakao/login', user.views.kakaoLoginOauth),
+    path('user/kakaologin', user.views.kakaoLogin),
 
-    # path('accounts/kakao/login/callback/', get_user_info),
 
+]

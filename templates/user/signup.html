@@ -6,7 +6,7 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 <br><br><br><br><br>
-<div class="span3">
+<div class="box1" style="text-align: center;">
     <h2>회원가입</h2>
     <form method="post">
          {% csrf_token %}
@@ -20,7 +20,8 @@
     <input type="password" name="password2" class="span3">
     <label>"Email/이메일"을 입력하세요.</label>
     <input type="email" name="email" class="span3">
-    <input method="POST" type="submit" value="가입하기" class="btn btn-primary pull-right">
+        <br>
+    <input method="POST" type="submit" value="가입하기" class="btn btn-primary pull-center">
     <div class="clearfix"></div>
     </form>
     {% load socialaccount %}
@@ -29,9 +30,7 @@
     카카오톡 회원가입
     </a>
     </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br>
-<br><br><br>
+<br><br><br><br>
 
 
 {% endblock %}
