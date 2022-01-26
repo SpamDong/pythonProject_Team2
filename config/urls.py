@@ -14,9 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.template.defaulttags import url
-
-from django.urls import path, re_path, include
+from django.urls import path
 import hplace.views
 import comment.views
 import post_list.views
@@ -37,7 +35,9 @@ urlpatterns = [
 
 
     path('comment/register', comment.views.register),
-#    path('comment/delete', comment.views.delete),
+    path('comment/register/<int:bid>', comment.views.register),
+    path('comment/delete/<int:cid>', comment.views.delete),
+    path('analytics/views', analytics.views.dashboard),
 
     path('user/login', user.views.userlogin),
     path('user/signup', user.views.signup),
@@ -62,5 +62,4 @@ urlpatterns = [
 
     path('sendemail/', user.views.sendEmail),
     path('key_compare/', user.views.key_compare),
-
 ]
