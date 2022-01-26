@@ -311,6 +311,15 @@ only screen and (min-resolution: 1.5dppx) {
                 <span class="num_contact"><span class="color_g"> &nbsp;&nbsp;카테고리&nbsp;&nbsp;&nbsp;</span><span
                         class="txt_contact">{{ post.user_food }}</span></span>
 
+
+
+            </div>
+                            <div class="placeinfo_default">
+                <h4 class="tit_detail"><span class="ico_comm ico_delivery">날씨 및 온도</span></h4>
+                <div class="location_detail"></div>
+                <span class="num_contact"><span class="color_g"> &nbsp;&nbsp;날씨 및 온도&nbsp;&nbsp;&nbsp;</span><span
+                        class="txt_contact">{{ weather.detailed_status }} & {{ temp.temp }}°C</span></span>
+
             </div>
             <div class="placeinfo_default placeinfo_facility">
                 <h4 class="tit_facility"><span class="ico_comm ico_installation"></span>시설정보</h4>
@@ -354,25 +363,8 @@ only screen and (min-resolution: 1.5dppx) {
             <h3 class="tit_subject">메뉴</h3>
             <span class="txt_updated">업데이트 <span class="txt_date"> 2021.08.17.</span></span>
         </div>
-        <div class="wrap_list">
-            <div class="present_menu present_menu2">
-                <a href="https://place.map.kakao.com/1168065433#none" data-type="menuboard" data-pidx="0"
-                   class="view_menu"
-                   style="background-image:url(&#39;//img1.kakaocdn.net/relay/local/R320x110/?fname=http%3A%2F%2Fpostfiles6.naver.net%2FMjAxOTA2MTlfMTMy%2FMDAxNTYwOTIzNTEyODYy.NupM8w8U3KAXRULoqjyA6F9EXhCuaVNLmEMb-cS2HHAg.iy09EEhlE0SxWWnE2o7YaDIeiSw8jcGwngqNuiLKPyUg.JPEG.parkvogue412%2FIMG_0959.JPG%3Ftype%3Dw966&#39;)"
-                   data-logtarget="" data-logevent="additional_info,menu,image1">
-                    <span class="frame_g"></span>
-                </a>
-                <a href="https://place.map.kakao.com/1168065433#none" data-type="menuboard" data-pidx="1"
-                   class="view_menu"
-                   style="background-image:url(&#39;//img1.kakaocdn.net/relay/local/R320x110/?fname=http%3A%2F%2Fpostfiles14.naver.net%2FMjAxOTAzMTVfNTkg%2FMDAxNTUyNjI1MDU4NDU4.kuSCNrhXUVWAEyk8HR6tazD1BbvpcGpK_hYCLRjkRfkg.t8pHrwx61CrbF9nJHxed4RKa5qzaeAfs2HM6K8rMheYg.JPEG.soulbless%2Foutput_3394171441.jpg%3Ftype%3Dw966&#39;)"
-                   data-logtarget="" data-logevent="additional_info,menu,image2">
-                                <span class="menu_num">
-                                    <span class="txt_num"><span class="ico_comm ico_menu"> 갯수: </span>9</span>
-                                </span>
-                    <span class="frame_g"></span>
-                </a>
-            </div>
-        </div>
+        <br><br>
+
         <strong class="screen_out">메뉴 목록</strong>
         <ul class="list_menu" data-maxpage="1">
             <li class="nophoto_type menu_fst" data-page="1"><!-- 이미지가 있는 경우 -->
@@ -419,170 +411,6 @@ only screen and (min-resolution: 1.5dppx) {
     </div>
 
 
-    <div data-viewid="visitor" data-root="" class="cont_visitor">
-        <h3 class="tit_subject">방문자 데이터</h3>
-        <p class="txt_visitor">카카오의 장소 기반 빅데이터를 분석한 정보입니다. (2022.01.18. 업데이트)</p>
-        <div class="popular_statistics">
-            <div class="visit_popular">
-                <h4 class="tit_popular">시간별 인기도</h4>
-                <ul class="day_legend">
-                    <li><span class="ico_comm ico_weekly"></span>주평균</li>
-                    <li>
-                        <span class="ico_comm ico_day"></span>
-                        <span class="day_txt">화요일 평균</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="dayChart_wrap">
-                <canvas id="dayChart" width="640" height="210" style="display: block;"></canvas>
-            </div><!-- 시간별 인기도 그래프 영역 -->
-            <ul class="list_day">
-                <li data-day="sunday">
-                    <a href="https://place.map.kakao.com/1168065433#none" class="link_day">일</a>
-                </li>
-                <li data-day="monday">
-                    <a href="https://place.map.kakao.com/1168065433#none" class="link_day">월</a>
-                </li>
-                <li data-day="tuesday" class="on">
-                    <a href="https://place.map.kakao.com/1168065433#none" class="link_day">화</a>
-                </li>
-                <li data-day="wednesday">
-                    <a href="https://place.map.kakao.com/1168065433#none" class="link_day">수</a>
-                </li>
-                <li data-day="thursday">
-                    <a href="https://place.map.kakao.com/1168065433#none" class="link_day">목</a>
-                </li>
-                <li data-day="friday">
-                    <a href="https://place.map.kakao.com/1168065433#none" class="link_day">금</a>
-                </li>
-                <li data-day="saturday">
-                    <a href="https://place.map.kakao.com/1168065433#none" class="link_day">토</a>
-                </li>
-            </ul>
-            <div class="visit_popular">
-                <h4 class="tit_popular">연령별 / 성별 인기도</h4>
-            </div>
-            <div class="charts_wrap">
-                <strong class="screen_out">연령별 인기도 그래프</strong>
-                <div class="ageChart_wrap">
-                    <canvas id="ageChart" width="351" height="170" style="display: block;"></canvas>
-                </div><!-- 연령별 인기도 그래프 영역(임시 스타일) -->
-                <strong class="screen_out">성별 인기도 그래프</strong>
-                <div class="genderChart_wrap">
-                    <div class="chart_gender">
-                        <canvas id="genderChart" width="146" height="146" style="display: block;"></canvas>
-                    </div><!-- 성별 인기도 그래프 영역(임시 스타일) -->
-                    <ul class="gender_legend">
-                        <li><span class="ico_comm ico_male"></span>남성</li>
-                        <li><span class="ico_comm ico_female"></span>여성</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-
-    <div data-viewid="photoSection" data-root="" class="cont_photo">
-        <div class="particular_head">
-            <h3 class="tit_subject">사진</h3>
-
-            <div class="wrap_btn">
-            </div>
-        </div>
-        <div class="photo_area">
-            <ul class="list_photo photo_type5">
-                <li class="size_l">
-                    <!-- 사진 2장 부터 클래스 size_l 추가 -->
-                    <a href="https://place.map.kakao.com/1168065433#none" class="link_photo" data-pidx="0"
-                       style="background-image:url(&#39;//img1.kakaocdn.net/relay/local/R640x320/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fplace%2F5C8D001C15634B99A39D9335E81CD99B&#39;)"
-                       data-logtarget="" data-logevent="photo,photo_view">
-                        <span class="frame_g"></span>
-                    </a>
-                </li>
-                <li class="">
-                    <!-- 사진 2장 부터 클래스 size_l 추가 -->
-                    <a href="https://place.map.kakao.com/1168065433#none" class="link_photo" data-pidx="1"
-                       style="background-image:url(&#39;//img1.kakaocdn.net/relay/local/R640x320/?fname=http%3A%2F%2Ft1.kakaocdn.net%2Ffiy_reboot%2Fplace%2F84D826CD799549E580C5DF6CD01C9638&#39;)"
-                       data-logtarget="" data-logevent="photo,photo_view">
-                        <span class="frame_g"></span>
-                    </a>
-                </li>
-                <li class="">
-                    <!-- 사진 2장 부터 클래스 size_l 추가 -->
-                    <a href="https://place.map.kakao.com/1168065433#none" class="link_photo" data-pidx="2"
-                       style="background-image:url(&#39;//img1.kakaocdn.net/relay/local/R640x320/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flocal%2FkakaomapPhoto%2Freview%2F4406e4d756785149896a4123e3b19d2c1d0ff8d9%3Foriginal&#39;)"
-                       data-logtarget="" data-logevent="photo,photo_view">
-                        <span class="frame_g"></span>
-                    </a>
-                </li>
-                <li class="">
-                    <!-- 사진 2장 부터 클래스 size_l 추가 -->
-                    <a href="https://place.map.kakao.com/1168065433#none" class="link_photo" data-pidx="3"
-                       style="background-image:url(&#39;//img1.kakaocdn.net/relay/local/R640x320/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flocal%2FkakaomapPhoto%2Freview%2Fc2b853667a387ae494c6d40b8fada921d38ac5ec%3Foriginal&#39;)"
-                       data-logtarget="" data-logevent="photo,photo_view">
-                        <span class="frame_g"></span>
-                    </a>
-                </li>
-                <li class="">
-                    <!-- 사진 2장 부터 클래스 size_l 추가 -->
-                    <a href="https://place.map.kakao.com/1168065433#none" class="link_photo"
-                       style="background-image:url(&#39;//img1.kakaocdn.net/relay/local/R640x320/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flocal%2FkakaomapPhoto%2Freview%2F879518005cab152e4573bf5f9d8869e0130f4666%3Foriginal&#39;)"
-                       data-logtarget="" data-logevent="photo,photo_view">
-                        <span class="more_photo">
-                            <span class="num_photo">+2324</span>
-                        </span>
-                        <span class="frame_g"></span>
-                    </a>
-                </li>
-            </ul>
-
-        </div>
-        <strong class="screen_out">분류</strong>
-        <ul class="list_category">
-            <li class="on">
-                <a href="https://place.map.kakao.com/1168065433#none" class="link_tag" data-category="all"
-                   data-logtarget="" data-logevent="photo,tag,전체">
-                    전체
-                </a>
-            </li><!-- 선택시 클래스 on 추가 -->
-            <li>
-                <a href="https://place.map.kakao.com/1168065433#none" class="link_tag" data-category="음식"
-                   data-logtarget="" data-logevent="photo,tag,음식">
-
-                    #음식
-                </a>
-            </li><!-- 선택시 클래스 on 추가 -->
-            <li>
-                <a href="https://place.map.kakao.com/1168065433#none" class="link_tag link_tag2" data-category="메뉴판"
-                   data-logtarget="" data-logevent="photo,tag,메뉴판">
-
-                    #메뉴판
-                </a>
-            </li><!-- 선택시 클래스 on 추가 -->
-            <li>
-                <a href="https://place.map.kakao.com/1168065433#none" class="link_tag" data-category="전경"
-                   data-logtarget="" data-logevent="photo,tag,전경">
-
-                    #전경
-                </a>
-            </li><!-- 선택시 클래스 on 추가 -->
-            <li>
-                <a href="https://place.map.kakao.com/1168065433#none" class="link_tag" data-category="실내"
-                   data-logtarget="" data-logevent="photo,tag,실내">
-
-                    #실내
-                </a>
-            </li><!-- 선택시 클래스 on 추가 -->
-            <li>
-                <a href="https://place.map.kakao.com/1168065433#none" class="link_tag" data-category="기타"
-                   data-logtarget="" data-logevent="photo,tag,기타">
-
-                    #기타
-                </a>
-            </li><!-- 선택시 클래스 on 추가 -->
-        </ul>
-    </div>
 
     {% include 'hplace/hplace_comment.html' %}
 
@@ -783,7 +611,7 @@ geocoder.addressSearch(address.dataset.address, function(result, status) {
         // 인포윈도우로 장소에 대한 설명을 표시합니다
         // 인포윈도우로 장소에 대한 설명을 표시합니다
         var infowindow = new kakao.maps.InfoWindow({
-            content: '<div style="width:150px;text-align:center;padding:6px 0;">{{ post.title }}</div>'
+            content: '<div style="width:150px;text-align:center;padding:6px 0;">{{ post.title }} {{weather.status}} </div>'
         });
         infowindow.open(map, arrivemarker);
 

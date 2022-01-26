@@ -3,6 +3,8 @@ from django.http import JsonResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
+from pyowm import OWM
+
 from comment.models import Comment
 from hplace.forms import BoardForm
 from hplace.models import Board
@@ -97,7 +99,15 @@ def posts(request):
 def read(request, bid):
     if request.method == 'GET':
         post = Board.objects.get(Q(id=bid))
-        return render(request, 'hplace/hplace.html', {'post': post})
+
+        API_key = '1b2e17a15b425623d7106d443cf4ed5b'
+        owm = OWM(API_key)
+        mgr = owm.weather_manager()
+
+        weather = mgr.weather_at_place('Seoul,KR').weather  # the observation object is a box containing a weather object
+        temp_dict_celsius = weather.temperature('celsius')  # guess?
+
+        return render(request, 'hplace/hplace.html', {'post': post, 'weather' : weather, 'temp' : temp_dict_celsius})
 
     if request.method == 'POST':
         commentForm = Comment(request.POST)
