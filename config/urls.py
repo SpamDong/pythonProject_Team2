@@ -14,35 +14,40 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.template.defaulttags import url
+
+from django.urls import path, re_path, include
 import hplace.views
 import comment.views
 import post_list.views
 import post.views
 import user.views
 
+
 urlpatterns = [
-    path('', post.views.main_post),
+    path('admin/', admin.site.urls),
     path('register/', hplace.views.register),
     path('posts/', hplace.views.posts),
-    path('update/<int:bid>', hplace.views.update),
+    path('update/', hplace.views.update),
     path('read/<int:bid>', hplace.views.read),
-    path('delete/<int:bid>', hplace.views.delete),
+    path('delete/', hplace.views.delete),
     path('home/', hplace.views.home),
     path('like/', hplace.views.like),
 
-    path('hplace/', post.views.main_post),
+    path('', post.views.main_post),
     path('test/', hplace.views.test),
 
 
-    path('comment/register/<int:bid>', comment.views.register),
+    path('comment/register', comment.views.register),
+    path('comment/update', comment.views.update),
+    path('comment/delete', comment.views.delete),
 
     path('user/login', user.views.userlogin),
     path('user/signup', user.views.signup),
     path('user/logout', user.views.userlogout),
+    path('user/delete', user.views.userdelete),
 
     path('user/changepassword', user.views.changepassword, name='password_edit'),
-    path('user/delete', user.views.userdelete),
     path('user/member_modify', user.views.member_modify, name='member_modify'),
     path('user/find_id1', user.views.find_id1),
     path('user/find_id2', user.views.find_id2),
@@ -50,9 +55,12 @@ urlpatterns = [
     path('main_post', post.views.main_post),
     path('post_list/', post_list.views.post_list),
 
-    path('asdf/', hplace.views.request_api),
-    path('kakao/', hplace.views.kakao_api),
-    path('oauth/', hplace.views.oauth),
-    path('test2/', hplace.views.test2),
-]
+    path('test11/', user.views.request_api),
+
+    path('kakaologin/', user.views.kakaologin),
+    path('kakaologin2/', user.views.request_api4),
+
+
+    path('account/', include('allauth.urls')),
+
 

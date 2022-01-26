@@ -21,3 +21,11 @@ class CustomPasswordChangeForm(PasswordChangeForm):
             'class': 'form-control',
         })
 
+from user.models import certification
+from django import forms
+
+
+class certificationForm(forms.ModelForm):
+    class Meta:
+        model = certification
+        fields = {'name', 'num'}

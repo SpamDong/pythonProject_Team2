@@ -1,16 +1,35 @@
 {% extends 'layout/base.html' %}
 {% block content %}
+{% load socialaccount %}
 
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
+<style type="text/css">
+.gg {
+color: #ffffff;
+background: #3379FE;
+font-size: 1.3em;
+padding: 0.3em 0.5em;
+margin-right: 0.1em;
+}
+
+.nn {
+color: #ffffff;
+background: #0BC904;
+font-size: 1.3em;
+padding: 0.3em 0.5em;
+margin-right: 0.1em;
+}
+</style>
+
 <br><br><br><br><br><br>
-<div class="span3">
+<div class="box1">
     <div style="text-align: center;">
         <h1>로그인</h1>
         <br><br>
-        <form method="POST">
+        <form method="POST" >
             {% csrf_token %}
             아이디:
             <br>
@@ -19,10 +38,43 @@
             비밀번호:
             <br>
             <input name="password" type="password">
-            <br><br>
-            <input type="submit" class="btn btn-primary pull-right" value="로그인하기">
+            <br>
+            <input type="submit" class="btn btn-primary pull-center" value="로그인하기">
         </form>
+
+ <br>
+  {% if user.is_authenticated %}
+  <p>Welcome, {{ user.username }} !</p>
+  {% else %}
+   <a href="{% provider_login_url 'google' %}" class="gg">Google 로그인</a>
+        <br><br>
+        <a href=" {% provider_login_url 'naver' %}" class="nn">NAVER 로그인</a>
+        <br>
+
+  {% endif %}
+
     </div>
-</div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     </div>
+
+
+
+
+<br><br><br>
 {% endblock %}
+
+
+<!--  <div class="form-floating mb-3">-->
+<!--                    <a id="custom-login-btn" href="kakaologin"><img src="//k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg" width="222" alt="카카오 로그인 버튼"/></a>-->
+<!--                </div>-->
+
+<!--<a href=" {% provider_login_url 'naver' %}">NAVER 로그인</a>-->
+
+<!--     <a href=" {% provider_login_url 'naver' %}" style="-->
+<!--color: #0BC904;-->
+<!--font-size: 1.5em;-->
+<!--font-weight: bold;-->
+<!--background: white;-->
+<!--">NAVER 로그인</a>-->
+
+
+
