@@ -32,15 +32,12 @@ urlpatterns = [
     path('read/<int:bid>', hplace.views.read),
     path('delete/', hplace.views.delete),
     path('home/', hplace.views.home),
-    path('like/', hplace.views.like),
 
     path('', post.views.main_post),
-    path('test/', hplace.views.test),
 
 
     path('comment/register', comment.views.register),
-    path('comment/update', comment.views.update),
-    path('comment/delete', comment.views.delete),
+#    path('comment/delete', comment.views.delete),
 
     path('user/login', user.views.userlogin),
     path('user/signup', user.views.signup),
@@ -55,7 +52,7 @@ urlpatterns = [
     path('main_post', post.views.main_post),
     path('post_list/', post_list.views.post_list),
 
-    path('test11/', user.views.request_api),
+
 
     path('kakaologin/', user.views.kakaologin),
     path('kakaologin2/', user.views.request_api4),
@@ -63,4 +60,7 @@ urlpatterns = [
 
     path('account/', include('allauth.urls')),
 
+    path('sendemail/', user.views.sendEmail),
+    path('key_compare/', user.views.key_compare),
 
+]

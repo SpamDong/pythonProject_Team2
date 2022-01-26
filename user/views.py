@@ -14,9 +14,7 @@ from django.template.loader import render_to_string
 from django.utils.decorators import method_decorator
 from django.views import View
 from django.contrib.auth.models import User
-from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import AllowAny
-from rest_framework.response import Response
+
 
 from user.form import CustomPasswordChangeForm
 import jwt
@@ -109,16 +107,16 @@ def find_id2(request):
             return render(request, 'user/find_id2.html', {'user' : user})
     print('안됨')
 
-import requests
-import json
-def request_api(request):   # 기상
-    res = requests.get('http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?serviceKey=CddQ%2FQoLkxAvrxtsz6QjD%2BFLEVIfsODF8yxJdHYKueavz8WQkUGZXRuN7AJIA06peELQ14mOnPbrNX7H%2FMJifw%3D%3D&numOfRows=10&pageNo=1&dataType=json&base_date=20220124&base_time=0600&nx=58&ny=125')
-
-    print(str(res.status_code))
-    result = json.loads(res.text)
-    print(result['response']['body']['items']['item'][0]['obsrValue'])
-
-    return render(request, 'test11.html')
+# import requests
+# import json
+# def request_api(request):   # 기상
+#     res = requests.get('http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?serviceKey=CddQ%2FQoLkxAvrxtsz6QjD%2BFLEVIfsODF8yxJdHYKueavz8WQkUGZXRuN7AJIA06peELQ14mOnPbrNX7H%2FMJifw%3D%3D&numOfRows=10&pageNo=1&dataType=json&base_date=20220124&base_time=0600&nx=58&ny=125')
+#
+#     print(str(res.status_code))
+#     result = json.loads(res.text)
+#     print(result['response']['body']['items']['item'][0]['obsrValue'])
+#
+#     return render(request, 'test11.html')
 
 def kakaologin(request):
     # app_key = '5baed5a062eee62acdce3048f6053838'

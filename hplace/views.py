@@ -13,61 +13,9 @@ import requests
 import json
 
 
-def request_api(request):
-    res = requests.get(
-        'http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?serviceKey=dYE9%2F8Qgkip%2Fb%2FTXul0OJ5o210b3Ll7SuTYfsOYv0WKeXbMl2mxYkk9kamahHjWuw2x5zEp49o4Eq67G%2BU7l7g%3D%3D&numOfRows=10&pageNo=1&base_date=20220124&base_time=0600&nx=58&ny=125&dataType=json')
-
-    print(str(res.status_code))
-
-    result = json.loads(res.text)
-    print(result['response']['body']['items']['item'][0]['obsrValue'])
-
-    return render(request, 'asdf.html')
-
-
-def kakao_api(request):
-    app_key = '919506260a89ee9fe16ec0239997ed76'
-    redirect_uri = 'http://127.0.0.1:8000/asdf/'
-    kakao_auth_api = 'https://kauth.kakao.com/oauth/authorize?response_type=code'
-    return redirect(
-        f'https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=919506260a89ee9fe16ec0239997ed76&redirect_uri=http://127.0.0.1:8000/oauth/'
-    )
-
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
-
-def test2(request):
-    return render(request, 'qwer.html')
-
-
-def oauth(request):
-    headers = {'Content_type': 'application/x-www-form-urlencoded;charset=utf-8'}
-
-    data = {'grant_type': 'authorization_code',
-            'client_id': '919506260a89ee9fe16ec0239997ed76',
-            'redirect_uri': 'http://127.0.0.1:8000/oauth/',
-            'code': request.GET.get('code')}
-
-    res = requests.post('https://kauth.kakao.com/oauth/token',
-                        data=data,
-                        headers=headers, )
-    print(res.text)
-
-    return render(request, 'zxcv.html')
-
-
-def like(request, bid):
-    post = Board.objects.get(Q(id=bid))
-    user = request.user
-    if post.like.filter(id=user.id).exists():  # 게시글 좋아요 눌렀음.
-        post.like.remove(user)
-        message = 'del'
-    else:  # 게시글 좋아요 아직 안눌렀음.
-        post.like.add(user)
-        message = 'add'
-    return JsonResponse({'message': message, 'like_cnt': post.like.count()})
-
 
 def home(request):
     return render(request, 'hplace/hplace.html')
@@ -155,6 +103,3 @@ def update(request, bid):
             post.save()
             return redirect('/read/' + str(bid))
 
-
-def test(request):
-    return render(request, 'test.html')
