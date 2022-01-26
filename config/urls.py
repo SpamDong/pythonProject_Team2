@@ -69,5 +69,8 @@ urlpatterns = [
     path('kakao/login', user.views.kakaoLoginOauth),
     path('user/kakaologin', user.views.kakaoLogin),
 
+    path('sendemail/', user.views.sendEmail),
+    path('key_compare/', user.views.key_compare),
+
 
 ]

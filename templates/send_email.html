@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Email 인증 </title>
+</head>
+<body><div style="position: absolute; top:200px; left: 50%;">
+
+<div style="position: relative; left: -50%; background-color: #ddd; padding:10px;">
+&nbsp;&nbsp;<strong>이메일을 입력해주세요</strong>
+<br>
+<br>
+&nbsp;&nbsp;<i>ex)example@naver.com</i>
+<br>
+<br>
+<form method="post">
+    {% csrf_token %}
+    {{ form.name }}
+    <input type="submit">
+</form>
+</div></div></body>
+</html>
