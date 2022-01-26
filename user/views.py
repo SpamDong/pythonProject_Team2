@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, PasswordChangeForm, UserChangeForm
 from django.contrib.auth.models import User
 from django.core.mail import EmailMessage
+from django.db.models import Q
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
@@ -20,21 +21,26 @@ from rest_framework.response import Response
 from user.form import CustomPasswordChangeForm
 import jwt
 
+import smtplib
+from email.mime.text import MIMEText
 
+from user.form import certificationForm
+import random
 
 
 def signup(request):
+    global now_user
     if request.method == 'POST':
         if request.POST['password1'] == request.POST['password2']:
             user = User.objects.create_user(
                                             username=request.POST['username'],
                                             password=request.POST['password1'],
-                                            email=request.POST['email'],
+                                            email=str(now_user),
                                             first_name=request.POST['first_name'],)
             auth.login(request, user)
             return redirect('/user/login')
         return render(request, 'user/signup.html')
-    return render(request, 'user/signup.html')
+    return render(request, 'user/signup.html', {'now_user' : now_user})
 
 def userlogin(request):
     if request.method == "GET":
@@ -136,29 +142,59 @@ def request_api4(request):
 
     return render(request,'main_post/main_post.html')
 
-class KakaoLogInView(View):
-    def get(self, request):
-        try:
-            access_token = request.headers.get('Authorization', None)
-            headers = {"Authorization": f"Bearer PiHvH9YK6z6WLRV8px31kiPoNYtwnvUcFhAU_worDSAAAAF-jvTF3w"}
-            kakao_login_data = requests.get("https://kapi.kakao.com/v2/user/me", headers=headers).json()
+static_key = ''
+now_user = ''
 
-            if not kakao_login_data:
-                return JsonResponse({'message': 'INVALID_TOKEN'}, status=401)
+def sendEmail(request):
+    key = random.randrange(10000, 19999)
 
-            if kakao_login_data.get('code') == -401:
-                return JsonResponse({'message': 'INVALID_TOKEN'}, status=401)
+    if request.method == 'GET':
+        form = certificationForm()
+        return render(request, 'send_email.html', {'form' : form})
+    elif request.method == 'POST':
 
-            kakao_id = str(kakao_login_data["id"])
-            kakao_account = kakao_login_data["kakao_account"]
-            email = kakao_account["email"]
+        sendEmail = "SLAcademyTeam@gmail.com"
+        recvEmail = request.POST.get('name')
+        password = "slateam2@"
 
-            if not User.objects.filter(email=email).exists() and email is not None:
-                return JsonResponse({'message': 'INVALID_USER'}, status=401)
+        global now_user
+        now_user = recvEmail
+        print(now_user)
+        smtpName = "smtp.gmail.com"  # smtp 서버 주소
+        smtpPort = 587  # smtp 포트 번호
 
-            login_token = jwt.encode({'user_id': kakao_id}, '5baed5a062eee62acdce3048f6053838', algorithm=ALGORITHM)
+        # 리스트중에 하나 가져오기
+        global static_key
+        static_key = key
 
-            return JsonResponse({'message': 'SUCCESS', 'access_token': login_token}, status=200)
+        text = "로그인 인증키 :    " + str(key)
+        msg = MIMEText(text)  # MIMEText(text , _charset = "utf8")
 
-        except json.JSONDecodeError:
-            return JsonResponse({"message": "JSONDecodeError"}, status=400)
+        msg['Subject'] = "로그인 인증키"
+        msg['From'] = sendEmail
+        msg['To'] = recvEmail
+
+        s = smtplib.SMTP(smtpName, smtpPort)  # 메일 서버 연결
+        s.starttls()  # TLS 보안 처리
+        s.login(sendEmail, password)  # 로그인
+        s.sendmail(sendEmail, recvEmail, msg.as_string())  # 메일 전송, 문자열로 변환하여 보냅니다.
+        s.close()  # smtp 서버 연결을 종료합니다.
+
+        return redirect('/key_compare/')
+
+def key_compare(request):
+    if request.method == 'GET':
+        form = certificationForm()
+        return render(request, 'key_compare.html', {'form': form})
+
+    elif request.method == 'POST':
+        global static_key
+
+        # 인증키와 서버에서 준 키값이 같다면
+        if request.POST.get('num') == str(static_key):
+            # 회원 가입 페이지로 넘어감
+            return redirect('/user/signup')
+
+        else:
+            # 오류 페이지 출력하고 이메일 입력칸으로
+            return redirect('/sendemail/')

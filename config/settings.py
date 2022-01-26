@@ -14,6 +14,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 from django.urls import reverse_lazy
+from pip._internal.utils import datetime
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -33,7 +34,6 @@ ALLOWED_HOSTS = []
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
-
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.kakao',
     'allauth.socialaccount.providers.google',
+
     # 'user.apps.AccountConfig',
 
 ]

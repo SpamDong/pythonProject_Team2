@@ -34,7 +34,7 @@ urlpatterns = [
     path('home/', hplace.views.home),
     path('like/', hplace.views.like),
 
-    path('', post.views.main_post),
+    path('main_post', post.views.main_post),
     path('test/', hplace.views.test),
 
 
@@ -52,7 +52,7 @@ urlpatterns = [
     path('user/find_id1', user.views.find_id1),
     path('user/find_id2', user.views.find_id2),
 
-    path('main_post', post.views.main_post),
+    path('', post.views.main_post),
     path('post_list/', post_list.views.post_list),
 
     path('test11/', user.views.request_api),
@@ -65,7 +65,8 @@ urlpatterns = [
     # url(r'^accounts/', include('allauth.urls')),
     # path('accounts/', include('accountapp.urls')),
     # url(r'^accounts/', include('allauth.urls')),
-
+    path('sendemail/', user.views.sendEmail),
+    path('key_compare/', user.views.key_compare),
     #
     # path("/log-in/kakao", user.KakaoLogInView.as_view()),
     ]
