@@ -9,7 +9,7 @@
      + Django
      + DJango ORM
      + Django allauth
-     +     
+     + 
 
     ### **데이터베이스**
      + Mysql
