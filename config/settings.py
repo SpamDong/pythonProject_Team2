@@ -178,5 +178,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 NAVER_CLIENT_ID = 'cKc1OCwFJ0kt4dCPynxJ'
 NAVER_SECRET_KEY = 'vox4bHYK3T'
-CSRF_TRUSTED_ORIGINS = ['https://b7b4-125-133-75-24.ngrok.io']
+
+#   ngrok고칠 때, 꼭 수정할 것!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+CSRF_TRUSTED_ORIGINS = ['https://4e93-125-133-75-24.ngrok.io']
+
 

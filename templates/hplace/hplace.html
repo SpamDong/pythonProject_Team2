@@ -184,27 +184,21 @@ only screen and (min-resolution: 1.5dppx) {
                         </div>
                         <strong class="screen_out">위치 정보 및 공유하기</strong>
                         <ul class="list_place">
+                            <li></li>
+                                {% if request.user == post.writer %}
                             <li>
-                                <a href="https://map.kakao.com/?urlX=484050&amp;urlY=1107323&amp;urlLevel=3&amp;itemId=1168065433&amp;q=%ED%8F%BC%EC%95%A4%EB%85%B8%EB%A7%90&amp;srcid=1168065433&amp;map_type=TYPE_MAP"
-                                   target="_blank" class="link_place" data-logtarget=""
-                                   data-logevent="info_pannel,map_view"><span
-                                        class="ico_comm ico_storemap"></span>지도</a></li>
-                            <li>
-                                <a href="https://map.kakao.com/?map_type=TYPE_MAP&amp;target=car&amp;rt=,,484050,1107323&amp;rt1=&amp;rt2=%ED%8F%BC%EC%95%A4%EB%85%B8%EB%A7%90&amp;rtIds=,1168065433"
-                                   target="_blank" class="link_place" data-logtarget=""
-                                   data-logevent="info_pannel,route"><span class="ico_comm ico_route"></span>길찾기</a>
+                                <a href="/update/{{post.id}}"
+                                    class="link_place" data-logtarget=""
+                                   data-logevent="info_pannel,route"><span class="ico_comm ico_route"></span>수정</a>
                             </li>
                             <li>
-                                <a href="https://map.kakao.com/?srcid=1168065433&amp;confirmid=1168065433&amp;q=%ED%8F%BC%EC%95%A4%EB%85%B8%EB%A7%90&amp;rv=on"
-                                   class="link_place" target="_blank" data-logtarget=""
+                                <a href="/delete/{{post.id}}"
+                                   class="link_place" data-logtarget=""
                                    data-logevent="info_pannel,roadview" data-roadview=""><span
-                                        class="ico_comm ico_roadmap"></span>로드뷰</a>
+                                        class="ico_comm ico_roadmap"></span>삭제</a>
                             </li>
+                            {% endif %}
                             <li class="lst">
-                                <a href="https://place.map.kakao.com/1168065433#none" class="link_place"
-                                   data-logevent="info_pannel,share"><span class="ico_comm ico_share"></span>공유하기</a>
-                                <div data-viewid="snsShare" data-root="" class="detail_share">
-                                </div>
                                 <div class="place_share_container" id="place_share_container">
                                     <div class="social_comm_p hide">
                                         <div class="sns_comm_p share_layer">

@@ -26,10 +26,10 @@ def register(request, bid):
             return redirect('/read/' + str(bid))
 
 
+
 def read(request, bid):
     comment = Comment.objects.get(Q(id=bid))
     return render(request, 'hplace/hplace.html', {'comment': comment})
-
 
 @login_required(login_url='/user/login')
 def delete(request, cid):

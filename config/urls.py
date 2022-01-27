@@ -13,8 +13,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+import analytics.views
+
+import analytics
 import hplace.views
 import comment.views
 import post_list.views
@@ -26,18 +30,16 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', hplace.views.register),
     path('posts/', hplace.views.posts),
-    path('update/', hplace.views.update),
+    path('update/<int:bid>', hplace.views.update),
     path('read/<int:bid>', hplace.views.read),
-    path('delete/', hplace.views.delete),
+    path('delete/<int:bid>', hplace.views.delete),
     path('home/', hplace.views.home),
-
-    path('', post.views.main_post),
 
 
     path('comment/register', comment.views.register),
     path('comment/register/<int:bid>', comment.views.register),
     path('comment/delete/<int:cid>', comment.views.delete),
-    path('analytics/views', analytics.views.dashboard),
+    path('', analytics.views.dashboard),
 
     path('user/login', user.views.userlogin),
     path('user/signup', user.views.signup),
@@ -51,12 +53,6 @@ urlpatterns = [
 
     path('main_post', post.views.main_post),
     path('post_list/', post_list.views.post_list),
-
-
-
-    path('kakaologin/', user.views.kakaologin),
-    path('kakaologin2/', user.views.request_api4),
-
 
     path('account/', include('allauth.urls')),
 

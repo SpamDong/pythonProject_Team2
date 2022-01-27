@@ -6,6 +6,7 @@ from django.contrib.auth import logout, login, update_session_auth_hash
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, PasswordChangeForm, UserChangeForm
 from django.contrib.auth.models import User
+from django.contrib.sites import requests
 from django.core.mail import EmailMessage
 from django.db.models import Q
 from django.http import JsonResponse
@@ -118,51 +119,6 @@ def find_id2(request):
 #
 #     return render(request, 'test11.html')
 
-def kakaologin(request):
-    # app_key = '5baed5a062eee62acdce3048f6053838'
-    # redirect_uri = 'http://127.0.0.1:8000/accounts/kakao/login/callback/'
-    # kakao_auth_api = 'https"//kauth.kakao.com/oauth/authorize?respons_type=code'
-    return redirect(
-        'https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=5baed5a062eee62acdce3048f6053838&redirect_uri=http://127.0.0.1:8000/accounts/kakao/login/callback/'
-    )
-
-
-def request_api3(request):
-    print(request.GET.get('code'))
-    return render(request,'kakaologin.html')
-
-
-def request_api4(request):
-    headers = {"Content-Type": "application/x-www-form-urlencoded"} # 문서에서 쓰라는 헤더 복사 붙여넣기
-    data = {"grant_type" : "authorization_code",
-            "client_id" : "5baed5a062eee62acdce3048f6053838",
-            "redirect_uri" : "http://127.0.0.1:8000/kakao/login",
-            "code" : request.GET.get('code')}
-
-    res = requests.post('https://kauth.kakao.com/oauth/token',
-                        data=data,
-                        headers=headers)
-
-    json_result = json.loads(res.text)
-
-    headers = {"Content-Type": "application/x-www-form-urlencoded;charset=utf-8",
-               "Authorization": "Bearer " + json_result['access_token']}
-    data = 'property_keys=["kakao_account.email", "properties.nickname"]'
-    res = requests.post('https://kapi.kakao.com/v2/user/me', data=data, headers=headers)
-
-    json_result = json.loads(res.text)
-
-    email = json_result['kakao_account']['email']
-    nickname = json_result['properties']['nickname']
-
-    # 가입한 적 있으면 에러남, 에러처리 필요
-    user = User()
-    user.email = email
-    user.nickname = nickname
-    user.is_active = True
-    user.save()
-
-    return redirect('/user/login')
 
 
 def kakaoLogin(request):
