@@ -40,7 +40,7 @@
   ![인프라 설계](https://user-images.githubusercontent.com/96184680/151283847-4a418d48-083b-403d-afe2-2c88e16c20e7.png)  
   
   ## **ERD 구조**
-  ![ERD 2팀](https://user-images.githubusercontent.com/96184680/151283604-da4eba5b-061c-4546-b414-b2d1c672a01e.JPG)
+![KakaoTalk_20220127_145038159](https://user-images.githubusercontent.com/96184680/151300028-0553fcc6-ff9d-4946-935d-37a727c17c6d.png)
   
   ## **프로젝트 진행 과정 중 핵심 문제점과 해결방법**
    + #### 문제1. 소셜네트워크(구글, 네이버)를 활용해 로그인을 할 수 있는 기능 + DB연동 
