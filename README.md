@@ -26,6 +26,8 @@
   ## **시스템 구조**
   
   ## **ERD 구조**
+  ![ERD 2팀](https://user-images.githubusercontent.com/96184680/151283604-da4eba5b-061c-4546-b414-b2d1c672a01e.JPG)
+
   
   
    
