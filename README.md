@@ -24,6 +24,8 @@
   + HTTPS 통신
   
   ## **시스템 구조**
+  ![인프라 설계](https://user-images.githubusercontent.com/96184680/151283847-4a418d48-083b-403d-afe2-2c88e16c20e7.png)
+  
   
   ## **ERD 구조**
   ![ERD 2팀](https://user-images.githubusercontent.com/96184680/151283604-da4eba5b-061c-4546-b414-b2d1c672a01e.JPG)
