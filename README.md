@@ -51,7 +51,7 @@
   <br><br>
   
   ## **시스템 구조**
-  ![인프라 설계](https://user-images.githubusercontent.com/96184680/151283847-4a418d48-083b-403d-afe2-2c88e16c20e7.png)  
+  ![인프라 설계](https://user-images.githubusercontent.com/97924823/151301762-8bbf0b4f-9826-457f-ba81-9c7ee27e4809.png)
   
   
   ## **ERD 구조**
