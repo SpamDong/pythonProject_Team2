@@ -54,7 +54,7 @@
   
   
   ## **ERD 구조**
-![KakaoTalk_20220127_145038159](https://user-images.githubusercontent.com/96184680/151300028-0553fcc6-ff9d-4946-935d-37a727c17c6d.png)
+https://github.com/SpamDong/pythonProject_Team2/issues/3#issue-1116899149
   
   <br><br>
   
