@@ -54,7 +54,7 @@
   
   
   ## **ERD 구조**
-https://github.com/SpamDong/pythonProject_Team2/issues/3#issue-1116899149
+  ![ERD_Model](https://user-images.githubusercontent.com/81276472/151469688-7c1f00ef-6bb5-459f-9508-e2772d3a0d62.png)
   
   <br><br>
   
