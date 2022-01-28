@@ -50,11 +50,12 @@
   <br><br>
   
   ## **시스템 구조**
-  ![image](https://user-images.githubusercontent.com/97924823/151324844-d1bc32f2-e43f-4139-b02e-0918374a3b12.png)
+  ![ERD_Model](https://user-images.githubusercontent.com/81276472/151469688-7c1f00ef-6bb5-459f-9508-e2772d3a0d62.png)
   
   
   ## **ERD 구조**
-  ![ERD_Model](https://user-images.githubusercontent.com/81276472/151469688-7c1f00ef-6bb5-459f-9508-e2772d3a0d62.png)
+
+  ![ERD](https://user-images.githubusercontent.com/81276472/151470158-a2161d09-be33-4dea-aa36-bb28f9252cd5.png)
   
   <br><br>
   
