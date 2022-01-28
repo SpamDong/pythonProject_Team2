@@ -49,7 +49,7 @@
   
   <br><br>
   
-  ## **시스템 구조**
+  ## **시스템 **
   ![ERD_Model](https://user-images.githubusercontent.com/81276472/151469688-7c1f00ef-6bb5-459f-9508-e2772d3a0d62.png)
   
   
