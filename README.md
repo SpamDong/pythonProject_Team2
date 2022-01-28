@@ -28,7 +28,6 @@
   ## **주요 키워드**
   + REST API
   + Git 관리
-  + HTTPS 통신(ngrok)  
 
 <br>
 
